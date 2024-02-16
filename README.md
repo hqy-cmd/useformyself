@@ -1,0 +1,2 @@
+# useformyself
+surge conf (simple)
