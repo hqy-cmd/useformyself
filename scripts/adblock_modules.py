@@ -26,6 +26,165 @@ INLINE_DATA = {
     "reject-img.gif": "data-type=tiny-gif status-code=200",
 }
 
+# ---------------------------------------------------------------- static lint
+# Surge splits rewrite / map-local lines on whitespace; a `"` or `'` toggles quoting until the same
+# character appears again (no backslash escapes). A line that ends inside a quote is rejected by
+# `surge-cli --check`, e.g. fmz200's `offset_ms":\d+` body rewrite.
+
+KNOWN_SECTIONS = {"General", "Replica", "Proxy", "Proxy Group", "Rule", "Host", "URL Rewrite",
+                  "Header Rewrite", "Body Rewrite", "Map Local", "MITM", "Script", "Panel", "WireGuard",
+                  "SSID Setting", "Port Forwarding", "Snell Server"}
+URL_REWRITE_TYPES = {"reject", "302", "307", "header"}
+HEADER_OPS = {"header-add", "header-del", "header-replace", "header-replace-regex"}
+BODY_TYPES = {"http-request", "http-response", "http-request-jq", "http-response-jq"}
+MAP_LOCAL_KEYS = {"data-type", "data", "status-code", "header"}
+MAP_LOCAL_TYPES = {"file", "text", "tiny-gif", "base64"}
+SCRIPT_KEYS = {"type", "pattern", "script-path", "requires-body", "binary-body-mode", "max-size",
+               "timeout", "argument", "debug", "engine", "script-update-interval", "ability",
+               "wake-system", "cronexp"}
+
+
+def surge_tokens(line: str) -> list[str] | None:
+    """Whitespace-split with Surge-style quoting; None if a quote is left open."""
+    tokens, buf, quote, started = [], [], "", False
+    for ch in line:
+        if quote:
+            buf.append(ch)
+            if ch == quote:
+                quote = ""
+        elif ch in "\"'":
+            quote = ch
+            buf.append(ch)
+            started = True
+        elif ch.isspace():
+            if started:
+                tokens.append("".join(buf))
+                buf, started = [], False
+        else:
+            buf.append(ch)
+            started = True
+    if quote:
+        return None
+    if started:
+        tokens.append("".join(buf))
+    return tokens
+
+
+def _regex_problem(pattern: str) -> str | None:
+    p = unquote(pattern)
+    if not p:
+        return "empty URL pattern"
+    try:
+        re.compile(p)
+    except re.error as e:
+        return f"invalid regex ({e})"
+    return None
+
+
+def lint_line(section: str, line: str) -> str | None:
+    """Return a problem description for one module line, or None if it looks valid."""
+    if section == "Script":
+        name, eq, params = line.partition("=")
+        if not eq or not name.strip():
+            return "script line without `name =`"
+        parts = split_top(params)
+        if any(p.count('"') % 2 for p in parts):
+            return "unbalanced double quote in script parameters"
+        kv = {}
+        for part in parts:
+            k, eq2, v = part.strip().partition("=")
+            if not eq2 or not k.strip() or not v.strip():
+                return f"empty or malformed script parameter {part.strip()!r}"
+            if k.strip() not in SCRIPT_KEYS:
+                return f"unknown script parameter {k.strip()!r}"
+            kv[k.strip()] = v.strip()
+        for req in ("type", "pattern", "script-path"):
+            if req not in kv:
+                return f"script missing {req}"
+        return _regex_problem(kv["pattern"])
+    if section == "MITM":
+        key, eq, value = line.partition("=")
+        if not eq or key.strip() not in ("hostname", "hostname-disabled", "skip-server-cert-verify",
+                                         "tcp-connection", "h2"):
+            return "unknown MITM key"
+        if key.strip().startswith("hostname"):
+            hosts = [h.strip() for h in value.replace("%APPEND%", "").replace("%INSERT%", "").split(",")]
+            if any(not h or re.search(r"[\s\"']", h) for h in hosts):
+                return "empty or malformed MITM hostname"
+        return None
+    if section not in ("URL Rewrite", "Map Local", "Header Rewrite", "Body Rewrite"):
+        return None
+    toks = surge_tokens(line)
+    if toks is None:
+        return "unbalanced quote"
+    if any(t in ('""', "''") for t in toks[:1]):
+        return "empty field"
+    if section != "Map Local" and any(re.search(r"\s", t) and t[0] not in "\"'" for t in toks):
+        return "unbalanced quoting (a quote opened inside a field swallows the next field)"
+    if section == "URL Rewrite":
+        if len(toks) != 3 or toks[2].lower() not in URL_REWRITE_TYPES:
+            return "URL Rewrite needs `pattern replacement type`"
+        return _regex_problem(toks[0])
+    if section == "Map Local":
+        if len(toks) < 2:
+            return "Map Local without parameters"
+        kv = {}
+        for t in toks[1:]:
+            k, eq, v = t.partition("=")
+            if not eq or k not in MAP_LOCAL_KEYS:
+                return f"unknown Map Local parameter {t!r}"
+            kv[k] = unquote(v)
+        if kv.get("data-type", "file") not in MAP_LOCAL_TYPES:
+            return f"unknown data-type {kv['data-type']!r}"
+        if kv.get("data-type", "file") != "tiny-gif" and "data" not in kv:
+            return "Map Local without data"
+        return _regex_problem(toks[0])
+    if section == "Header Rewrite":
+        if len(toks) < 4 or toks[0] not in ("http-request", "http-response") or toks[2] not in HEADER_OPS:
+            return "Header Rewrite needs `http-request|http-response pattern op header [value]`"
+        return _regex_problem(toks[1])
+    if section == "Body Rewrite":
+        if toks[0] not in BODY_TYPES:
+            return f"unknown Body Rewrite type {toks[0]!r}"
+        if toks[0].endswith("-jq"):
+            if len(toks) != 3:
+                return "jq Body Rewrite needs exactly `type pattern 'expression'`"
+        elif len(toks) < 4 or len(toks) % 2:
+            return "Body Rewrite needs `type pattern regex replacement [regex replacement ...]`"
+        else:
+            for t in toks[2::2]:
+                if _regex_problem(t):
+                    return f"invalid body regex {t!r}"
+        return _regex_problem(toks[1])
+    return None
+
+
+def lint_module(text: str) -> list[tuple[int, str, str]]:
+    """Static checks over a whole module: [(line number, problem, line)]."""
+    problems = []
+    section = None
+    for n, raw in enumerate(text.splitlines(), 1):
+        line = raw.strip()
+        if not line or line.startswith("#") or line.startswith("//"):
+            continue
+        m = re.match(r"^\[([^\]]*)\]$", line)
+        if m:
+            section = m.group(1).strip()
+            if section not in KNOWN_SECTIONS:
+                problems.append((n, f"unknown section [{section}]", line))
+            continue
+        if line.startswith("["):
+            problems.append((n, "malformed section header", line))
+            continue
+        if section is None:
+            problems.append((n, "line outside any section", line))
+            continue
+        p = lint_line(section, line)
+        if p:
+            problems.append((n, p, line))
+    return problems
+
+
 @dataclass
 class Entry:
     section: str
@@ -281,6 +440,10 @@ def build_entries(source: str, text: str, psl) -> tuple[list[Entry], list[str], 
             continue
         e = make_entry(section, line2, source, label, dropped)
         if e is None:
+            continue
+        problem = lint_line(section, f"x = {e.line}" if section == "Script" else e.line)
+        if problem:
+            dropped[f"lint: {problem}"].append(line)
             continue
         info = regex_host(e.pattern)
         if info is None:
@@ -544,3 +707,24 @@ def count_sections(entries: list[Entry]) -> dict[str, int]:
     for e in entries:
         c[e.section] += 1
     return dict(c)
+
+
+def main(argv: list[str]) -> int:
+    """`python3 scripts/adblock_modules.py --lint FILE...`: exit 1 if any module line is invalid."""
+    if len(argv) < 2 or argv[0] != "--lint":
+        print("usage: adblock_modules.py --lint FILE.sgmodule ...")
+        return 2
+    bad = 0
+    for path in argv[1:]:
+        with open(path, encoding="utf-8") as f:
+            problems = lint_module(f.read())
+        for n, why, line in problems:
+            print(f"{path}:{n}: {why}: {line[:200]}")
+        bad += len(problems)
+        print(f"{path}: {'OK' if not problems else f'{len(problems)} problem(s)'}")
+    return 1 if bad else 0
+
+
+if __name__ == "__main__":
+    import sys
+    sys.exit(main(sys.argv[1:]))
