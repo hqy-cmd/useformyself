@@ -1,11 +1,11 @@
 #!name=WLoc Local
 #!desc=实验性 Apple Wi-Fi 定位改写；填写 WGS-84 坐标并设 enabled=true 后才生效。
 #!system=mac
-#!arguments=enabled:false,lat:UNSET,lon:UNSET,altitude:0,hacc:10,vacc:10
-#!arguments-desc=lat=纬度，lon=经度，均为 WGS-84；altitude/hacc/vacc 单位米。enabled=false 放行原请求。需系统信任 Surge CA。
+#!arguments=enabled:false,lat:UNSET,lon:UNSET,altitude:0,hacc:10,vacc:10,radiusKm:0
+#!arguments-desc=lat=纬度，lon=经度，均为 WGS-84；altitude/hacc/vacc 单位米；radiusKm 为随机半径公里（0 关闭，最大 1000）。enabled=false 放行原请求。需系统信任 Surge CA。
 
 [MITM]
 hostname = %APPEND% gs-loc.apple.com, gs-loc-cn.apple.com
 
 [Script]
-wloc-local = type=http-request, pattern=^https://(?:gs-loc|gs-loc-cn)\.apple\.com(?::443)?/clls/wloc(?:\?|$), requires-body=true, binary-body-mode=true, max-size=1048576, timeout=5, script-path=https://raw.githubusercontent.com/hqy-cmd/useformyself/main/modules/wloc/wloc.js, argument="enabled={{{enabled}}}&lat={{{lat}}}&lon={{{lon}}}&altitude={{{altitude}}}&hacc={{{hacc}}}&vacc={{{vacc}}}"
+wloc-local = type=http-request, pattern=^https://(?:gs-loc|gs-loc-cn)\.apple\.com(?::443)?/clls/wloc(?:\?|$), requires-body=true, binary-body-mode=true, max-size=1048576, timeout=5, script-path=https://raw.githubusercontent.com/hqy-cmd/useformyself/main/modules/wloc/wloc.js, argument="enabled={{{enabled}}}&lat={{{lat}}}&lon={{{lon}}}&altitude={{{altitude}}}&hacc={{{hacc}}}&vacc={{{vacc}}}&radiusKm={{{radiusKm}}}"

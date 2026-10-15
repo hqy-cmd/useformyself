@@ -75,6 +75,7 @@
       if (at > 0) c[pair.slice(0, at)] = decodeURIComponent(pair.slice(at + 1));
     }
     if (c.enabled !== 'true') return null;
+    if (c.radiusKm === undefined) c.radiusKm = '0';
     function num(key, min, max, integer) {
       const s = c[key];
       if (!s || !/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(s)) throw Error('invalid ' + key);
@@ -83,10 +84,26 @@
       return n;
     }
     return {lat: num('lat', -90, 90), lon: num('lon', -180, 180),
+      radiusKm: num('radiusKm', 0, 1000),
       altitude: num('altitude', -12000, 100000),
       hacc: num('hacc', 0, 1000000, true), vacc: num('vacc', 0, 1000000, true)};
   }
+  // Uniform area on a spherical cap, not uniform distance from the center.
+  // Cartesian tangent basis stays well-defined at poles and the date line.
+  function jitter(c) {
+    if (!c.radiusKm) return c;
+    const rad = Math.PI / 180, lat = c.lat * rad, lon = c.lon * rad;
+    const angle = 2 * Math.asin(Math.sqrt(Math.random()) * Math.sin(c.radiusKm / 6371.0088 / 2));
+    const bearing = 2 * Math.PI * Math.random();
+    const cl = Math.cos(lat), sl = Math.sin(lat), co = Math.cos(lon), so = Math.sin(lon);
+    const a = Math.cos(angle), n = Math.sin(angle) * Math.cos(bearing), e = Math.sin(angle) * Math.sin(bearing);
+    const x = a * cl * co - n * sl * co - e * so;
+    const y = a * cl * so - n * sl * so + e * co;
+    const z = a * sl + n * cl;
+    return Object.assign({}, c, {lat: Math.atan2(z, Math.hypot(x, y)) / rad, lon: Math.atan2(y, x) / rad});
+  }
   function build(a, c) {
+    c = jitter(c);
     const location = cat([int(1, round(c.lat * 1e8)), int(2, round(c.lon * 1e8)),
       int(3, c.hacc), int(4, 3), int(5, round(c.altitude)), int(6, c.vacc), int(11, 63), int(12, 467)]);
     let count = 0;
