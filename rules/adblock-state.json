@@ -1,0 +1,117 @@
+{
+  "generated": "2026-10-15 20:51:11 UTC",
+  "output": {
+    "Reject_Domain.list": 144409,
+    "Reject.list": 966,
+    "Reject_Extra_Domain.list": 185053,
+    "AdBlock.sgmodule": 1856,
+    "AdBlock-iOS-Lite.sgmodule": 289,
+    "MITM-Guard.sgmodule": 2
+  },
+  "upstreams": {
+    "public-suffix-list": {
+      "name": "Public Suffix List",
+      "count": 10336,
+      "sha256": "ba7d836c0ea57a8bcf9f1fcb868066a7554bed029b441ecc6204ad8494a32612",
+      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "url": "https://publicsuffix.org/list/public_suffix_list.dat",
+      "source": "fresh"
+    },
+    "ddgksf2013-startingad": {
+      "name": "ddgksf2013 APP启动页去广告 (yfamilys)",
+      "count": 741,
+      "sha256": "aa70518c19f06d9d85fd4e90eccedfc791307d0538f4dc51fbd96d48d953b81f",
+      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "url": "https://yfamilys.com/module/startingad.sgmodule",
+      "source": "fresh"
+    },
+    "fmz200-blockads": {
+      "name": "fmz200 wool_scripts blockAds",
+      "count": 1725,
+      "sha256": "d75a30e3410fccc4269c2749cdc430f2c6ef5b092bca1bc342279642f9918423",
+      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module",
+      "source": "fresh"
+    },
+    "kelee-blockadvertisers-module": {
+      "name": "kelee 广告平台拦截器 (URL Rewrite)",
+      "count": 4,
+      "sha256": "a6aac68223851e646423dfb22c50e1dcd38301f067d9355b6dcc2a8a999ee591",
+      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "url": "https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule",
+      "source": "fresh"
+    },
+    "sukka-reject": {
+      "name": "Sukka reject (domainset)",
+      "count": 140807,
+      "sha256": "958a44d46b8f496a4b8b6fbf98f4e8ee446c1425e35f6a1016574ce54937cebc",
+      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "url": "https://ruleset.skk.moe/List/domainset/reject.conf",
+      "source": "fresh"
+    },
+    "sukka-reject-non-ip": {
+      "name": "Sukka reject (non_ip)",
+      "count": 369,
+      "sha256": "0620fd54346f03eb1a17cb18aeff45423cb801845aaa7a0eb7486277a1bff91a",
+      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "url": "https://ruleset.skk.moe/List/non_ip/reject.conf",
+      "source": "fresh"
+    },
+    "sukka-reject-ip": {
+      "name": "Sukka reject (ip)",
+      "count": 765,
+      "sha256": "021228be383159d124ebee575c21300e32fbbdedbfb8764a9b11dd9c1aaca717",
+      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "url": "https://ruleset.skk.moe/List/ip/reject.conf",
+      "source": "fresh"
+    },
+    "awavenue": {
+      "name": "AWAvenue-Ads-Rule (秋风)",
+      "count": 965,
+      "sha256": "3aa8cec471f436156921bd33516bc14ea7535e796bba421aee8e37cac40a8387",
+      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list",
+      "source": "fresh"
+    },
+    "heidai-lite": {
+      "name": "217heidai adblockfilters lite",
+      "count": 8241,
+      "sha256": "3e76d0ff1cfe3383e2a3a70220b3216c902c59890c0f6a057a1f1ef45164f168",
+      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "url": "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksurgelite.list",
+      "source": "fresh"
+    },
+    "v2fly-ads-all": {
+      "name": "v2fly category-ads-all (MetaCubeX)",
+      "count": 902,
+      "sha256": "e055820ac5f07f3ab5447b0043f6b98eaabbf99a87f2b9921759409bc70f3f38",
+      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list",
+      "source": "fresh"
+    },
+    "kelee-blockadvertisers": {
+      "name": "kelee 广告平台拦截器 [Rule]",
+      "count": 324,
+      "sha256": "2947d7df2ceb8addb9b06d7651465f8166d61ebd02ce1d889d562c62739266c4",
+      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "url": "https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx",
+      "source": "fresh"
+    },
+    "sukka-reject-extra": {
+      "name": "Sukka reject_extra (domainset)",
+      "count": 77821,
+      "sha256": "03a194c4dc63973f5bdfc2f88338ffe36aeb40ede646731bcb6cb2ee8ccc1b0c",
+      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "url": "https://ruleset.skk.moe/List/domainset/reject_extra.conf",
+      "source": "fresh"
+    },
+    "hagezi-pro": {
+      "name": "HaGeZi Multi PRO (wildcard domains)",
+      "count": 198026,
+      "sha256": "fbf8901e8ae3dbf3b7cf176124b5436cfc1433a34037c486dae8d316e7264ddc",
+      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt",
+      "source": "fresh"
+    }
+  }
+}
