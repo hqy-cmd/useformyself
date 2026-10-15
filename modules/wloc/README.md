@@ -1,6 +1,6 @@
 # WLoc Surge 模块（实验版）
 
-已完成协议移植、离线测试和 Surge 真实 HTTPS 链路测试；macOS 27.0.1 已触发系统 WLoc 请求并使地图视野转向测试区域；精确位置及持续稳定性仍待验证。默认 enabled=false，lat/lon=UNSET。不安装 WLoc App，不启动独立代理，不改系统 PAC。
+已完成协议移植、离线测试和 Surge 真实 HTTPS 链路测试；macOS 27.0.1 已完成两轮系统刷新并确认 My Location 显示坐标与目标一致；长期稳定性与 iOS 仍待验证。详见 [稳定性复测](STABILITY-2026-10-15.md)。默认 enabled=false，lat/lon=UNSET。不安装 WLoc App，不启动独立代理，不改系统 PAC。
 
 ## 原理与范围
 
