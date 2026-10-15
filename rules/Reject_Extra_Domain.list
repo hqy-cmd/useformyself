@@ -1,5 +1,5 @@
 # Reject_Extra_Domain.list - Surge DOMAIN-SET (aggressive layer, entries not already in core)
-# Generated: 2026-10-15 20:51:11 UTC
+# Generated: 2026-10-15 21:04:04 UTC
 # Entries: 185053 (185042 suffix, 11 exact)
 # Upstreams:
 #   - Sukka reject_extra (domainset): 77821 entries [fresh]

@@ -1,10 +1,10 @@
 {
-  "generated": "2026-10-15 20:51:11 UTC",
+  "generated": "2026-10-15 21:04:04 UTC",
   "output": {
     "Reject_Domain.list": 144409,
     "Reject.list": 966,
     "Reject_Extra_Domain.list": 185053,
-    "AdBlock.sgmodule": 1856,
+    "AdBlock.sgmodule": 1855,
     "AdBlock-iOS-Lite.sgmodule": 289,
     "MITM-Guard.sgmodule": 2
   },

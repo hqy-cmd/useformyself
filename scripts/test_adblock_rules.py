@@ -126,6 +126,25 @@ class ModuleTests(unittest.TestCase):
         e = am.Entry("URL Rewrite", r"^https?:\/\/a\.b\.com\/ad\/ - reject", r"^https?:\/\/a\.b\.com\/ad\/", "t")
         self.assertIsNone(am.host_wide_reject_domain(e))
 
+    def test_lint_quotes(self):
+        bad = r'http-response ^https?:\/\/beta-api\.crunchyroll\.com\/cms offset_ms":\d+ offset_ms":99999999999999'
+        self.assertIn("quot", am.lint_line("Body Rewrite", bad))
+        self.assertIsNone(am.surge_tokens("http-response ^x a\"b"))
+        ok = [
+            r'http-response ^https?:\/\/m\.lkcoffee\.com\/capi "popTitle":".+?" "popTitle":""',
+            r'http-response ^https?:\/\/x\.yangkeduo\.com\/goods "list":\[.+\] "list":[]',
+            r"""http-response-jq ^https?:\/\/acs\.x\.com\/gw '.data |= map(select(.name | contains("营销") | not))'""",
+        ]
+        for line in ok:
+            self.assertIsNone(am.lint_line("Body Rewrite", line), line)
+        self.assertIsNone(am.lint_line("Map Local", r'^https?:\/\/a\.b\.com\/x data-type=text data=" " status-code=200'))
+        self.assertIsNotNone(am.lint_line("Map Local", r'^https?:\/\/a\.b\.com\/x data-type=json data="{}"'))
+        self.assertIsNotNone(am.lint_line("URL Rewrite", r"^https?:\/\/a\.b\.com\/x -"))
+        self.assertIsNotNone(am.lint_line("Script", "s = type=http-response,pattern=^x,script-path="))
+        self.assertIsNotNone(am.lint_line("Script", "s = type=http-response,pattern=^x,script-path=u,foo=1"))
+        probs = am.lint_module("#!name=t\n[Rewrite]\n^a reject\n[MITM]\nhostname = %APPEND% a.com, ,b.com\n")
+        self.assertEqual([p[1] for p in probs], ["unknown section [Rewrite]", "empty or malformed MITM hostname"])
+
     def test_mitm_blocked(self):
         never = ["*bank*", "*.apple.com", "apple.com", "acs.m.taobao.com"]
         self.assertEqual(am.mitm_blocked("creditcardapp.bankcomm.com", never), "*bank*")

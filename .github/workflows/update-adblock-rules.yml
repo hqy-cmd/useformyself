@@ -50,9 +50,17 @@ jobs:
             echo "No snapshot branch yet; upstream failures fall back to rules/adblock-seed/."
           fi
 
+      - name: Unit tests
+        run: python3 scripts/test_adblock_rules.py
+
       - name: Merge upstream rules and modules
         id: merge
         run: python3 scripts/update_adblock_rules.py --cache-dir "$CACHE_DIR" ${{ inputs.force && '--force' || '' }}
+
+      # Static check of every module that would be committed (unbalanced quotes, empty or unknown
+      # fields, unknown sections); a failure stops the job before anything is pushed.
+      - name: Lint modules
+        run: python3 scripts/adblock_modules.py --lint modules/adblock/*.sgmodule modules/wloc/*.sgmodule
 
       - name: Commit and push outputs
         if: steps.merge.outputs.changed == 'true'

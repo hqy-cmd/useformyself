@@ -1175,6 +1175,11 @@ def main() -> int:
         "AdBlock (iOS Lite)", f"{REPO_RAW}/modules/adblock/AdBlock-iOS-Lite.sgmodule"))
     new_modules = {"AdBlock.sgmodule": mac_text, "AdBlock-iOS-Lite.sgmodule": lite_text,
                    "MITM-Guard.sgmodule": guard_module_text(stamp)}
+    for k, text in new_modules.items():
+        problems = am.lint_module(text)
+        if problems:
+            n, why, line = problems[0]
+            raise Abort(f"LINT: {k} line {n}: {why}: {line[:160]} ({len(problems)} problems)")
     paths = {"Reject_Domain.list": DOMAIN_OUT, "Reject.list": RULESET_OUT,
              "Reject_Extra_Domain.list": EXTRA_OUT, "AdBlock.sgmodule": MAC_MODULE,
              "AdBlock-iOS-Lite.sgmodule": LITE_MODULE, "MITM-Guard.sgmodule": GUARD_MODULE}
