@@ -1,0 +1,48 @@
+name: Update AI rules
+
+on:
+  schedule:
+    - cron: "17 20 * * *"  # 20:17 UTC = 04:17 Asia/Singapore
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Skip shrink safety checks (use after reviewing a large upstream removal)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-ai-rules
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Merge upstream rules
+        id: merge
+        run: python3 scripts/update_ai_rules.py ${{ inputs.force && '--force' || '' }}
+
+      - name: Commit and push
+        if: steps.merge.outputs.changed == 'true'
+        env:
+          COMMIT_MESSAGE: ${{ steps.merge.outputs.commit_message }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rules/
+          if git diff --cached --quiet; then
+            echo "No staged changes."
+            exit 0
+          fi
+          git commit -m "$COMMIT_MESSAGE"
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((i * 10))
+          done
+          exit 1
