@@ -1,0 +1,8 @@
+#!name=WLoc iOS Experimental
+#!desc=实验性 Apple Wi-Fi 定位改写；iOS 未验证；在脚本 argument 中填写 WGS-84 坐标并设 enabled=true。
+
+[MITM]
+hostname = %APPEND% gs-loc.apple.com, gs-loc-cn.apple.com
+
+[Script]
+wloc-ios = type=http-request, pattern=^https://(?:gs-loc|gs-loc-cn)\.apple\.com(?::443)?/clls/wloc(?:\?|$), requires-body=true, binary-body-mode=true, max-size=1048576, timeout=5, script-path=https://raw.githubusercontent.com/hqy-cmd/useformyself/main/modules/wloc/wloc.js, argument="enabled=true&lat=1.29167&lon=103.85000&altitude=0&hacc=10&vacc=10"
