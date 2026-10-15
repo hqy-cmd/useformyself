@@ -1,0 +1,88 @@
+# Whitelist for the generated ad-block rules: removed from ALL layers (Reject_Domain.list,
+# Reject.list, Reject_Extra_Domain.list).
+#
+# Syntax (one per line, `#` starts a comment, `[name]` starts a report category):
+#   DOMAIN,example.com           example.com itself must not be blocked: drops `example.com`,
+#                                `.example.com` and any broader parent suffix; subdomains such as
+#                                tracker.example.com stay blocked
+#   DOMAIN-SUFFIX,example.com    nothing at or under example.com may be blocked (also drops
+#                                parent suffixes, keywords / wildcards / AND rules aimed at it)
+#   DOMAIN-WILDCARD,cici*.com    shell-style pattern matched against the name and its parents
+#   DOMAIN-KEYWORD,fenxi         drops that DOMAIN-KEYWORD rule
+#   URL-REGEX,<regex>            drops that exact URL-REGEX rule
+#   AND,((...),(...))            drops that exact logical rule (flags / policy ignored)
+#   IP-CIDR,1.2.3.0/24           drops CIDRs equal to, inside or containing this range
+#   .example.com / example.com   shorthand for DOMAIN-SUFFIX / DOMAIN
+#
+# Applied before adblock-include.txt, so an include always wins - except against
+# adblock-guard.txt and rules/AI_Domain.list, which are enforced last and fail the run.
+
+[AI feature flags (Statsig)]
+# Feature-gate service behind ChatGPT / Claude / Cursor; blocking it hides features or breaks clients.
+DOMAIN-SUFFIX,statsigapi.net
+DOMAIN-SUFFIX,statsig.com
+DOMAIN-SUFFIX,statsigcdn.com
+DOMAIN-SUFFIX,featuregates.org
+DOMAIN-SUFFIX,featureassets.org     # Statsig network fallback domains
+DOMAIN-SUFFIX,assetsconfigcdn.org
+DOMAIN-SUFFIX,prodregistryv2.org
+DOMAIN-SUFFIX,oaistatsig.com        # OpenAI's Statsig proxy
+DOMAIN,statsig.anthropic.com
+
+[Crash reporting used by apps you sign in to (Sentry)]
+DOMAIN-SUFFIX,sentry.io             # includes *.ingest.sentry.io / *.ingest.us.sentry.io
+DOMAIN-SUFFIX,sentry-cdn.com
+DOMAIN-KEYWORD,sentry
+
+[Google infrastructure]
+DOMAIN-SUFFIX,gvt2.com              # Chrome / Google network-quality + beacons, also YouTube
+DOMAIN-SUFFIX,gvt3.com
+DOMAIN-SUFFIX,googletagmanager.com  # some login / checkout pages hard-depend on GTM
+
+[Deep links (keep the app links in SMS / mail working)]
+# Branch: links (app.link, bnc.lt) and the API that resolves them are not separable.
+DOMAIN-SUFFIX,branch.io
+DOMAIN-SUFFIX,app.link
+DOMAIN-SUFFIX,test-app.link
+DOMAIN-SUFFIX,bnc.lt
+# AppsFlyer OneLink: only the link domain; the SDK tracking hosts (appsflyersdk.com,
+# *.appsflyer.com) are separate and stay blocked.
+DOMAIN-SUFFIX,onelink.me
+# Adjust universal links; app.adjust.com / *.adjust.com tracking stays blocked.
+DOMAIN-SUFFIX,adj.st
+DOMAIN-SUFFIX,go.link
+DOMAIN-SUFFIX,page.link             # Firebase Dynamic Links
+
+[TikTok / ByteDance network config and IM]
+# TNC is ByteDance's network-config service (kelee routes it DIRECT instead of rejecting it);
+# imapi is TikTok's legacy IM API. Logging / ad hosts on the same domains stay blocked.
+DOMAIN-WILDCARD,tnc*.isnssdk.com
+DOMAIN-WILDCARD,tnc*.snssdk.com
+DOMAIN-WILDCARD,tnc*.tiktokv.com
+DOMAIN-WILDCARD,tnc*.tiktokv.us
+DOMAIN-WILDCARD,tnc*.byteoversea.com
+DOMAIN-WILDCARD,imapi*.isnssdk.com
+
+[Over-broad keywords]
+# Substring rules that hit unrelated sites (e.g. fenxi matches fenxiang = "share").
+DOMAIN-KEYWORD,fenxi
+DOMAIN-KEYWORD,advert
+DOMAIN-KEYWORD,.zooplus.            # whole shopping sites, not trackers
+DOMAIN-KEYWORD,.zoohit.
+DOMAIN-KEYWORD,.bitiba.
+DOMAIN-KEYWORD,.stenaline.
+DOMAIN-KEYWORD,.footlocker.
+DOMAIN-KEYWORD,dolce-gusto.
+DOMAIN-KEYWORD,seniorliving.
+DOMAIN-KEYWORD,-fin.meituan.com     # Meituan finance / payment hosts
+DOMAIN-KEYWORD,marketing.net        # also matches *marketing.netease.com, *marketing.netflix.com
+DOMAIN-KEYWORD,this_rule_set_is_made_by_sukkaw
+
+[Over-broad URL-REGEX]
+# Host-agnostic paths: they match any site with that path.
+URL-REGEX,/\d+/resolve
+URL-REGEX,/\d+/sign_d
+URL-REGEX,/igd\.xml                 # UPnP gateway description (router / game-console NAT)
+
+[Noise]
+DOMAIN-SUFFIX,5ukk4w.skk.moe        # Sukka watermark entry
