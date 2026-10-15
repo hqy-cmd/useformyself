@@ -1,6 +1,6 @@
 # WLoc Surge 模块（实验版）
 
-已完成协议移植及离线测试；尚未验证 macOS 27.0.1 的真实定位生效。默认 enabled=false，lat/lon=UNSET。不安装 WLoc App，不启动独立代理，不改系统 PAC。
+已完成协议移植、离线测试和 Surge 真实 HTTPS 链路测试；macOS 27.0.1 系统定位尚未生效。默认 enabled=false，lat/lon=UNSET。不安装 WLoc App，不启动独立代理，不改系统 PAC。
 
 ## 原理与范围
 
@@ -43,14 +43,14 @@ Surge 负责 TLS MITM 和请求处理，JavaScript 负责二进制协议。脚�
 1. 确保 Surge MITM 和脚本功能开启，Surge CA 在系统钥匙串中得到系统信任。仅用户钥匙串信任不一定足以让 locationd 接受。模块不能配置/替换 CA，也不会关闭证书校验。
 2. 检查有效 MITM 主机列表中是否有优先的 Apple 域名排除项。模块只追加两个精确域名，不覆盖现有 MITM 列表；既有排除规则可能导致不拦截。
 3. 填入目标 WGS-84 坐标，再设 enabled=true。确保目标请求实际通过 Surge HTTP 引擎；本机系统代理和增强模式虽已开启，但仍需请求记录确认。
-4. 在系统设置里重新开关定位服务，用地图等应用发起新定位。成功证据应同时包含：目标 POST 请求命中 wloc-local 脚本、得到本地响应，以及系统/地图实际位置变为目标。
+4. 用地图等应用发起新定位。部分系统关闭全局定位开关会提示从“查找我的 Mac”移除此设备；不要把关闭总开关当成无副作用的缓存刷新。成功证据应同时包含：目标 POST 请求命中 wloc-local 脚本、得到本地响应，以及系统/地图实际位置变为目标。
 5. 不生效时区分：没有请求（路由/缓存）、TLS 失败（信任/系统限制）、脚本放行（协议/参数）、脚本成功但系统未采用（系统策略/其他定位源）。离线测试不能证明这些步骤成功。
 
 不会更改 IP 定位、GPS 硬件或保证所有应用采用该结果。Apple 协议和系统行为可能变化。
 
 ## 停用与恢复
 
-把 enabled 改成 false 可停止改写，但模块仍追加 MITM 域名；完全停用请在 Surge 中禁用 WLoc Local 模块。随后重新开关系统定位服务，让缓存更新。无需移除其他应用使用的 Surge CA；本模块没有新建证书、后台服务或 PAC。
+把 enabled 改成 false 可停止改写，但模块仍追加 MITM 域名；完全停用请在 Surge 中禁用 WLoc Local 模块。随后重新请求定位并等待缓存更新；若系统关闭定位开关会影响“查找我的 Mac”，应先评估该影响。无需移除其他应用使用的 Surge CA；本模块没有新建证书、后台服务或 PAC。
 
 ## 验证记录
 
@@ -75,3 +75,13 @@ Surge 负责 TLS MITM 和请求处理，JavaScript 负责二进制协议。脚�
 - https://github.com/OpenHRTT/wloc/blob/07b3ba0ce63d50c2fc771809e560946e070bda89/WLocApp/WLocCore/BSSIDApp.pb.swift
 - https://manual.nssurge.com/scripting/http-request.html
 - https://manual.nssurge.com/profile/module.html
+
+## 真实链路测试（2026-10-15）
+
+- 已在 Surge 中实际加载本地模块；两个域名的 HTTPS POST 合成请求均返回 HTTP 200 本地响应。
+- TLS 使用系统现有信任，无 `-k` 或跳过证书验证。独立解码返回 protobuf，坐标与本地指定测试值完全一致。
+- 合成测试数据仅含虚构 BSSID，不能替代系统定位验证。
+- 打开地图并刷新 locationd 后，地图仍显示原位置；系统日志显示 Wi-Fi tile/cache 查询。本轮观察到 locationd 访问 cl2.apple.com，未观察到目标 /clls/wloc 请求。
+- 因而目前只能确认模块的实际 HTTPS 处理链路有效，不能宣称系统定位修改成功，也不能由此判定系统完全不兼容。
+- 测试结束已禁用本地测试模块，保留原证书、定位开关和其他 Surge 模块。取消了会影响“查找我的 Mac”的关闭定位操作。
+- 下一步应确认如何在保留现有系统设置的前提下触发新的 WLoc 请求，并区分缓存、系统新协议和其他定位来源；未删除定位数据库或改动系统保护。
