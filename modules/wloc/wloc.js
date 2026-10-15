@@ -115,6 +115,7 @@
       if (encoding && String(headers[encoding]).toLowerCase() !== 'identity') throw Error('encoded request unsupported');
       if (!($request.body instanceof Uint8Array) || !$request.body.length || $request.body.length > MAX) throw Error('invalid binary body');
       result = {response: {status: 200, headers: {'Content-Type': 'application/x-www-form-urlencoded', 'Cache-Control': 'no-store'}, body: build($request.body, c)}};
+      console.log('[WLoc] synthetic response generated (' + result.response.body.length + ' bytes)');
     }
   } catch (e) { console.log('[WLoc] passthrough: ' + e.message); }
   $done(result);
