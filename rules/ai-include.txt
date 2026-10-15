@@ -1,0 +1,10 @@
+# Manual additions merged into the generated AI rules (applied after ai-exclude.txt).
+#
+# Syntax (one per line, `#` starts a comment):
+#   DOMAIN,example.com          -> AI_Domain.list as `example.com` (exact)
+#   DOMAIN-SUFFIX,example.com   -> AI_Domain.list as `.example.com` (domain + subdomains)
+#   .example.com / example.com  shorthand for DOMAIN-SUFFIX / DOMAIN
+#   DOMAIN-KEYWORD,example      -> AI.list
+#   IP-CIDR,1.2.3.0/24          -> AI.list (no-resolve added automatically)
+#   IP-CIDR6,2001:db8::/32      -> AI.list (no-resolve added automatically)
+#   IP-ASN,12345                -> AI.list (no-resolve added automatically)

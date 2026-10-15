@@ -1,0 +1,106 @@
+# Exclusions applied to the merged upstream AI rules.
+#
+# Syntax (one per line, `#` starts a comment, `[name]` starts a report category):
+#   DOMAIN,example.com           exact name: drops `example.com` whether upstream has it as
+#                                DOMAIN or DOMAIN-SUFFIX; subdomains listed separately are kept
+#   DOMAIN-SUFFIX,example.com    drops example.com and every entry under it
+#   DOMAIN-WILDCARD,cici*.com    shell-style pattern matched against the name and each parent
+#                                (so `cici*.com` also drops www.ciciai.com)
+#   DOMAIN-KEYWORD,sentry        drops that DOMAIN-KEYWORD rule
+#   IP-CIDR,1.2.3.0/24           drops CIDRs equal to or inside this range (IP-CIDR6 for IPv6)
+#   IP-ASN,14061                 drops that IP-ASN rule
+#   .example.com / example.com   shorthand for DOMAIN-SUFFIX / DOMAIN
+#
+# Excludes run before ai-include.txt, so an include always wins.
+
+[ASN: generic VPS hosting]
+IP-ASN,14061    # DigitalOcean
+IP-ASN,20473    # Vultr (Choopa)
+
+[Keywords: shared telemetry / too broad]
+DOMAIN-KEYWORD,sentry
+DOMAIN-KEYWORD,datadog
+DOMAIN-KEYWORD,sift
+DOMAIN-KEYWORD,colab
+DOMAIN-KEYWORD,developerprofiles
+DOMAIN-KEYWORD,generativelanguage
+
+[Broad infrastructure]
+DOMAIN,storage.googleapis.com
+DOMAIN,api.cloudflare.com
+DOMAIN,cp4.cloudflare.com
+DOMAIN-SUFFIX,awsstatic.com
+DOMAIN-SUFFIX,awsapps.com
+DOMAIN-SUFFIX,aws.dev
+DOMAIN,sso.amazonaws.com
+DOMAIN,cognito-identity.us-east-1.amazonaws.com
+DOMAIN,console.aws.a2z.com
+DOMAIN,auth0.com    # drops the broad suffix only; anthropic.auth0.com stays
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,identrust.com
+DOMAIN,login.live.com
+DOMAIN,login.microsoftonline.com
+DOMAIN,api.github.com
+DOMAIN,www.bing.com
+
+[Shared third-party services (broad suffixes)]
+# Exact-name excludes: they drop catch-all suffixes such as `.sentry.io` while keeping
+# AI-specific hosts like o33249.ingest.sentry.io (OpenAI) or js.stripe.com.
+DOMAIN,sentry.io
+DOMAIN,stripe.com
+DOMAIN,segment.io
+DOMAIN,launchdarkly.com
+DOMAIN,algolia.net
+
+[Apple group conflicts]
+# Apple Intelligence hosts (apple-relay.*, humb.apple.com, smoot.apple.com) are intentionally kept.
+DOMAIN,apps.mzstatic.com
+DOMAIN,gateway.icloud.com
+DOMAIN,gspe1-ssl.ls.apple.com
+
+[ByteDance / TikTok infrastructure]
+DOMAIN-SUFFIX,byteoversea.com
+DOMAIN,abtestvm-sg.bytedance.com
+DOMAIN,bytegate-sg.byteintlapi.com
+DOMAIN,sf16-short-sg.bytedapm.com
+DOMAIN,lf3-static.bytednsdoc.com
+DOMAIN,starling.zijieapi.com
+DOMAIN,tron-sg.bytelemon.com
+
+[Chinese companies' overseas AI sites]
+DOMAIN-SUFFIX,kimi.ai           # Moonshot AI
+DOMAIN-SUFFIX,kimi.com          # Moonshot AI
+DOMAIN-SUFFIX,moonshot.ai       # Moonshot AI
+DOMAIN-SUFFIX,minimax.io        # MiniMax
+DOMAIN-SUFFIX,hailuoai.video    # MiniMax Hailuo
+DOMAIN-SUFFIX,hailuo.ai         # MiniMax Hailuo
+DOMAIN-SUFFIX,qoder.com         # Alibaba Qoder
+DOMAIN-SUFFIX,qwen.ai           # Alibaba Qwen
+DOMAIN-SUFFIX,qwenlm.ai         # Alibaba Qwen
+DOMAIN-SUFFIX,coze.com          # ByteDance Coze
+DOMAIN-WILDCARD,cici*.com       # ByteDance Cici (cici.com, ciciai.com, ciciaicdn.com, ...)
+DOMAIN-SUFFIX,dola.com          # ByteDance Dola
+DOMAIN-SUFFIX,marscode.com      # ByteDance MarsCode
+DOMAIN-SUFFIX,trae.ai           # ByteDance Trae
+DOMAIN-SUFFIX,traeapi.us        # ByteDance Trae API
+DOMAIN-SUFFIX,mchost.guru       # ByteDance Trae API hosts (trae-api-*.mchost.guru)
+DOMAIN-SUFFIX,klingai.com       # Kuaishou Kling
+DOMAIN-SUFFIX,z.ai              # Zhipu
+DOMAIN-SUFFIX,deepseek.com      # DeepSeek
+DOMAIN-SUFFIX,lovart.ai         # LiblibAI Lovart
+DOMAIN-SUFFIX,tripo3d.ai        # VAST (Beijing) Tripo
+DOMAIN-SUFFIX,youmind.ai        # YouMind
+DOMAIN-SUFFIX,youmind.com       # YouMind
+DOMAIN-SUFFIX,youmind.site      # YouMind
+DOMAIN-SUFFIX,tapnow.ai         # TapNow
+
+[Noise / not AI]
+DOMAIN-SUFFIX,envato.com
+DOMAIN-SUFFIX,envato-static.com
+DOMAIN-SUFFIX,envatousercontent.com
+DOMAIN-SUFFIX,themeforest.net
+DOMAIN-SUFFIX,oystermercury.top
+DOMAIN-SUFFIX,liveperson.net
+DOMAIN-SUFFIX,lpsnmedia.net
+DOMAIN-SUFFIX,5ukk4w.skk.moe    # Sukka watermark (7h15.ru1353t.1s.m4d3.by.5ukk4w.skk.moe)
