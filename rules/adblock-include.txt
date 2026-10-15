@@ -1,0 +1,20 @@
+# Manual additions merged into the generated ad-block rules (applied after adblock-exclude.txt).
+#
+# Syntax (one per line, `#` starts a comment, `[name]` is just a heading):
+#   DOMAIN,example.com          -> Reject_Domain.list as `example.com` (exact)
+#   DOMAIN-SUFFIX,example.com   -> Reject_Domain.list as `.example.com` (domain + subdomains)
+#   .example.com / example.com  shorthand for DOMAIN-SUFFIX / DOMAIN
+#   DOMAIN-KEYWORD,example      -> Reject.list
+#   DOMAIN-WILDCARD,ad-*.x.com  -> Reject.list
+#   URL-REGEX,^http://x/y$      -> Reject.list
+#   AND,((...),(...))           -> Reject.list
+#   IP-CIDR,1.2.3.0/24          -> Reject.list (no-resolve added automatically; IP-CIDR6 too)
+#
+# Includes still go through the final guard (adblock-guard.txt + rules/AI_Domain.list): an
+# include that would block a protected name fails the run instead of being published.
+
+[Hand-written rejects from the profile (Shared.dconf / PROXY0622.conf)]
+DOMAIN,business.msstatic.com                                   # Huya ads
+DOMAIN-SUFFIX,v1d.szbdyd.com
+URL-REGEX,^http://cdn.wup.huya.com/launch/queryHttpDns$        # Huya HTTPDNS
+IP-CIDR,0.0.0.0/32

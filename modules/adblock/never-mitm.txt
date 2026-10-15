@@ -1,0 +1,139 @@
+# Hosts the generated AdBlock modules must never decrypt (MITM). Any upstream module entry that
+# needs one of these hosts is dropped, and the run fails if a generated module would still list
+# one. Hosts from rules/AI_Domain.list are added automatically.
+#
+# Syntax: one host glob per line (`*` and `?` as in Surge's hostname list);
+# `.example.com` = example.com and *.example.com. `#` starts a comment.
+#
+# [guard]         also exported to MITM-Guard.sgmodule as `-host` exclusions placed FIRST with
+#                 %INSERT%, so no other module can decrypt them either
+# [adblock-only]  only keeps the generated AdBlock modules away from these hosts; other modules
+#                 you install on purpose (WLoc on gs-loc.apple.com, YouTube, Apple weather ...)
+#                 keep working
+
+[guard]
+# App Store purchases, Apple ID, Apple Pay
+buy.itunes.apple.com
+*-buy.itunes.apple.com
+p*-buy.itunes.apple.com
+appleid.apple.com
+idmsa.apple.com
+gsa.apple.com
+apple-pay-gateway.apple.com
+*.apple-pay-gateway.apple.com
+
+# Banks
+*bank*
+.abchina.com
+.abchina.com.cn
+.95599.cn
+.icbc.com.cn
+.icbc.com
+.ccb.com
+.ccb.cn
+.boc.cn
+.bankofchina.com
+.bankcomm.com
+.bankcomm.cn
+.cmbchina.com
+.cmbimg.com
+.psbc.com
+.citicbank.com
+.cebbank.com
+.cib.com.cn
+.spdb.com.cn
+.spdbccc.com.cn
+.cmbc.com.cn
+.hxb.com.cn
+.cgbchina.com.cn
+.95508.com
+.pingan.com
+.pingan.com.cn
+.jk.cn
+.bosc.cn
+.webank.com
+.mybank.cn
+.js96008.com
+.hsbc.com
+.hsbc.com.hk
+.hsbc.com.cn
+.hsbcfts.com.cn
+.citibank.com
+.chase.com
+.dbs.com
+.dbs.com.sg
+.ocbc.com
+.uob.com.sg
+
+# Payments and the order / payment gateways of shopping apps
+.alipay.com
+.alipay.cn
+.alipayobjects.com
+.antgroup.com
+.95516.com
+.unionpay.com
+.unionpaysecure.com
+.chinapay.com
+.tenpay.com
+pay.weixin.qq.com
+wx.tenpay.com
+.wechatpay.com.hk
+.jdpay.com
+pay.jd.com
+api.m.jd.com
+acs.m.taobao.com
+guide-acs.m.taobao.com
+*.pay.meituan.com
+npay.meituan.com
+.bestpay.com.cn
+.95598pay.com
+.ysepay.com
+.lakala.com
+.helipay.com
+.paypal.com
+.paypalobjects.com
+.stripe.com
+.stripe.network
+.braintreegateway.com
+.adyen.com
+.wise.com
+.visa.com
+.mastercard.com
+
+[adblock-only]
+# Apple system hosts and iCloud
+.apple.com
+.icloud.com
+.icloud-content.com
+.mzstatic.com
+.apple-cloudkit.com
+.cdn-apple.com
+.apple.news
+.itunes.com
+
+# Developer / identity / Google / Microsoft
+.github.com
+.githubusercontent.com
+.githubassets.com
+.google.com
+.googleapis.com
+.gstatic.com
+.youtube.com
+.googlevideo.com
+.microsoft.com
+.microsoftonline.com
+.live.com
+.office.com
+.office365.com
+
+# Shared clouds: decrypting these would touch thousands of unrelated services
+.cloudfront.net
+.amazonaws.com
+.cloudfunctions.net
+.azurewebsites.net
+.akamaized.net
+.cloudflare.com
+
+# Messaging / login flows with certificate pinning
+.weixin110.qq.com
+security.wechat.com

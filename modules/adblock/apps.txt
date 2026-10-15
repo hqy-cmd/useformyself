@@ -1,0 +1,43 @@
+# App selection for the generated AdBlock modules.
+#
+#   name: host-suffix, host-suffix     an entry belongs to the app when its request host ends
+#                                      with one of the suffixes
+#
+# [lite]       AdBlock-iOS-Lite.sgmodule takes apps in this order until the budget is used
+#              (<= 30 scripts, at most 6 per app, <= 100 MITM hosts, <= 30 body rewrites;
+#              non-body and splash / ad-endpoint scripts first).
+#              Reorder / trim to the apps you actually use on the iPhone.
+# [delegated]  apps left out of BOTH modules because a dedicated, frequently updated upstream
+#              module handles them better (subscribe to those directly, see README.md).
+# The Mac module (AdBlock.sgmodule) takes every app that passes the safety filters.
+
+[lite]
+高德地图: amap.com, autonavi.com
+小红书: xiaohongshu.com, xhscdn.com
+微博: weibo.com, weibo.cn
+知乎: zhihu.com, zhimg.com
+网易云音乐: music.163.com, music.126.net
+喜马拉雅: ximalaya.com, xmcdn.com
+微信公众号 / 小程序: mp.weixin.qq.com, weixin.qq.com, wxs.qq.com
+拼多多广告链: pinduoduo.com, pddpic.com, yangkeduo.com
+菜鸟: cainiao.com
+美团 / 大众点评: meituan.com, meituan.net, dianping.com
+饿了么: ele.me, elemecdn.com
+京东 (non-payment hosts): jd.com, 360buyimg.com
+百度地图 / 百度网盘: map.baidu.com, mapapi.baidu.com, pan.baidu.com
+12306: 12306.cn
+爱奇艺: iqiyi.com, iqiyipic.com
+优酷: youku.com
+芒果TV: mgtv.com
+腾讯视频 / 腾讯新闻: v.qq.com, video.qq.com, inews.qq.com, news.ssp.qq.com
+什么值得买: smzdm.com, zdmimg.com
+彩云天气: cyapi.cn, caiyunapp.com
+酷安: coolapk.com
+携程 / 去哪儿: ctrip.com, qunar.com
+滴滴: xiaojukeji.com, diditaxi.com.cn
+顺丰: sf-express.com
+中国移动: 10086.cn, 139.com
+
+[delegated]
+Bilibili (kokoryh/Sparkle bilibili.sgmodule): bilibili.com, biliapi.net, biliapi.com, bilivideo.com, hdslb.com, bilibili.tv
+YouTube (Maasea YouTube.Enhance): youtube.com, googlevideo.com, youtubei.googleapis.com

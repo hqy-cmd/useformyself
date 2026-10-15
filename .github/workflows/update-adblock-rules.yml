@@ -1,0 +1,90 @@
+name: Update ad-block rules
+
+on:
+  schedule:
+    - cron: "47 20 * * *"  # 20:47 UTC = 04:47 Asia/Singapore, 30 min after the AI job
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Skip shrink safety checks (use after reviewing a large upstream removal)"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+    paths:
+      - rules/adblock-exclude.txt
+      - rules/adblock-include.txt
+      - rules/adblock-guard.txt
+      - modules/adblock/apps.txt
+      - modules/adblock/never-mitm.txt
+      - scripts/update_adblock_rules.py
+      - scripts/adblock_modules.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-adblock-rules
+  cancel-in-progress: false
+
+env:
+  SNAPSHOT_BRANCH: adblock-upstream-cache
+  CACHE_DIR: .cache/adblock-upstream
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      # Raw upstream copies (several MB) are kept out of main's history: they live on a
+      # single-commit orphan branch that is overwritten on every successful fetch.
+      - name: Restore upstream snapshots
+        run: |
+          mkdir -p "$CACHE_DIR"
+          if git fetch --depth=1 origin "$SNAPSHOT_BRANCH"; then
+            git archive FETCH_HEAD | tar -x -C "$CACHE_DIR"
+            ls -l "$CACHE_DIR"
+          else
+            echo "No snapshot branch yet; upstream failures fall back to rules/adblock-seed/."
+          fi
+
+      - name: Merge upstream rules and modules
+        id: merge
+        run: python3 scripts/update_adblock_rules.py --cache-dir "$CACHE_DIR" ${{ inputs.force && '--force' || '' }}
+
+      - name: Commit and push outputs
+        if: steps.merge.outputs.changed == 'true'
+        env:
+          COMMIT_MESSAGE: ${{ steps.merge.outputs.commit_message }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rules/Reject_Domain.list rules/Reject.list rules/Reject_Extra_Domain.list \
+                  rules/adblock-report.md rules/adblock-changelog.md rules/adblock-state.json \
+                  modules/adblock/*.sgmodule
+          if git diff --cached --quiet; then
+            echo "No staged changes."
+            exit 0
+          fi
+          git commit -m "$COMMIT_MESSAGE"
+          for i in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((i * 10))
+          done
+          exit 1
+
+      - name: Save upstream snapshots
+        if: steps.merge.outputs.snapshots_changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cd "$CACHE_DIR"
+          git init -q -b "$SNAPSHOT_BRANCH"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Upstream snapshots $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+            "HEAD:refs/heads/${SNAPSHOT_BRANCH}"
