@@ -5,8 +5,8 @@
 # Syntax: one host glob per line (`*` and `?` as in Surge's hostname list);
 # `.example.com` = example.com and *.example.com. `#` starts a comment.
 #
-# [guard]         also exported to MITM-Guard.sgmodule as `-host` exclusions placed FIRST with
-#                 %INSERT%, so no other module can decrypt them either
+# [guard]         also exported to both AdBlock modules (and the deprecated MITM-Guard.sgmodule) as
+#                 `-host` exclusions placed FIRST with %INSERT%, so no other module can decrypt them either
 # [adblock-only]  only keeps the generated AdBlock modules away from these hosts; other modules
 #                 you install on purpose (WLoc on gs-loc.apple.com, YouTube, Apple weather ...)
 #                 keep working

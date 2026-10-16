@@ -1011,12 +1011,15 @@ def build_modules(mod_texts: dict[str, str], mod_status: dict[str, dict], psl: P
     return {"hostwide": hostwide, "mac": mac, "lite": lite, "dropped": dropped, "merged": merged}
 
 
-def module_guard(variants: list[am.Variant], never: list[str]) -> None:
+def module_guard(variants: list[am.Variant], never: list[str], guard_excl: list[str]) -> None:
     for v in variants:
         for h in v.mitm:
             hit = am.mitm_blocked(h, never)
             if hit:
                 raise Abort(f"GUARD: {v.name} module would MITM {h} (never-MITM {hit})")
+            hit = next((g for g in guard_excl if am.globs_overlap(am.split_port(h.lower())[0], g)), None)
+            if hit:
+                raise Abort(f"GUARD: {v.name} exclusion -{hit} would cancel its own MITM host {h}")
         for e in v.entries:
             if e.section == "Script" and re.search(r"script-path=\"?https?://(?!(%s)/)" % "|".join(
                     re.escape(x) for x in am.SCRIPT_HOST_ALLOW), e.line):
@@ -1055,8 +1058,9 @@ def guard_module_text(stamp: str) -> str:
     hosts = ["-" + h for h in read_never_mitm_file(("guard",))]
     return "\n".join([
         "#!name=MITM Guard (never decrypt bank / payment / App Store purchase hosts)",
-        "#!desc=Puts exclusions at the FRONT of the MITM hostname list with %INSERT%, so no other "
-        "module (e.g. App unlock collections) can decrypt these hosts. Generated; optional.",
+        "#!desc=DEPRECATED / optional: the same exclusions are now built into AdBlock (Mac) and "
+        "AdBlock (iOS Lite). Puts them at the FRONT of the MITM hostname list with %INSERT%, so no other "
+        "module (e.g. App unlock collections) can decrypt these hosts. Kept for compatibility.",
         "#!author=hqy-cmd",
         "#!category=AdBlock",
         f"# Generated: {stamp} from the [guard] section of modules/adblock/never-mitm.txt",
@@ -1151,7 +1155,8 @@ def main() -> int:
                 r, entry = hits[0]
                 raise Abort(f"GUARD: {lname} output would block {what} entry {r.raw!r} via {entry!r} "
                             f"({len(hits)} hits; check adblock-include.txt)")
-    module_guard([mods["mac"], mods["lite"]], never)
+    guard_excl = read_never_mitm_file(("guard",))
+    module_guard([mods["mac"], mods["lite"]], never, guard_excl)
 
     new = {
         "Reject_Domain.list": domain_lines(core),
@@ -1167,12 +1172,12 @@ def main() -> int:
         mods["mac"], stamp, mod_header_common,
         "Splash / in-app ad removal for Mac (URL Rewrite, Map Local, Body/Header Rewrite, Scripts). "
         "Generated from ddgksf2013, fmz200 and kelee modules; bank/payment/Apple/AI hosts never decrypted.",
-        "AdBlock (Mac)", f"{REPO_RAW}/modules/adblock/AdBlock.sgmodule"))
+        "AdBlock (Mac)", f"{REPO_RAW}/modules/adblock/AdBlock.sgmodule"), guard_excl)
     lite_text = am.render(mods["lite"], module_header(
         mods["lite"], stamp, mod_header_common,
         f"iPhone budget version: <= {LITE_MAX_SCRIPTS} scripts, <= {LITE_MAX_MITM} MITM hosts, "
         "non-body scripts preferred. Same sources as the Mac module, limited to modules/adblock/apps.txt [lite].",
-        "AdBlock (iOS Lite)", f"{REPO_RAW}/modules/adblock/AdBlock-iOS-Lite.sgmodule"))
+        "AdBlock (iOS Lite)", f"{REPO_RAW}/modules/adblock/AdBlock-iOS-Lite.sgmodule"), guard_excl)
     new_modules = {"AdBlock.sgmodule": mac_text, "AdBlock-iOS-Lite.sgmodule": lite_text,
                    "MITM-Guard.sgmodule": guard_module_text(stamp)}
     for k, text in new_modules.items():
