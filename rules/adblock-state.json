@@ -1,9 +1,9 @@
 {
-  "generated": "2026-10-15 21:04:04 UTC",
+  "generated": "2026-10-16 04:04:28 UTC",
   "output": {
     "Reject_Domain.list": 144409,
     "Reject.list": 966,
-    "Reject_Extra_Domain.list": 185053,
+    "Reject_Extra_Domain.list": 185819,
     "AdBlock.sgmodule": 1855,
     "AdBlock-iOS-Lite.sgmodule": 289,
     "MITM-Guard.sgmodule": 2
@@ -76,16 +76,16 @@
     "heidai-lite": {
       "name": "217heidai adblockfilters lite",
       "count": 8241,
-      "sha256": "3e76d0ff1cfe3383e2a3a70220b3216c902c59890c0f6a057a1f1ef45164f168",
-      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "sha256": "aca37f6b7d0decd48ea9fdefba71f0111b9acdaab79d07f905e76a9e1915d11a",
+      "fetched_at": "2026-10-16 04:04:28 UTC",
       "url": "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksurgelite.list",
       "source": "fresh"
     },
     "v2fly-ads-all": {
       "name": "v2fly category-ads-all (MetaCubeX)",
       "count": 902,
-      "sha256": "e055820ac5f07f3ab5447b0043f6b98eaabbf99a87f2b9921759409bc70f3f38",
-      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "sha256": "ec9c20a22dd0706a07558fb864cd0d4ca1333ac51b43d591048071f4fe70419e",
+      "fetched_at": "2026-10-16 04:04:28 UTC",
       "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list",
       "source": "fresh"
     },
@@ -107,9 +107,9 @@
     },
     "hagezi-pro": {
       "name": "HaGeZi Multi PRO (wildcard domains)",
-      "count": 198026,
-      "sha256": "fbf8901e8ae3dbf3b7cf176124b5436cfc1433a34037c486dae8d316e7264ddc",
-      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "count": 199227,
+      "sha256": "d289d019a84f0e3f30d98de303313e5ef622cd1e56349737be7a5c4ba5ee533c",
+      "fetched_at": "2026-10-16 04:04:28 UTC",
       "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt",
       "source": "fresh"
     }

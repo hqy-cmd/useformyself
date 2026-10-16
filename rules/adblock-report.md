@@ -1,6 +1,6 @@
 # Ad-block rules report
 
-Generated: 2026-10-15 21:04:04 UTC
+Generated: 2026-10-16 04:04:28 UTC
 
 ## Upstreams
 
@@ -14,11 +14,11 @@ Generated: 2026-10-15 21:04:04 UTC
 | Sukka reject (non_ip) | core | 369 | fresh | 2026-10-15 20:51:11 UTC | https://ruleset.skk.moe/List/non_ip/reject.conf |
 | Sukka reject (ip) | core | 765 | fresh | 2026-10-15 20:51:11 UTC | https://ruleset.skk.moe/List/ip/reject.conf |
 | AWAvenue-Ads-Rule (秋风) | core | 965 | fresh | 2026-10-15 20:51:11 UTC | https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list |
-| 217heidai adblockfilters lite | core | 8241 | fresh | 2026-10-15 20:51:11 UTC | https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksurgelite.list |
-| v2fly category-ads-all (MetaCubeX) | core | 902 | fresh | 2026-10-15 20:51:11 UTC | https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list |
+| 217heidai adblockfilters lite | core | 8241 | fresh | 2026-10-16 04:04:28 UTC | https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksurgelite.list |
+| v2fly category-ads-all (MetaCubeX) | core | 902 | fresh | 2026-10-16 04:04:28 UTC | https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list |
 | kelee 广告平台拦截器 [Rule] | core | 324 | fresh | 2026-10-15 20:51:11 UTC | https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx |
 | Sukka reject_extra (domainset) | extra | 77821 | fresh | 2026-10-15 20:51:11 UTC | https://ruleset.skk.moe/List/domainset/reject_extra.conf |
-| HaGeZi Multi PRO (wildcard domains) | extra | 198026 | fresh | 2026-10-15 20:51:11 UTC | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt |
+| HaGeZi Multi PRO (wildcard domains) | extra | 199227 | fresh | 2026-10-16 04:04:28 UTC | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt |
 
 List upstream breakdown:
 
@@ -32,21 +32,21 @@ List upstream breakdown:
 | v2fly category-ads-all (MetaCubeX) | 158 | 744 | 0 | 0 | 0 | 0 | 0 |
 | kelee 广告平台拦截器 [Rule] | 113 | 195 | 12 | 0 | 0 | 3 | 1 |
 | Sukka reject_extra (domainset) | 16 | 77805 | 0 | 0 | 0 | 0 | 0 |
-| HaGeZi Multi PRO (wildcard domains) | 0 | 198026 | 0 | 0 | 0 | 0 | 0 |
+| HaGeZi Multi PRO (wildcard domains) | 0 | 199227 | 0 | 0 | 0 | 0 | 0 |
 
 - Module host-wide rejects moved into the core DOMAIN-SET: 7 (`adapi.izuiyou.com`, `api.htp.ad-scope.com.cn`, `fc-video.cdn.bcebos.com`, `sdk1xyajs.data.kuiniuca.com`, `stat.peopleapp.com`, `.kingsoft-office-service.com`, `.pglstatp-toutiao.com`)
-- Raw union before filtering: core 147223, extra 233467
+- Raw union before filtering: core 147223, extra 234672
 
 ## Outputs
 
 - `Reject_Domain.list`: 144409 lines
 - `Reject.list`: 966 lines
-- `Reject_Extra_Domain.list`: 185053 lines
+- `Reject_Extra_Domain.list`: 185819 lines
 - `AdBlock.sgmodule`: 1855 lines
 - `AdBlock-iOS-Lite.sgmodule`: 289 lines
 - `MITM-Guard.sgmodule`: 2 lines
 - Reject.list breakdown: DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR 812
-- Extra-layer entries dropped because core already covers them: 46090
+- Extra-layer entries dropped because core already covers them: 46529
 
 ## Removed by category
 
