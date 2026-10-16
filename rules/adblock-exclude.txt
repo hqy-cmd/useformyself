@@ -39,6 +39,22 @@ DOMAIN-SUFFIX,gvt2.com              # Chrome / Google network-quality + beacons,
 DOMAIN-SUFFIX,gvt3.com
 DOMAIN-SUFFIX,googletagmanager.com  # some login / checkout pages hard-depend on GTM
 
+[Device fingerprinting for bot / fraud checks (FingerprintJS)]
+# Sites use it for login / anti-bot checks; blocking it breaks those checks and fingerprint test pages.
+DOMAIN-SUFFIX,fingerprint.com
+DOMAIN-SUFFIX,fingerprintjs.com
+DOMAIN-SUFFIX,fpjs.io
+DOMAIN-SUFFIX,fpjs.com
+DOMAIN-SUFFIX,fpapi.io
+DOMAIN-SUFFIX,fpcdn.io
+DOMAIN-SUFFIX,openfpcdn.io
+DOMAIN-SUFFIX,fpjscdn.net
+DOMAIN-SUFFIX,fpnpmcdn.net          # npm-package CDN for the JS agent
+DOMAIN-SUFFIX,fptls.com             # TLS-fingerprint endpoints
+DOMAIN-SUFFIX,fptls2.com
+DOMAIN-SUFFIX,fptls3.com
+DOMAIN-SUFFIX,fptls4.com
+
 [Deep links (keep the app links in SMS / mail working)]
 # Branch: links (app.link, bnc.lt) and the API that resolves them are not separable.
 DOMAIN-SUFFIX,branch.io
