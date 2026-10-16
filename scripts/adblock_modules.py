@@ -677,7 +677,9 @@ def select_lite(entries: list[Entry], app_order: list[tuple[str, list[str]]], ma
     return Variant("iOS Lite", chosen, sorted(mitm), apps, skipped, notes)
 
 
-def render(variant: Variant, header: list[str]) -> str:
+def render(variant: Variant, header: list[str], exclusions: list[str] = ()) -> str:
+    """`exclusions` (hosts without the leading `-`) switch the MITM line to %INSERT% so they lead
+    the merged hostname list, ahead of other modules' entries."""
     out = list(header)
     used_names: dict[str, int] = defaultdict(int)
     for section in EMITTED_SECTIONS:
@@ -697,7 +699,9 @@ def render(variant: Variant, header: list[str]) -> str:
                 out.append(f"ab-{base}-{used_names[base]} = {e.line}")
             else:
                 out.append(e.line)
-    if variant.mitm:
+    if exclusions:
+        out += ["", "[MITM]", "hostname = %INSERT% " + ", ".join(["-" + h for h in exclusions] + variant.mitm)]
+    elif variant.mitm:
         out += ["", "[MITM]", "hostname = %APPEND% " + ", ".join(variant.mitm)]
     return "\n".join(out) + "\n"
 

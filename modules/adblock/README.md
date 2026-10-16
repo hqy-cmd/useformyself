@@ -16,7 +16,7 @@ also makes it work without MITM.
 |---|---|---|
 | Mac mini, MacBook | AdBlock (Mac) | `https://raw.githubusercontent.com/hqy-cmd/useformyself/main/modules/adblock/AdBlock.sgmodule` |
 | iPhone | AdBlock (iOS Lite) | `https://raw.githubusercontent.com/hqy-cmd/useformyself/main/modules/adblock/AdBlock-iOS-Lite.sgmodule` |
-| any (optional) | MITM Guard | `https://raw.githubusercontent.com/hqy-cmd/useformyself/main/modules/adblock/MITM-Guard.sgmodule` |
+| any (deprecated, optional) | MITM Guard | `https://raw.githubusercontent.com/hqy-cmd/useformyself/main/modules/adblock/MITM-Guard.sgmodule` |
 
 Install only one of Mac / Lite per device. They replace the ddgksf2013 "APP启动页去广告" module and the old
 fmz200 `test.sgmodule` snapshot (running both would apply the same scripts twice). The kelee "广告平台拦截器" module
@@ -45,7 +45,7 @@ Per run (counts as of 2026-10-15):
 | Map Local | 1047 | 170 |
 | Body Rewrite (mostly `http-response-jq`) | 59 | 10 |
 | Script | 264 (262 requires-body) | 30 (all requires-body) |
-| MITM hosts (`%APPEND%`) | 970 | 100 |
+| MITM hosts (positive, after the guard exclusions) | 970 | 100 |
 | Apps | ~650 app domains | 17 apps from `apps.txt` |
 
 The iOS Lite budget is ≤ 30 scripts (at most 6 per app), ≤ 100 MITM hosts, ≤ 30 body rewrites. It walks
@@ -78,9 +78,15 @@ The iOS Lite budget is ≤ 30 scripts (at most 6 per app), ≤ 100 MITM hosts, �
 
 `%APPEND%` adds hostnames to the end of the list, and Surge stops at the first matching entry, so a `-host` at the
 end cannot stop another module (for example the chxm1023 unlock collection, which decrypts
-`buy.itunes.apple.com`) from decrypting a host. `MITM-Guard.sgmodule` uses `%INSERT%` to put the `[guard]` hosts of
-`never-mitm.txt` (App Store purchases / Apple ID / Apple Pay, banks, payments) first. It deliberately does not
-exclude all of `*.apple.com`, Google or YouTube, so WLoc (`gs-loc.apple.com`) and the YouTube module keep working.
+`buy.itunes.apple.com`) from decrypting a host. The guard is therefore built into **both** AdBlock modules: their
+line is `hostname = %INSERT% -<guard hosts>, <own hosts>`, which puts the `[guard]` hosts of `never-mitm.txt`
+(App Store purchases / Apple ID / Apple Pay, banks, payments) first. The run fails if an exclusion would cancel
+one of the module's own hosts. The iOS Lite budget of 100 counts only the positive hosts. The guard deliberately
+does not exclude all of `*.apple.com`, Google or YouTube, so WLoc (`gs-loc.apple.com`) and the YouTube module keep
+working.
+
+`MITM-Guard.sgmodule` (the same exclusions alone) is still generated for compatibility but is deprecated: a module
+with only a `[MITM]` section cannot be enabled in Surge Mac (6.4.4, 6.10.0), and you no longer need it.
 
 ## Surge Mac 6.4.4 compatibility
 
@@ -96,4 +102,4 @@ dropped). iOS limits body rewriting to 1 MB responses. Validate once with `surge
 |---|---|
 | `AdBlock.sgmodule` / `AdBlock-iOS-Lite.sgmodule` / `MITM-Guard.sgmodule` | Generated modules. |
 | `apps.txt` | `[lite]` app priority list for the iPhone module; `[delegated]` apps left to dedicated modules. |
-| `never-mitm.txt` | Hosts never decrypted; `[guard]` part also exported to MITM Guard. |
+| `never-mitm.txt` | Hosts never decrypted; `[guard]` part also exported as `-host` exclusions in both AdBlock modules (and the deprecated MITM Guard). |
