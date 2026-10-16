@@ -1,12 +1,12 @@
 # AI_Domain.list - Surge DOMAIN-SET (merged AI domains)
-# Generated: 2026-10-15 19:17:49 UTC
-# Entries: 327 (242 suffix '.x', 85 exact)
+# Generated: 2026-10-16 22:49:43 UTC
+# Entries: 346 (242 suffix '.x', 104 exact)
 # Upstreams:
 #   - QuixoticHeart: 226 entries [fresh]
 #     https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/surge/ai.list
 #   - VPSDance: 315 entries [fresh]
 #     https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/global.list
-#   - dler-io: 159 entries [fresh]
+#   - dler-io: 178 entries [fresh]
 #     https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list
 #   - v2fly category-ai-!cn (MetaCubeX): 189 entries [fresh]
 #     https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.list
@@ -169,10 +169,13 @@ webchannel-alkalimakersuite-pa.clients6.google.com
 .gemini.google.com
 .jules.google.com
 .labs.google.com
+lh3.google.com
 .makersuite.google.com
 .notebook.google.com
 .notebooklm.google.com
+ogs.google.com
 .opal.google.com
+play.google.com
 .aicode.googleapis.com
 .aida.googleapis.com
 .aisandbox-pa.googleapis.com
@@ -180,23 +183,38 @@ antigravity.googleapis.com
 antigravity-pa.googleapis.com
 cloudaicompanion.googleapis.com
 .cloudcode-pa.googleapis.com
+content-autofill.googleapis.com
 daily-cloudcode-pa.googleapis.com
+fonts.googleapis.com
 .geller-pa.googleapis.com
 .generativelanguage.googleapis.com
+jnn-pa.googleapis.com
 jules.googleapis.com
+maps.googleapis.com
 notebooklm.googleapis.com
 notebooklm-pa.googleapis.com
+optimizationguide-pa.googleapis.com
 appcatalyst.pa.googleapis.com
 .labstailwind.pa.googleapis.com
 .proactivebackend-pa.googleapis.com
 .robinfrontend-pa.googleapis.com
 daily-cloudcode-pa.sandbox.googleapis.com
+streetviewpixels-pa.googleapis.com
+lh3.googleusercontent.com
+lh5.googleusercontent.com
 .grammarly.com
 .grok.com
 .grokipedia.com
 auth.grokusercontent.com
 .groq.com
+encrypted-tbn0.gstatic.com
+encrypted-tbn1.gstatic.com
+encrypted-tbn2.gstatic.com
+encrypted-tbn3.gstatic.com
+fonts.gstatic.com
 .gemini.gstatic.com
+maps.gstatic.com
+ssl.gstatic.com
 .heygen.com
 account.jetbrains.com
 oauth.account.jetbrains.com
@@ -244,6 +262,7 @@ js.stripe.com
 .udio.com
 cdn.usefathom.com
 .windsurf.com
+csp.withgoogle.com
 .opal.withgoogle.com
 .stitch.withgoogle.com
 cdn.workos.com

@@ -1,12 +1,12 @@
 # AI.list - Surge RULE-SET (merged AI keyword / IP / ASN rules)
-# Generated: 2026-10-15 19:17:49 UTC
+# Generated: 2026-10-16 22:49:43 UTC
 # Rules: 38 (DOMAIN-KEYWORD 7, IP-CIDR/IP-CIDR6 29, IP-ASN 2)
 # Upstreams:
 #   - QuixoticHeart: 226 entries [fresh]
 #     https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/surge/ai.list
 #   - VPSDance: 315 entries [fresh]
 #     https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/global.list
-#   - dler-io: 159 entries [fresh]
+#   - dler-io: 178 entries [fresh]
 #     https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list
 #   - v2fly category-ai-!cn (MetaCubeX): 189 entries [fresh]
 #     https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.list
