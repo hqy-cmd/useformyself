@@ -1,14 +1,14 @@
 # AI_Domain.list - Surge DOMAIN-SET (merged AI domains)
-# Generated: 2026-10-16 22:49:43 UTC
-# Entries: 346 (242 suffix '.x', 104 exact)
+# Generated: 2026-10-18 22:24:34 UTC
+# Entries: 348 (244 suffix '.x', 104 exact)
 # Upstreams:
-#   - QuixoticHeart: 226 entries [fresh]
+#   - QuixoticHeart: 229 entries [fresh]
 #     https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/surge/ai.list
-#   - VPSDance: 315 entries [fresh]
+#   - VPSDance: 316 entries [fresh]
 #     https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/global.list
 #   - dler-io: 178 entries [fresh]
 #     https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list
-#   - v2fly category-ai-!cn (MetaCubeX): 189 entries [fresh]
+#   - v2fly category-ai-!cn (MetaCubeX): 192 entries [fresh]
 #     https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.list
 # Exclude rules: 73, include rules: 0
 # Source: https://github.com/hqy-cmd/useformyself/tree/main/rules
@@ -62,6 +62,7 @@ accounts.spacex.ai
 .suno.ai
 .syntx.ai
 .together.ai
+.typesafe.ai
 .x.ai
 .claude.app
 .gamma.app
@@ -349,6 +350,7 @@ openaicomproductionae4b.blob.core.windows.net
 .lcicat.org
 .lcicollections.org
 .modelcontextprotocol.org
+.openai.org
 .sillylittleguy.org
 .chorus.sh
 .cursor.sh
