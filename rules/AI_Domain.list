@@ -1,14 +1,14 @@
 # AI_Domain.list - Surge DOMAIN-SET (merged AI domains)
-# Generated: 2026-10-18 22:24:34 UTC
-# Entries: 348 (244 suffix '.x', 104 exact)
+# Generated: 2026-10-20 23:10:03 UTC
+# Entries: 363 (245 suffix '.x', 118 exact)
 # Upstreams:
-#   - QuixoticHeart: 229 entries [fresh]
+#   - QuixoticHeart: 230 entries [fresh]
 #     https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/surge/ai.list
-#   - VPSDance: 316 entries [fresh]
+#   - VPSDance: 317 entries [fresh]
 #     https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/global.list
-#   - dler-io: 178 entries [fresh]
+#   - dler-io: 192 entries [fresh]
 #     https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list
-#   - v2fly category-ai-!cn (MetaCubeX): 192 entries [fresh]
+#   - v2fly category-ai-!cn (MetaCubeX): 193 entries [fresh]
 #     https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.list
 # Exclude rules: 73, include rules: 0
 # Source: https://github.com/hqy-cmd/useformyself/tree/main/rules
@@ -179,28 +179,42 @@ ogs.google.com
 play.google.com
 .aicode.googleapis.com
 .aida.googleapis.com
+aiplatform.googleapis.com
 .aisandbox-pa.googleapis.com
 antigravity.googleapis.com
 antigravity-pa.googleapis.com
+businessaicode.googleapis.com
 cloudaicompanion.googleapis.com
 .cloudcode-pa.googleapis.com
 content-autofill.googleapis.com
 daily-cloudcode-pa.googleapis.com
+discoveryengine.googleapis.com
+eu-discoveryengine.googleapis.com
 fonts.googleapis.com
 .geller-pa.googleapis.com
 .generativelanguage.googleapis.com
 jnn-pa.googleapis.com
 jules.googleapis.com
 maps.googleapis.com
+aiplatform.mtls.googleapis.com
+businessaicode.mtls.googleapis.com
+discoveryengine.mtls.googleapis.com
+eu-discoveryengine.mtls.googleapis.com
+us-discoveryengine.mtls.googleapis.com
 notebooklm.googleapis.com
 notebooklm-pa.googleapis.com
 optimizationguide-pa.googleapis.com
 appcatalyst.pa.googleapis.com
 .labstailwind.pa.googleapis.com
 .proactivebackend-pa.googleapis.com
+aiplatform.eu.rep.googleapis.com
+businessaicode.eu.rep.googleapis.com
+aiplatform.us.rep.googleapis.com
+businessaicode.us.rep.googleapis.com
 .robinfrontend-pa.googleapis.com
 daily-cloudcode-pa.sandbox.googleapis.com
 streetviewpixels-pa.googleapis.com
+us-discoveryengine.googleapis.com
 lh3.googleusercontent.com
 lh5.googleusercontent.com
 .grammarly.com
@@ -222,6 +236,7 @@ oauth.account.jetbrains.com
 .langchain.com
 odc.officeapps.live.com
 .llama.com
+.magnific.com
 .manuscdn.com
 ai.meta.com
 aidemos.meta.com

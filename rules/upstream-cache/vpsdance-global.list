@@ -418,6 +418,7 @@ DOMAIN-SUFFIX,chatgpt.site
 DOMAIN-SUFFIX,host.livekit.cloud
 DOMAIN-SUFFIX,oaistatsig.com
 DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net
+DOMAIN-SUFFIX,openai.org
 DOMAIN-SUFFIX,turn.livekit.cloud
 
 # OpenArt / Core
