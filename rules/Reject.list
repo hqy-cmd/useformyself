@@ -1,23 +1,23 @@
 # Reject.list - Surge RULE-SET (ad-block keyword / wildcard / logical / URL-REGEX / IP rules)
-# Generated: 2026-10-19 23:56:57 UTC
-# Rules: 966 (DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR/IP-CIDR6 812)
+# Generated: 2026-10-20 23:25:38 UTC
+# Rules: 967 (DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR/IP-CIDR6 813)
 # Upstreams:
-#   - Sukka reject (domainset): 143051 entries [fresh]
+#   - Sukka reject (domainset): 143627 entries [fresh]
 #     https://ruleset.skk.moe/List/domainset/reject.conf
 #   - Sukka reject (non_ip): 369 entries [fresh]
 #     https://ruleset.skk.moe/List/non_ip/reject.conf
-#   - Sukka reject (ip): 765 entries [fresh]
+#   - Sukka reject (ip): 766 entries [fresh]
 #     https://ruleset.skk.moe/List/ip/reject.conf
 #   - AWAvenue-Ads-Rule (秋风): 965 entries [fresh]
 #     https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list
-#   - 217heidai adblockfilters lite: 7909 entries [fresh]
+#   - 217heidai adblockfilters lite: 8295 entries [fresh]
 #     https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksurgelite.list
 #   - v2fly category-ads-all (MetaCubeX): 902 entries [fresh]
 #     https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list
 #   - kelee 广告平台拦截器 [Rule]: 324 entries [fresh]
 #     https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
 #   - module host-wide rejects (ddgksf2013 / fmz200 / kelee): 7 entries
-# Protected / excluded entries removed this run: 259 (see rules/adblock-report.md)
+# Protected / excluded entries removed this run: 260 (see rules/adblock-report.md)
 # Source: https://github.com/hqy-cmd/useformyself/tree/main/rules
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
 DOMAIN-KEYWORD,-ad.a.yximgs.com
@@ -316,6 +316,7 @@ IP-CIDR,47.110.187.87/32,no-resolve
 IP-CIDR,50.112.124.170/32,no-resolve
 IP-CIDR,51.15.3.223/32,no-resolve
 IP-CIDR,51.68.87.229/32,no-resolve
+IP-CIDR,51.77.227.97/32,no-resolve
 IP-CIDR,51.89.187.141/32,no-resolve
 IP-CIDR,51.91.66.125/32,no-resolve
 IP-CIDR,51.91.211.94/32,no-resolve
