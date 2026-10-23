@@ -1,16 +1,16 @@
 # Reject.list - Surge RULE-SET (ad-block keyword / wildcard / logical / URL-REGEX / IP rules)
-# Generated: 2026-10-22 23:37:23 UTC
-# Rules: 967 (DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR/IP-CIDR6 813)
+# Generated: 2026-10-23 23:32:24 UTC
+# Rules: 971 (DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR/IP-CIDR6 817)
 # Upstreams:
-#   - Sukka reject (domainset): 144623 entries [fresh]
+#   - Sukka reject (domainset): 144702 entries [fresh]
 #     https://ruleset.skk.moe/List/domainset/reject.conf
-#   - Sukka reject (non_ip): 369 entries [fresh]
+#   - Sukka reject (non_ip): 373 entries [fresh]
 #     https://ruleset.skk.moe/List/non_ip/reject.conf
 #   - Sukka reject (ip): 766 entries [fresh]
 #     https://ruleset.skk.moe/List/ip/reject.conf
 #   - AWAvenue-Ads-Rule (秋风): 976 entries [fresh]
 #     https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list
-#   - 217heidai adblockfilters lite: 8425 entries [fresh]
+#   - 217heidai adblockfilters lite: 8455 entries [fresh]
 #     https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksurgelite.list
 #   - v2fly category-ads-all (MetaCubeX): 903 entries [fresh]
 #     https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list
@@ -474,6 +474,8 @@ IP-CIDR,100.20.13.49/32,no-resolve
 IP-CIDR,100.20.104.229/32,no-resolve
 IP-CIDR,100.28.19.138/32,no-resolve
 IP-CIDR,101.35.204.35/32,no-resolve
+IP-CIDR,101.91.140.124/32,no-resolve
+IP-CIDR,101.91.140.224/32,no-resolve
 IP-CIDR,101.124.19.122/32,no-resolve
 IP-CIDR,101.226.10.8/32,no-resolve
 IP-CIDR,101.227.97.240/32,no-resolve
@@ -597,6 +599,8 @@ IP-CIDR,121.36.72.124/32,no-resolve
 IP-CIDR,121.61.48.170/32,no-resolve
 IP-CIDR,122.6.254.201/32,no-resolve
 IP-CIDR,122.9.7.134/32,no-resolve
+IP-CIDR,122.9.13.79/32,no-resolve
+IP-CIDR,122.9.15.129/32,no-resolve
 IP-CIDR,122.159.29.192/32,no-resolve
 IP-CIDR,122.192.106.84/32,no-resolve
 IP-CIDR,122.192.177.176/32,no-resolve
