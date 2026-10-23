@@ -1,26 +1,27 @@
 # AI rules report
 
-Generated: 2026-10-21 23:16:39 UTC
+Generated: 2026-10-23 23:07:17 UTC
 
 ## Upstreams
 
 | Upstream | Entries | DOMAIN | SUFFIX | KEYWORD | IP-CIDR | IP-ASN | Source |
 |---|---|---|---|---|---|---|---|
 | [QuixoticHeart](https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/surge/ai.list) | 241 | 45 | 188 | 8 | 0 | 0 | fresh |
-| [VPSDance](https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/global.list) | 317 | 56 | 247 | 5 | 6 | 3 | fresh |
-| [dler-io](https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list) | 192 | 92 | 77 | 0 | 23 | 0 | fresh |
+| [VPSDance](https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/global.list) | 319 | 56 | 249 | 5 | 6 | 3 | fresh |
+| [dler-io](https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list) | 192 | 87 | 82 | 0 | 23 | 0 | fresh |
 | [v2fly category-ai-!cn (MetaCubeX)](https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.list) | 204 | 31 | 173 | 0 | 0 | 0 | fresh |
 
-Raw union before exclusions: 494
+Raw union before exclusions: 490
 
 ## Output
 
-- `AI_Domain.list`: 366 (247 suffix, 119 exact)
+- `AI_Domain.list`: 366 (248 suffix, 118 exact)
 - `AI.list`: 38 (DOMAIN-KEYWORD 7, IP-CIDR/IP-CIDR6 29, IP-ASN 2)
 
 ## Dropped rule types (unsupported in DOMAIN-SET / not wanted)
 
 - **PROCESS-NAME** (23): `PROCESS-NAME,Antigravity`, `PROCESS-NAME,Antigravity.exe`, `PROCESS-NAME,Augment`, `PROCESS-NAME,Augment.exe`, `PROCESS-NAME,ChatGPT`, `PROCESS-NAME,ChatGPT.exe`, `PROCESS-NAME,Claude`, `PROCESS-NAME,Claude.exe`, `PROCESS-NAME,Codex`, `PROCESS-NAME,Codex.exe`, `PROCESS-NAME,Cursor`, `PROCESS-NAME,Cursor.exe`, `PROCESS-NAME,Windsurf`, `PROCESS-NAME,Windsurf.exe`, `PROCESS-NAME,antigravity`, `PROCESS-NAME,augment`, `PROCESS-NAME,chatgpt`, `PROCESS-NAME,claude`, `PROCESS-NAME,claude.exe`, `PROCESS-NAME,codex`, `PROCESS-NAME,cowork-svc.exe`, `PROCESS-NAME,cursor`, `PROCESS-NAME,windsurf`
+- **invalid domain** (1): `DOMAIN-SUFFIX,//github.com/aprilnea/reverse-engineering-claude-code-antspace`
 
 ## Exclusions by category
 
@@ -79,6 +80,6 @@ Removed: `DOMAIN-SUFFIX,envato.com`, `DOMAIN-SUFFIX,envato-static.com`, `DOMAIN-
 
 ## Normalisation
 
-- DOMAIN covered by DOMAIN-SUFFIX: 18
+- DOMAIN covered by DOMAIN-SUFFIX: 14
 - DOMAIN-KEYWORD covered by shorter keyword: 2
 - DOMAIN-SUFFIX covered by broader DOMAIN-SUFFIX: 5

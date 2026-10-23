@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21 23:16:39 UTC",
+  "generated": "2026-10-23 23:07:17 UTC",
   "output": {
     "AI_Domain.list": 366,
     "AI.list": 38
@@ -12,21 +12,21 @@
       "source": "fresh"
     },
     "VPSDance": {
-      "count": 317,
-      "sha256": "c9e7ea2237311f3d05091fa77d9296bcd5c5e650d9e733c185e4f394e6552163",
-      "fetched_at": "2026-10-20 23:10:03 UTC",
+      "count": 319,
+      "sha256": "4d17534c82935eb58f2e4da67319f33bdc813e7badf2b741513f643ec9b3f9ed",
+      "fetched_at": "2026-10-23 23:07:17 UTC",
       "source": "fresh"
     },
     "dler-io": {
       "count": 192,
-      "sha256": "6ed3ee78ca6224c6c9639f22bf7ee892e3c0fe9cdcb45e2072d16ba6bd6b7edb",
-      "fetched_at": "2026-10-20 23:10:03 UTC",
+      "sha256": "3d942e22380bf000725bd15191445e5f003a7456256f36d070a2a8c599dfeba8",
+      "fetched_at": "2026-10-23 23:07:17 UTC",
       "source": "fresh"
     },
     "v2fly category-ai-!cn (MetaCubeX)": {
       "count": 204,
-      "sha256": "16ca395707f82fbe381bb5ed7729d0d4250ffc49e7d684b0d9545a2653ef33e4",
-      "fetched_at": "2026-10-21 23:16:39 UTC",
+      "sha256": "485af8f7be4c968c0ab00c84dc194936eefc3984cd21026f1482423f6bcef19a",
+      "fetched_at": "2026-10-23 23:07:17 UTC",
       "source": "fresh"
     }
   }
