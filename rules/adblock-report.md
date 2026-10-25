@@ -1,6 +1,6 @@
 # Ad-block rules report
 
-Generated: 2026-10-24 22:44:43 UTC
+Generated: 2026-10-25 22:49:08 UTC
 
 ## Upstreams
 
@@ -8,45 +8,45 @@ Generated: 2026-10-24 22:44:43 UTC
 |---|---|---|---|---|---|
 | Public Suffix List | aux | 10397 | fresh | 2026-10-22 23:37:23 UTC | https://publicsuffix.org/list/public_suffix_list.dat |
 | ddgksf2013 APP启动页去广告 (yfamilys) | module | 741 | fresh | 2026-10-15 20:51:11 UTC | https://yfamilys.com/module/startingad.sgmodule |
-| fmz200 wool_scripts blockAds | module | 1725 | fresh | 2026-10-15 20:51:11 UTC | https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module |
+| fmz200 wool_scripts blockAds | module | 1656 | fresh | 2026-10-25 22:49:08 UTC | https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module |
 | kelee 广告平台拦截器 (URL Rewrite) | module | 4 | fresh | 2026-10-15 20:51:11 UTC | https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule |
-| Sukka reject (domainset) | core | 144758 | fresh | 2026-10-24 22:44:43 UTC | https://ruleset.skk.moe/List/domainset/reject.conf |
+| Sukka reject (domainset) | core | 144851 | fresh | 2026-10-25 22:49:08 UTC | https://ruleset.skk.moe/List/domainset/reject.conf |
 | Sukka reject (non_ip) | core | 373 | fresh | 2026-10-23 23:32:24 UTC | https://ruleset.skk.moe/List/non_ip/reject.conf |
 | Sukka reject (ip) | core | 766 | fresh | 2026-10-20 23:25:38 UTC | https://ruleset.skk.moe/List/ip/reject.conf |
 | AWAvenue-Ads-Rule (秋风) | core | 976 | fresh | 2026-10-22 23:37:23 UTC | https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list |
-| 217heidai adblockfilters lite | core | 8464 | fresh | 2026-10-24 22:44:43 UTC | https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksurgelite.list |
-| v2fly category-ads-all (MetaCubeX) | core | 903 | fresh | 2026-10-24 22:44:43 UTC | https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list |
+| 217heidai adblockfilters lite | core | 8477 | fresh | 2026-10-25 22:49:08 UTC | https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksurgelite.list |
+| v2fly category-ads-all (MetaCubeX) | core | 904 | fresh | 2026-10-25 22:49:08 UTC | https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list |
 | kelee 广告平台拦截器 [Rule] | core | 324 | fresh | 2026-10-15 20:51:11 UTC | https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx |
-| Sukka reject_extra (domainset) | extra | 81105 | fresh | 2026-10-24 22:44:43 UTC | https://ruleset.skk.moe/List/domainset/reject_extra.conf |
+| Sukka reject_extra (domainset) | extra | 81378 | fresh | 2026-10-25 22:49:08 UTC | https://ruleset.skk.moe/List/domainset/reject_extra.conf |
 | HaGeZi Multi PRO (wildcard domains) | extra | 208296 | fresh | 2026-10-24 22:44:43 UTC | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt |
 
 List upstream breakdown:
 
 | Upstream | DOMAIN | SUFFIX | KEYWORD | WILDCARD | URL-REGEX | AND/OR | IP-CIDR |
 |---|---|---|---|---|---|---|---|
-| Sukka reject (domainset) | 1157 | 143601 | 0 | 0 | 0 | 0 | 0 |
+| Sukka reject (domainset) | 1155 | 143696 | 0 | 0 | 0 | 0 | 0 |
 | Sukka reject (non_ip) | 71 | 89 | 144 | 15 | 3 | 0 | 51 |
 | Sukka reject (ip) | 1 | 0 | 0 | 0 | 0 | 0 | 765 |
 | AWAvenue-Ads-Rule (秋风) | 960 | 12 | 4 | 0 | 0 | 0 | 0 |
-| 217heidai adblockfilters lite | 0 | 8464 | 0 | 0 | 0 | 0 | 0 |
-| v2fly category-ads-all (MetaCubeX) | 159 | 744 | 0 | 0 | 0 | 0 | 0 |
+| 217heidai adblockfilters lite | 0 | 8477 | 0 | 0 | 0 | 0 | 0 |
+| v2fly category-ads-all (MetaCubeX) | 159 | 745 | 0 | 0 | 0 | 0 | 0 |
 | kelee 广告平台拦截器 [Rule] | 113 | 195 | 12 | 0 | 0 | 3 | 1 |
-| Sukka reject_extra (domainset) | 16 | 81089 | 0 | 0 | 0 | 0 | 0 |
+| Sukka reject_extra (domainset) | 16 | 81362 | 0 | 0 | 0 | 0 | 0 |
 | HaGeZi Multi PRO (wildcard domains) | 0 | 208296 | 0 | 0 | 0 | 0 | 0 |
 
 - Module host-wide rejects moved into the core DOMAIN-SET: 7 (`adapi.izuiyou.com`, `api.htp.ad-scope.com.cn`, `fc-video.cdn.bcebos.com`, `sdk1xyajs.data.kuiniuca.com`, `stat.peopleapp.com`, `.kingsoft-office-service.com`, `.pglstatp-toutiao.com`)
-- Raw union before filtering: core 151313, extra 246349
+- Raw union before filtering: core 151414, extra 246510
 
 ## Outputs
 
-- `Reject_Domain.list`: 148463 lines
+- `Reject_Domain.list`: 148564 lines
 - `Reject.list`: 971 lines
-- `Reject_Extra_Domain.list`: 193796 lines
+- `Reject_Extra_Domain.list`: 194054 lines
 - `AdBlock.sgmodule`: 1855 lines
-- `AdBlock-iOS-Lite.sgmodule`: 289 lines
+- `AdBlock-iOS-Lite.sgmodule`: 278 lines
 - `MITM-Guard.sgmodule`: 2 lines
 - Reject.list breakdown: DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR 817
-- Extra-layer entries dropped because core already covers them: 50192
+- Extra-layer entries dropped because core already covers them: 50093
 
 ## Removed by category
 
@@ -120,23 +120,23 @@ Exclude rules with no current match (kept for future upstream changes): `DOMAIN-
 - core: DOMAIN-SUFFIX covered by broader DOMAIN-SUFFIX: 382
 - core: IP-CIDR covered by broader CIDR: 1
 - extra: DOMAIN covered by DOMAIN-SUFFIX: 4
-- extra: DOMAIN-SUFFIX covered by broader DOMAIN-SUFFIX: 2148
+- extra: DOMAIN-SUFFIX covered by broader DOMAIN-SUFFIX: 2150
 
 ## Modules
 
 ### Mac
 
 - Sections: Body Rewrite 58, Map Local 1047, Script 264, URL Rewrite 480
-- Scripts: 264 (262 requires-body); MITM hosts: 969
+- Scripts: 264 (262 requires-body); MITM hosts: 974
 - Apps (646): 00bang.cn, 01zhuanche.com, 10010.cn, 10010.com, 10086.cn, 10099.com.cn, 101.42.130.147, 10101111cdn.com, 103.37.155.60, 103.41.167.237, 106.55.220.18, 10jqka.com.cn, 11222.cn, 118.178.214.118, 118.89.204.198, 122.gov.cn, 12306.cn, 1234567.com.cn, 123pan.com, 125.215.147.40, 126.net, 127.net, 1314zhilv.com, 133.cn, 139.196.12.179, 139.com, 163.com, 17kjs.com, 17u.cn, 17usoft.com, 180.96.8.44, 182.92.244.70, 189.cn, 1jietu.com, 1qianbao.com, 1rtb.net, 203.107.1.97, 21ec74.com, 21jingji.com, 2345.com, 2bulu.com, 34580.com, 360.cn, 360buyimg.com, 369cx.cn, 36kr.com, 3hxq.cn, 47.110.187.87, 4gtv.tv, 4kya.com, 500.com, 51credit.com, 51fanli.net, 51jobapp.com, 52tt.com, 54.222.159.138, 58.com, 59.82.113.10, 5eplay.com, 5idream.net, 91160.com, 95504.net, 96225.com, aa-ab.com, abite.com, acfun.cn, admobile.top, adukwai.com, adview.cn, ahmobile.cn, ahzs10000.com, aia.com.cn, aihuishou.com, ailbaba.me, alibaba.com, alibabausercontent.com, alicdn.com, alipan.com, aliyuncs.com, allahall.com, amap.com, amazon.cn, amemv.com, anythinktech.com, aomiapp.com, appsimg.com, appvipshop.com, autohome.com.cn, autoimg.cn, awtmt.com, babytree.com, babytreeimg.com, badmintoncn.com, baicizhan.com, baidu.com, baidupcs.com, banyuetanapp.com, bcebos.com, bczeducation.cn, bdatu.com, bdstatic.com, beitaichufang.com, benewtech.cn, benlailife.com, bestv.cn, bestv.com.cn, bevol.com, biguotk.com, biligame.com, binance.com, bishijie.com, bitqiu.com, bjev.com.cn, bjxkhc.com, black-unique.com, blibee.com, blued.cn, boohee.com, bwton.com, bybutter.com, bydauto.com.cn, bytescm.com, caijingmobile.com, cainiao.com, caixin.com, caiyicloud.com, caiyunapp.com, camera360.com, caocaokeji.cn, cdnmama.com, cdtft.cn, ceair.com, cgmcare.cn, cgws.com, chaoxing.com, chelaile.net.cn, chelaileapp.cn, chengdu.gov.cn, chery.cn, chinafamilymart.com.cn, chinahxzq.com.cn, chinastock.com.cn, chuangkit.com, cibfintech.com, closeli.cn, cloudbae.cn, cls.cn, cmgadx.com, cmschina.com, cnki.net, cntaiping.com, cntv.cn, coolapk.com, cotticoffee.com, cp.com.cn, csair.com, csdn.net, ctaiot.com, ctm.net, ctobsnssdk.com, ctrip.com, cyapi.cn, d3yuiw4.com, dailmo.com, dangdang.com, daydaycook.com.cn, dcloud.net.cn, ddpai.com, ddrk.me, ddxq.mobi, dewu.com, dfcfw.com, dian.so, dianping.com, dianshihome.com, didapinche.com, didistatic.com, diditaxi.com.cn, djiits.com, dnurse.com, dongdianqiu.com, dongfeng-nissan.com.cn, douban.com, doubleclick.net, douyin.com, douyucdn.cn, dpfile.com, dsocial.xyz, dushu365.com, duxiaoman.com, dxy.cn, dxy.com, dyncdn.me, dzh.com.cn, eastmoney.com, echargenet.com, ecitic.com, ecoliving168.com, edaijia.cn, edifier.com, edit.sinaapp.com, ele.me, elecfans.com, elemecdn.com, elong.com, enmonster.com, eol.cn, epicc.com.cn, etnet.com.hk, faw-vw.com, fcbox.com, feidee.com, feidee.net, fenbi.com, fengshows.cn, fengshows.com, fenqile.com, fitdays.cn, flipchina.cn, flydigi.com, flymodem.com.cn, folidaymall.com, fosunhanig.com, freshippo.com, ftms.com.cn, futunn.com, gacmotor.com, gamer.com.tw, gamersky.com, gaoding.com, gaoqingdianshi.com, gcores.com, gdoil.cn, geely.com, gifshow.com, go189.cn, gome.com.cn, gongkaoleida.com, goofish.com, googleadservices.com, googlesyndication.com, gotokeep.com, gtimg.cn, gtimg.com, gtja.com, guahao.cn, guahao.com, guiderank-app.com, gwmapp-w.com, hafoo.com, haiersmarthomes.com, haixue.com, hannto.com, haohaozhu.cn, hbooker.com, hgold.cn, hilton.com.cn, hiyun.tv, homeinns.com, hongyibo.com.cn, hoopchina.com.cn, hpoi.net.cn, hpplay.cn, hstong.com, htsc.com, huachenjie.com, huami.com, huatu.com, huazhu.com, hubcloud.com.cn, huomao.com, hupu.com, hupucdn.com, huxiu.com, huya.com, hyhuo.com, i18n-pglstatp.com, i3zh.com, i4.cn, ibuscloud.com, icc.one, iciba.com, iconntech.com, icourse163.org, ictun.com, ifanr.com, igetcool.com, igetget.com, igpsport.com, imdada.cn, imlaidian.com, indeedpower.com, inke.cn, internetofcity.cn, iqihang.com, iqiyi.com, ireader.com, ireader.mobi, ireaderm.net, ithome.com, iyingdi.cn, iyunmai.com, izuiyou.com, jampp.com, jd.com, jdcloud.com, jetour.com.cn, jiantou8.com, jiediankeji.com, jiemian.com, jin10.com, jumpvg.com, juneyaoair.com, juxingclub.com, jxedt.com, kakamobi.cn, kaola.com, kaolacdn.com, ke.com, keepcdn.com, kfc.com.cn, kingsoft-office-service.com, kkmh.com, koudaibaobao.com, ksapisrv.com, ksedt.com, kuaidadi.com, kuaidi100.com, kuaishou.cn, kuaishou.com, kujiale.com, kurobbs.com, kuwo.cn, laichon.com, laifeng.com, lanjiyin.com.cn, lantouzi.com, lbdj.com, leapmotor.cn, lechange.cn, leisuapi.com, lenovo.cn, lenovoimage.com, leoao.com, lf127.net, liepin.com, lifeweek.com.cn, line-apps.com, line-scdn.net, line.me, linecorp.com, livelab.com.cn, lkcoffee.com, llsapp.com, lofter.com, longfor.com, luckincoffeecdn.com, lucklyworld.com, lvcchong.com, lz-qs.com, mafengwo.cn, manhuaren.*, manhuaren.com, manhuashe.com, markiapp.com, mcd.cn, mddcloud.com.cn, medlive.cn, medsci.cn, meitu.com, meituan.com, meituan.net, meitudata.com, meitun.com, merach.com, meruki.cn, mgtv.com, mgzf.com, mi.com, miaopai.com, midukanshu.com, migu.cn, miguvideo.com, mihoyo.com, missevan.com, missfresh.cn, mitvos.com, miyoushe.com, mob.com, moedot.net, msstatic.com, msyc.cc, mting.info, mucang.cn, mwee.cn, mxbc.net, my.com, myfriday.cn, mygolbs.com, mylyg.net, mypikpak.com, myusmile.online, narwaltech.com, naver.com, naver.jp, nbtv.cn, ncarzone.com, netease.com, nfmovies.com, ngchina.cn, nhsa.gov.cn, nilbt.com, niu.com, oclean.com, ofo.com, onethingpcs.com, onewo.com, onstar.com.cn, openspeech.cn, oray.com, oray.net, oschina.net, palmestore.com, panda.tv, pangolin-sdk-toutiao-b.com, pangolin-sdk-toutiao.*, pangolin-sdk-toutiao.com, pansearch.me, paojd.cn, pcauto.com.cn, pconline.com.cn, pddpic.com, peopleapp.com, perfectlingo.com, petkit.cn, pglstatp-toutiao.com, picooc.com, pinduoduo.com, pipi.cn, pixiv.net, pizzahut.com.cn, pocketuni.net, pstatp.com, psy-1.com, pupuapi.com, qbb6.com, qd-metro.com, qdaily.com, qeeniao.com, qidian.com, qingcdn.com, qinlinad.com, qiumibao.com, qjjfin.com, qmai.cn, qpic.cn, qq.com, qunar.com, qweather.net, qyer.com, radio.cn, ranfenghd.com, realtech-inc.com, rfsvr.net, rr.tv, rsscc.com, sdb.com.cn, sdo.com, seewo.com, seeyouyima.com, sensorsdata.cn, sf-express.com, sfacg.com, sfbest.com, shanghaionstar.com, shenyin.name, shenzhentong.com, shihuo.cn, shihuocdn.cn, shouqiev.com, shunchangzhixing.com, shuqireader.com, shuqistat.com, sigmob.cn, simshine.cn, sina.cn, sinopec.com, sinopecsales.com, sljkj.com, sm.cn, smzdm.com, snailsleep.net, snssdk.com, sodalife.xyz, sogaha.cn, sogou.com, soulapp.cn, soulapp.me, soutushenqi.com, sparke.cn, spotify.com, sqcosmos.com, ssjlicai.com, sspai.com, suh.cn, suning.com, suzhou.gov.cn, szsmk.com, szy.cn, tailgdd.com, taobao.com, taou.com, taptapdada.com, teamair.cn, tf.cn, thepaper.cn, tianmu.mobi, tipatipa.xyz, tipsoon.com, tmuyun.com, touker.com, toutiao.com, tratao.com, truthsocial.com, tsytv.com.cn, tuitiger.com, tujia.com, tuniu.com, txcmapp.com, txffp.com, u51.com, ubixioe.com, uc.cn, ulife.group, umetrip.com, usmile.com, variflight.com, versa-ai.com, vistastory.com, vistopia.com.cn, wacaijizhang.com, wallstreetcn.com, walmartmobile.cn, wandafilm.com, watsonsvip.com.cn, weather.com.cn, weathercn.com, weibo.cn, weibo.com, weico.cc, weidian.com, wenhua.com.cn, wfdata.club, wifi188.com, wifi8.com, winbull8.com, wind.com.cn, wmpvp.com, wps.cn, wting.info, wtzw.com, wukongtv.com, wuta-cam.com, xbwpys.com, xbxxhz.com, xcultur.com, xczim.com, xgimi.com, xiachufang.com, xiamenair.com, xiaoaisound.com, xiaocantech.com, xiaofubao.com, xiaoheihe.cn, xiaohongshu.com, xiaojukeji.com, xiaomi.com, xiaote.net, xiaotucc.com, xiaoxiaoyouxuan.com, xiaoxiongmeishu.com, xiaoyi.com, xiaoyuzhoufm.com, xiaozujian.com, xima.*, ximalaya.com, xinmanhua.net, xinpianchang.com, xmcdn.com, xmseeyouyima.com, xoyo.com, xqpark.cn, xueqiu.com, xunlei.com, xycdn.com, xyzq.cn, yaduo.com, yahoo.com, yangkeduo.com, ydstatic.com, yhd.com, yiche.com, yikaobang.com.cn, yinxiang.com, ykccn.com, ylyk.com, ymm56.com, yonghuivip.com, yorentown.com, youdao.com, youku.com, youonbike.com, youshu.cc, ys7.com, yuanfudao.com, yuebuy.cn, yuxueyuan.cn, yxzq.com, zbj.com, zcool.com.cn, zdmimg.com, zeekstudio.com, zhangle.com, zhangyue.com, zhangyue.net, zhaojinapp.com, zhengqi100.com, zhidiantianxia.cn, zhiduodev.com, zhihu.com, zhijianmedia.cn, zhinengxiyifang.cn, zhoudamozi.com, zhuanzhuan.com, zhumanggroup.com, ziben.com, ziroom.com, zjdr666.com, zjzwfw.gov.cn, zol.com.cn, zongheng.com, ztehome.com.cn, zto.com, zuche.com, zuoyebang.com, zybang.com
 
 ### iOS Lite
 
-- Sections: Body Rewrite 10, Map Local 170, Script 30, URL Rewrite 73
+- Sections: Body Rewrite 10, Map Local 159, Script 30, URL Rewrite 73
 - Scripts: 30 (30 requires-body); MITM hosts: 100
-- Apps (17): 高德地图 (partial: 18 of 21 entries), 小红书 (partial: 22 of 28 entries), 微博 (partial: 22 of 39 entries), 知乎 (partial: 43 of 55 entries), 网易云音乐 (partial: 22 of 39 entries), 喜马拉雅 (partial: 39 of 44 entries), 微信公众号 / 小程序, 拼多多广告链, 菜鸟 (partial: 14 of 21 entries), 美团 / 大众点评 (partial: 30 of 32 entries), 饿了么, 京东 (non-payment hosts), 百度地图 / 百度网盘 (partial: 15 of 16 entries), 爱奇艺 (partial: 4 of 17 entries), 优酷 (partial: 2 of 8 entries), 芒果TV (partial: 8 of 16 entries), 腾讯视频 / 腾讯新闻 (partial: 2 of 3 entries)
+- Apps (15): 高德地图 (partial: 18 of 21 entries), 小红书 (partial: 22 of 28 entries), 微博 (partial: 22 of 39 entries), 知乎 (partial: 43 of 55 entries), 网易云音乐 (partial: 22 of 39 entries), 喜马拉雅 (partial: 39 of 44 entries), 微信公众号 / 小程序, 拼多多广告链, 菜鸟 (partial: 14 of 21 entries), 美团 / 大众点评 (partial: 30 of 32 entries), 饿了么, 京东 (non-payment hosts), 百度地图 / 百度网盘 (partial: 15 of 16 entries), 爱奇艺 (partial: 4 of 17 entries), 优酷 (partial: 1 of 8 entries)
 
-- Skipped: 12306 (budget), 什么值得买 (budget), 彩云天气 (budget), 酷安 (budget), 携程 / 去哪儿 (budget), 滴滴 (budget), 顺丰 (budget), 中国移动 (budget)
+- Skipped: 12306 (budget), 芒果TV (budget), 腾讯视频 / 腾讯新闻 (budget), 什么值得买 (budget), 彩云天气 (budget), 酷安 (budget), 携程 / 去哪儿 (budget), 滴滴 (budget), 顺丰 (budget), 中国移动 (budget)
 
 ### Module entries dropped
 
@@ -166,12 +166,12 @@ Exclude rules with no current match (kept for future upstream changes): `DOMAIN-
 | ddgksf2013-startingad: never-MITM host sapphire.api.microsoftapp.net (matches *.api.microsoftapp.net) | 1 | `^https?:\/\/sapphire\.api\.microsoftapp\.net\/config\/api\/v1\/get` |
 | ddgksf2013-startingad: never-MITM host yunbusiness.ccb.com (matches *.ccb.com) | 1 | `^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341A00(2\|9)` |
 | ddgksf2013-startingad: script hosted outside GitHub/jsDelivr (royal-block-f6b1.q00.workers.dev) | 16 | `redbook.ads=type=http-response,pattern=^https?:\/\/[a-z]+\.xiaohongshu\.com\/api`, `redbook.ads2=type=http-response,pattern=^https?:\/\/[a-z]+\.xiaohongshu\.com\/ap`, `redbook.ads3=type=http-response,pattern=^https?:\/\/[a-z]+\.xiaohongshu\.com\/ap` |
-| fmz200-blockads: body processor on a host already scripted by a higher-precedence source | 59 | `^https:\/\/j1\.pupuapi\.com\/client\/notification\/message_center\/unread_number`, `^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\?`, `^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\?` |
+| fmz200-blockads: body processor on a host already scripted by a higher-precedence source | 48 | `^https:\/\/j1\.pupuapi\.com\/client\/notification\/message_center\/unread_number`, `^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\?`, `^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList` |
 | fmz200-blockads: delegated to dedicated module (Bilibili (kokoryh/Sparkle bilibili.sgmodule)) | 30 | `^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.(interface\.v1\.(Teenagers\/ModeSt`, `^https:\/\/api\.bilibili\.com\/x\/pd-proxy\/tracker\?`, `^https:\/\/api\.bilibili\.com\/pgc\/view\/v2\/app\/season\?` |
 | fmz200-blockads: delegated to dedicated module (YouTube (Maasea YouTube.Enhance)) | 5 | `^https?:\/\/.+\.googleapis.com/.+ad_break`, `^https?:\/\/.+\.googleapis.com/.+log_event`, `^https?:\/\/.+\.googleapis.com/adsmeasurement` |
-| fmz200-blockads: duplicate pattern | 133 | `^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/home\/advertisement`, `^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd`, `^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/1\.` |
-| fmz200-blockads: host-agnostic or unparseable URL pattern | 39 | `^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}(:\d+)?\/api\/v\d\/advert - rejec`, `^https?:\/\/appapi\.huazhu\.com:\d+\/client\/app\/getAppStartPage\/ - reject`, `^https?:\/\/.*\/yyting\/advertclient\/ClientAdvertList.action - reject` |
-| fmz200-blockads: inactive upstream (no matching MITM hostname) | 103 | `^https?:\/\/als\.baidu\.com\/clog\/clog - reject`, `^https?:\/\/log.+?baidu\.com - reject`, `^https?:\/\/js-ad\.ayximgs\.com\.ad-universe-cdn\.hzhcbkj\.cn\/xgapp\.php\/v2\/t` |
+| fmz200-blockads: duplicate pattern | 65 | `^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/home\/advertisement`, `^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd`, `^https?:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do$` |
+| fmz200-blockads: host-agnostic or unparseable URL pattern | 50 | `^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}(:\d+)?\/api\/v\d\/advert - rejec`, `^https?:\/\/appapi\.huazhu\.com:\d+\/client\/app\/getAppStartPage\/ - reject`, `^https?:\/\/.*\/yyting\/advertclient\/ClientAdvertList.action - reject` |
+| fmz200-blockads: inactive upstream (no matching MITM hostname) | 102 | `^https?:\/\/als\.baidu\.com\/clog\/clog - reject`, `^https?:\/\/log.+?baidu\.com - reject`, `^https?:\/\/js-ad\.ayximgs\.com\.ad-universe-cdn\.hzhcbkj\.cn\/xgapp\.php\/v2\/t` |
 | fmz200-blockads: lint: invalid regex (bad escape \c at position 26) | 1 | `^https?:\/\/res\.kfc\.com.\cn\/advertisement\/ - reject` |
 | fmz200-blockads: lint: unbalanced quoting (a quote opened inside a field swallows the next field) | 1 | `http-response ^https?:\/\/beta-api\.crunchyroll\.com\/cms offset_ms":\d+ offset_` |
 | fmz200-blockads: never-MITM host *.17u.cn (matches (over-broad wildcard)) | 6 | `^https?:\/\/wx\.17u\.cn\/xcxhomeapi\/((aggregator\/index)\|(home\/(screen\|banner\|`, `^https:\/\/mada-travel\.17u\.cn\/mdapi\/config\/ads`, `^https:\/\/mada-travel\.17u\.cn\/mdapi\/config\/mine` |

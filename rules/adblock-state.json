@@ -1,11 +1,11 @@
 {
-  "generated": "2026-10-24 22:44:43 UTC",
+  "generated": "2026-10-25 22:49:08 UTC",
   "output": {
-    "Reject_Domain.list": 148463,
+    "Reject_Domain.list": 148564,
     "Reject.list": 971,
-    "Reject_Extra_Domain.list": 193796,
+    "Reject_Extra_Domain.list": 194054,
     "AdBlock.sgmodule": 1855,
-    "AdBlock-iOS-Lite.sgmodule": 289,
+    "AdBlock-iOS-Lite.sgmodule": 278,
     "MITM-Guard.sgmodule": 2
   },
   "upstreams": {
@@ -27,9 +27,9 @@
     },
     "fmz200-blockads": {
       "name": "fmz200 wool_scripts blockAds",
-      "count": 1725,
-      "sha256": "d75a30e3410fccc4269c2749cdc430f2c6ef5b092bca1bc342279642f9918423",
-      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "count": 1656,
+      "sha256": "084197a83ab68a19746f6c51334735dbc6e330ba7ff65f97ae26e1faa9b60370",
+      "fetched_at": "2026-10-25 22:49:08 UTC",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module",
       "source": "fresh"
     },
@@ -43,9 +43,9 @@
     },
     "sukka-reject": {
       "name": "Sukka reject (domainset)",
-      "count": 144758,
-      "sha256": "b2b1ba3499eae994c7c8064e5ee40155684c4d94984d2af99803c5e1eef7abbb",
-      "fetched_at": "2026-10-24 22:44:43 UTC",
+      "count": 144851,
+      "sha256": "cb616664586d4667835a731903ef24c577f4b870c49e881022dc93b38dd81b09",
+      "fetched_at": "2026-10-25 22:49:08 UTC",
       "url": "https://ruleset.skk.moe/List/domainset/reject.conf",
       "source": "fresh"
     },
@@ -75,17 +75,17 @@
     },
     "heidai-lite": {
       "name": "217heidai adblockfilters lite",
-      "count": 8464,
-      "sha256": "1ab44c5c6b413a4d5129bc63a39376ba695c6b96e709a49e17d2b7bf498060c2",
-      "fetched_at": "2026-10-24 22:44:43 UTC",
+      "count": 8477,
+      "sha256": "91005353ca23417ddde14de4e3a75bb34d194260cff2ceec670ca4d9569d17b8",
+      "fetched_at": "2026-10-25 22:49:08 UTC",
       "url": "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksurgelite.list",
       "source": "fresh"
     },
     "v2fly-ads-all": {
       "name": "v2fly category-ads-all (MetaCubeX)",
-      "count": 903,
-      "sha256": "1ed1caf13dc42473ab4e538101fcd3cde9fd1a635d107374ebef637e1ca5e03a",
-      "fetched_at": "2026-10-24 22:44:43 UTC",
+      "count": 904,
+      "sha256": "fc00a7c5c5228a71305d8e7c8c624572c1a9d1182e82c012dfcf46fdb3f73f95",
+      "fetched_at": "2026-10-25 22:49:08 UTC",
       "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list",
       "source": "fresh"
     },
@@ -99,9 +99,9 @@
     },
     "sukka-reject-extra": {
       "name": "Sukka reject_extra (domainset)",
-      "count": 81105,
-      "sha256": "9d517d0b25fcd4a069e239729acabf1fa1b7361f3ac85d52b2760238ad3546f9",
-      "fetched_at": "2026-10-24 22:44:43 UTC",
+      "count": 81378,
+      "sha256": "02e2b93c99b51af6a45e2c26870a3a45dbbba26d74b8599561bd780af6aab6f3",
+      "fetched_at": "2026-10-25 22:49:08 UTC",
       "url": "https://ruleset.skk.moe/List/domainset/reject_extra.conf",
       "source": "fresh"
     },

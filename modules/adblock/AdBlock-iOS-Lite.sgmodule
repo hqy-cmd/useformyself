@@ -4,15 +4,15 @@
 #!homepage=https://github.com/hqy-cmd/useformyself/tree/main/modules/adblock
 # Install URL: https://raw.githubusercontent.com/hqy-cmd/useformyself/main/modules/adblock/AdBlock-iOS-Lite.sgmodule
 #!category=AdBlock
-# Generated: 2026-10-24 22:44:43 UTC by scripts/update_adblock_rules.py - do not edit by hand.
+# Generated: 2026-10-25 22:49:08 UTC by scripts/update_adblock_rules.py - do not edit by hand.
 # Domain rejects are NOT in this module (module [Rule] lines run before profile rules);
 # use rules/Reject_Domain.list + rules/Reject.list in the profile. Needs MITM enabled.
-# Sections: Body Rewrite 10, Map Local 170, Script 30, URL Rewrite 73; body-buffering entries 40; MITM hosts 100
+# Sections: Body Rewrite 10, Map Local 159, Script 30, URL Rewrite 73; body-buffering entries 40; MITM hosts 100
 # Upstreams:
 #   - ddgksf2013 APP启动页去广告 (yfamilys) [fresh] https://yfamilys.com/module/startingad.sgmodule
 #   - fmz200 wool_scripts blockAds [fresh] https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module
 #   - kelee 广告平台拦截器 (URL Rewrite) [fresh] https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule
-# Apps: 高德地图, 小红书, 微博, 知乎, 网易云音乐, 喜马拉雅, 微信公众号 / 小程序, 拼多多广告链, 菜鸟, 美团 / 大众点评, 饿了么, 京东 (non-payment hosts), 百度地图 / 百度网盘, 爱奇艺, 优酷, 芒果TV, 腾讯视频 / 腾讯新闻
+# Apps: 高德地图, 小红书, 微博, 知乎, 网易云音乐, 喜马拉雅, 微信公众号 / 小程序, 拼多多广告链, 菜鸟, 美团 / 大众点评, 饿了么, 京东 (non-payment hosts), 百度地图 / 百度网盘, 爱奇艺, 优酷
 
 [URL Rewrite]
 # > amap.com  [ddgksf2013-startingad]
@@ -93,6 +93,10 @@
 ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
 # > 七猫小说  [fmz200-blockads]
 ^https?:\/\/dsp\-x\.jd\.com\/adx\/sdk - reject
+# > 网易邮箱  [fmz200-blockads]
+^https?:\/\/p\.c\.music\.126.net\/.*?jpg$ - reject
+^https?:\/\/iadmusicmat\.music.126.net\/.*?jpg$ - reject
+^https?:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ - reject
 # > 知乎  [fmz200-blockads]
 ^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card - reject
 ^https:\/\/api\.zhihu\.com\/ab\/api\/v1\/products\/zhihu\/platforms\/ios\/config - reject
@@ -102,10 +106,6 @@
 ^https:\/\/www\.zhihu\.com\/api\/v4/(?:answers|questions)\/\d+/related-readings - reject
 ^https:\/\/www\.zhihu\.com\/commercial_api\/banners_v3\/mobile_banner - reject
 ^https:\/\/zhuanlan\.zhihu\.com\/api\/articles\/\d+\/recommendation - reject
-# > 网易邮箱  [fmz200-blockads]
-^https?:\/\/p\.c\.music\.126.net\/.*?jpg$ - reject
-^https?:\/\/iadmusicmat\.music.126.net\/.*?jpg$ - reject
-^https?:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ - reject
 # > pinduoduo.com  [kelee-blockadvertisers-module]
 ^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_ - reject
 
@@ -145,8 +145,6 @@
 # > pinduoduo.com  [ddgksf2013-startingad]
 ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash data-type=text data=" " status-code=200
 # > qq.com  [ddgksf2013-startingad]
-^https?:\/\/r\.inews\.qq\.com\/(adsBlacklist|getFullScreenPic|getQQNewsRemoteConfig) data-type=text data=" " status-code=200
-^https?:\/\/r\.inews\.qq\.com\/(getBannerAds|getNewsRemoteConfig|getSplash|searchHotCatList|upLoadLoc) data-type=text data=" " status-code=200
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info data-type=text data=" " status-code=200
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword data-type=text data=" " status-code=200
 # > amap.com  [ddgksf2013-startingad]
@@ -248,11 +246,6 @@
 # > lofter  [fmz200-blockads]
 ^https?:\/\/images\.pinduoduo\.com\/marketing\_api data-type=text data=" " status-code=200
 ^https?:\/\/t-dsp\.pinduoduo\.com data-type=text data=" " status-code=200
-# > 芒果TV  [fmz200-blockads]
-^https?:\/\/damang\.api\.mgtv\.com\/station\/album\/red\/dot\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/hb-boom\.api\.mgtv\.com\/release\/pullReleaseInfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/mobile\.api\.mgtv\.com\/v2\/mobile\/checkUpdate\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # > 美团 & 美团外卖  [fmz200-blockads]
 ^https?:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg data-type=tiny-gif status-code=200
 ^https?:\/\/img\.meituan\.net\/goodsawardpic\/[a-f0-9]+\.png\.webp data-type=tiny-gif status-code=200
@@ -268,29 +261,6 @@ https?:\/\/(ipv4|interface\d?)\.music\.163.com\/e?api\/ad data-type=text data="{
 ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(resource\/comments?\/musiciansaid|community\/friends\/fans-group\/artist\/group\/get|user\/sub\/artist|music\/songshare\/text\/recommend\/get|mine\/applet\/redpoint|resniche\/position\/play\/new\/get) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https?:\/\/interface\d?\.music\.163.com\/w?e?api\/(search\/(chart|default|rcmd\/keyword|specialkeyword)|resource-exposure\/|activity\/bonus\/playpage\/time\/query) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https?:\/\/interface\d?\.music\.163.com\/eapi\/(mlivestream\/entrance\/playpage|link\/(position\/show\/strategy|scene\/show)|ios\/version|v\d\/content\/exposure\/comment\/banner) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-# > 小红书  [fmz200-blockads]
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(?:get_style|open|submit_action) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/guide\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/detailfeed\/preload\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/guide\/user_banner data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/(v\d+\/ads\/resource|v\d+\/hey\/\w+\/hey_gallery) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/ci\.xiaohongshu\.com\/system_config\/watermark data-type=tiny-gif status-code=200
-# > 知乎  [fmz200-blockads]
-^https:\/\/api\.zhihu\.com\/commercial_api\/(?:answer\/\d+\/bottom-v2|article\/\d+\/bottom-v2|banners_v3\/app_topstory_banner|launch_v2|real_time_launch_v2) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/api\.zhihu\.com\/(?:moments\/lastread|drama\/hot-drama-list) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/api\.zhihu\.com\/root\/window data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/api\.zhihu\.com\/(?:bazaar\/float_window|market\/popovers_v2) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/api\.zhihu\.com\/me\/guides data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/api\.zhihu\.com\/search\/(hot_search|preset_words) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/www\.zhihu\.com\/api\/v4\/search\/related_queries\/(?:article|answer)\/\d+ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/api\.zhihu\.com\/comment_v5\/(?:articles|answers)\/\d+\/list-headers data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/api\.zhihu\.com\/prague\/related_suggestion_native\/feed\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/api\.zhihu\.com\/v5\.1\/topics\/answer\/\d+\/relation data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/api\.zhihu\.com\/ad-style-service\/request data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/appcloud2\.zhihu\.com\/v3\/resource\?group_name=mp data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/h5\/recommendation\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # > 网易邮箱  [fmz200-blockads]
 ^https?:\/\/p[^4](c)?\.music\.126\.net\/\w+==\/10995\d{13}\.jpg$ data-type=tiny-gif status-code=200
 # > 网易邮箱  [fmz200-blockads]
@@ -312,17 +282,33 @@ https?:\/\/(ipv4|interface\d?)\.music\.163.com\/e?api\/ad data-type=text data="{
 ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/subscribe\/v\d\/subscribe\/recommend\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-user\/v\d\/purchased\/recommend\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https:\/\/(m|mwsa)\.ximalaya\.com\/community\/square\/v\d\/stream\? data-type=text data="{"data":{"cards":[{"content":{},"type":"RECOMMENDS"}]},"ret":0}" status-code=200 header="Content-Type:application/json"
-# > 小芒  [fmz200-blockads]
-^https:\/\/mgesq\.api\.mgtv\.com\/v2\/goods\/guess_you_like data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-https://mgesq.api.mgtv.com/v2/user/center/icon data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/mgesq\.api\.mgtv\.com\/search\/goods\/rank data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https:\/\/mgesq\.api\.mgtv\.com\/user\/center\/config data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+# > 小红书  [fmz200-blockads]
+^https:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v1\/surprisebox\/(?:get_style|open|submit_action) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/www\.(xiaohongshu|rnote)\.com\/api\/marketing\/box\/trigger\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/note\/guide\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/note\/detailfeed\/preload\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/guide\/user_banner data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/www\.(xiaohongshu|rnote)\.com\/api\/sns\/(v\d+\/ads\/resource|v\d+\/hey\/\w+\/hey_gallery) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/ci\.(xiaohongshu|rnote)\.com\/system_config\/watermark data-type=tiny-gif status-code=200
 # > 小象超市  [fmz200-blockads]
 ^https?:\/\/portal-portm\.meituan\.com\/horn_ios\/mergeRequest data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/splash data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https?:\/\/mall\.meituan\.com\/api\/c\/homepage\/bubble\/operate\/info data-type=text data="{"code": 0}" header="Content-Type:application/json"
-# > 优酷  [fmz200-blockads]
-^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+# > 知乎  [fmz200-blockads]
+^https:\/\/api\.zhihu\.com\/commercial_api\/(?:answer\/\d+\/bottom-v2|article\/\d+\/bottom-v2|banners_v3\/app_topstory_banner|launch_v2|real_time_launch_v2) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.zhihu\.com\/(?:moments\/lastread|drama\/hot-drama-list) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.zhihu\.com\/root\/window data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.zhihu\.com\/(?:bazaar\/float_window|market\/popovers_v2) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.zhihu\.com\/me\/guides data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.zhihu\.com\/search\/(hot_search|preset_words) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/www\.zhihu\.com\/api\/v4\/search\/related_queries\/(?:article|answer)\/\d+ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.zhihu\.com\/comment_v5\/(?:articles|answers)\/\d+\/list-headers data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.zhihu\.com\/prague\/related_suggestion_native\/feed\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.zhihu\.com\/v5\.1\/topics\/answer\/\d+\/relation data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.zhihu\.com\/ad-style-service\/request data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/appcloud2\.zhihu\.com\/v3\/resource\?group_name=mp data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/h5\/recommendation\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Body Rewrite]
 # > weibo.cn  [ddgksf2013-startingad]
@@ -372,12 +358,12 @@ ab-zhihu-com-4 = type=http-response,pattern=^https:\/\/(api|web-render)\.zhihu\.
 ab-zhihu-com-5 = type=http-response,pattern=^https:\/\/api\.zhihu\.com\/questions\/\d+\/feeds?,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 ab-zhihu-com-6 = type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/next-render,requires-body=1,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 # > 小红书  [fmz200-blockads]
-ab-xiaohongshu-com-1 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/(banner|hot)_list, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
-ab-xiaohongshu-com-2 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/(hint|trending)\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
-ab-xiaohongshu-com-3 = type=http-response, pattern=^https?:\/\/(so|edith)\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/notes\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
-ab-xiaohongshu-com-4 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/config\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
-ab-xiaohongshu-com-5 = type=http-response, pattern=^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/splash_config, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
-ab-xiaohongshu-com-6 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/interaction\/comment\/video\/download\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
+ab-xiaohongshu-com-1 = type=http-response, pattern=^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/search\/(banner|hot)_list, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
+ab-xiaohongshu-com-2 = type=http-response, pattern=^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/search\/(hint|trending)\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
+ab-xiaohongshu-com-3 = type=http-response, pattern=^https?:\/\/(so|edith)\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/search\/notes\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
+ab-xiaohongshu-com-4 = type=http-response, pattern=^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/system_service\/config\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
+ab-xiaohongshu-com-5 = type=http-response, pattern=^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/system_service\/splash_config, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
+ab-xiaohongshu-com-6 = type=http-response, pattern=^https:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v1\/interaction\/comment\/video\/download\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
 
 [MITM]
-hostname = %INSERT% -buy.itunes.apple.com, -*-buy.itunes.apple.com, -p*-buy.itunes.apple.com, -appleid.apple.com, -idmsa.apple.com, -gsa.apple.com, -apple-pay-gateway.apple.com, -*.apple-pay-gateway.apple.com, -*bank*, -abchina.com, -*.abchina.com, -abchina.com.cn, -*.abchina.com.cn, -95599.cn, -*.95599.cn, -icbc.com.cn, -*.icbc.com.cn, -icbc.com, -*.icbc.com, -ccb.com, -*.ccb.com, -ccb.cn, -*.ccb.cn, -boc.cn, -*.boc.cn, -bankofchina.com, -*.bankofchina.com, -bankcomm.com, -*.bankcomm.com, -bankcomm.cn, -*.bankcomm.cn, -cmbchina.com, -*.cmbchina.com, -cmbimg.com, -*.cmbimg.com, -psbc.com, -*.psbc.com, -citicbank.com, -*.citicbank.com, -cebbank.com, -*.cebbank.com, -cib.com.cn, -*.cib.com.cn, -spdb.com.cn, -*.spdb.com.cn, -spdbccc.com.cn, -*.spdbccc.com.cn, -cmbc.com.cn, -*.cmbc.com.cn, -hxb.com.cn, -*.hxb.com.cn, -cgbchina.com.cn, -*.cgbchina.com.cn, -95508.com, -*.95508.com, -pingan.com, -*.pingan.com, -pingan.com.cn, -*.pingan.com.cn, -jk.cn, -*.jk.cn, -bosc.cn, -*.bosc.cn, -webank.com, -*.webank.com, -mybank.cn, -*.mybank.cn, -js96008.com, -*.js96008.com, -hsbc.com, -*.hsbc.com, -hsbc.com.hk, -*.hsbc.com.hk, -hsbc.com.cn, -*.hsbc.com.cn, -hsbcfts.com.cn, -*.hsbcfts.com.cn, -citibank.com, -*.citibank.com, -chase.com, -*.chase.com, -dbs.com, -*.dbs.com, -dbs.com.sg, -*.dbs.com.sg, -ocbc.com, -*.ocbc.com, -uob.com.sg, -*.uob.com.sg, -alipay.com, -*.alipay.com, -alipay.cn, -*.alipay.cn, -alipayobjects.com, -*.alipayobjects.com, -antgroup.com, -*.antgroup.com, -95516.com, -*.95516.com, -unionpay.com, -*.unionpay.com, -unionpaysecure.com, -*.unionpaysecure.com, -chinapay.com, -*.chinapay.com, -tenpay.com, -*.tenpay.com, -pay.weixin.qq.com, -wx.tenpay.com, -wechatpay.com.hk, -*.wechatpay.com.hk, -jdpay.com, -*.jdpay.com, -pay.jd.com, -api.m.jd.com, -acs.m.taobao.com, -guide-acs.m.taobao.com, -*.pay.meituan.com, -npay.meituan.com, -bestpay.com.cn, -*.bestpay.com.cn, -95598pay.com, -*.95598pay.com, -ysepay.com, -*.ysepay.com, -lakala.com, -*.lakala.com, -helipay.com, -*.helipay.com, -paypal.com, -*.paypal.com, -paypalobjects.com, -*.paypalobjects.com, -stripe.com, -*.stripe.com, -stripe.network, -*.stripe.network, -braintreegateway.com, -*.braintreegateway.com, -adyen.com, -*.adyen.com, -wise.com, -*.wise.com, -visa.com, -*.visa.com, -mastercard.com, -*.mastercard.com, *.api.weibo.*, *.cainiao.com, *.dianping.com, *.iqiyi.com, *.mgtv.com, *.music.126.net, *.uve.weibo.com, *.xiaohongshu.com, *.xima*.*, *.xmcdn.*, acs.youku.com, afd.baidu.com, ai.amap.com, amap-aos-info-nogw.amap.com, api*.tuisong.baidu.com, api.pinduoduo.com, api.smart.jd.com, api.weibo.*, api.weibo.cn, api.yangkeduo.com, api.zhihu.com, appcloud2.zhihu.com, appwk.baidu.com, awp-assets.meituan.net, b2baifanfan.baidu.com, baichuan.baidu.com, bdsp-x.jd.com, cdb.meituan.com, center.amap.com, ci.xiaohongshu.com, cn-acs.m.cainiao.com, cover.baidu.com, cube.elemecdn.com, ddplus.meituan.net, dsp-x.jd.com, edith.xiaohongshu.com, elemecdn.com, fcvbjbcebos.baidu.com, flowplus.meituan.net, fuss10.elemecdn.com, images.pinduoduo.com, img.meituan.net, interface*.music.163.com, interface.music.163.com, interface3.music.163.com, interface9.music.163.com, ipv4.music.163.com, iyes.youku.com, jdread-api.jd.com, link.zhihu.com, lop-proxy.jd.com, m*.amap.com, m.360buyimg.com, m.baidu.com, m.ximalaya.com, m5-zb.amap.com, m5.amap.com, mall.meituan.com, mapi.weibo.com, mbd.baidu.com, mgesq.api.mgtv.com, mime.baidu.com, mobads.baidu.com, mobile.ximalaya.com, mobile.yangkeduo.com, mobilehera.ximalaya.com, mobwsa.ximalaya.com, mp.weixin.qq.com, ms.jr.jd.com, mwsa.ximalaya.com, newclient.map.baidu.com, nr-op.elemecdn.com, optimus-ads.amap.com, p*.meituan.net, p.meituan.com, pan.baidu.com, peisongapi.meituan.com, portal-portm.meituan.com, r.inews.qq.com, r6.mo.baidu.com, res.mi.baidu.com, rms.meituan.com, s3plus.meituan.net, sa*.tuisong.baidu.com, search.ximalaya.com, searchwsa.ximalaya.com, so.xiaohongshu.com, sofire.baidu.com, t-dsp.pinduoduo.com, tiebac.baidu.com, update.pan.baidu.com, video-dsp.pddpic.com, waimai-guide.ele.me, web-render.zhihu.com, wmapi.meituan.com, www.baidu.com, www.meituan.com, www.xiaohongshu.com, www.zhihu.com, zhuanlan.zhihu.com
+hostname = %INSERT% -buy.itunes.apple.com, -*-buy.itunes.apple.com, -p*-buy.itunes.apple.com, -appleid.apple.com, -idmsa.apple.com, -gsa.apple.com, -apple-pay-gateway.apple.com, -*.apple-pay-gateway.apple.com, -*bank*, -abchina.com, -*.abchina.com, -abchina.com.cn, -*.abchina.com.cn, -95599.cn, -*.95599.cn, -icbc.com.cn, -*.icbc.com.cn, -icbc.com, -*.icbc.com, -ccb.com, -*.ccb.com, -ccb.cn, -*.ccb.cn, -boc.cn, -*.boc.cn, -bankofchina.com, -*.bankofchina.com, -bankcomm.com, -*.bankcomm.com, -bankcomm.cn, -*.bankcomm.cn, -cmbchina.com, -*.cmbchina.com, -cmbimg.com, -*.cmbimg.com, -psbc.com, -*.psbc.com, -citicbank.com, -*.citicbank.com, -cebbank.com, -*.cebbank.com, -cib.com.cn, -*.cib.com.cn, -spdb.com.cn, -*.spdb.com.cn, -spdbccc.com.cn, -*.spdbccc.com.cn, -cmbc.com.cn, -*.cmbc.com.cn, -hxb.com.cn, -*.hxb.com.cn, -cgbchina.com.cn, -*.cgbchina.com.cn, -95508.com, -*.95508.com, -pingan.com, -*.pingan.com, -pingan.com.cn, -*.pingan.com.cn, -jk.cn, -*.jk.cn, -bosc.cn, -*.bosc.cn, -webank.com, -*.webank.com, -mybank.cn, -*.mybank.cn, -js96008.com, -*.js96008.com, -hsbc.com, -*.hsbc.com, -hsbc.com.hk, -*.hsbc.com.hk, -hsbc.com.cn, -*.hsbc.com.cn, -hsbcfts.com.cn, -*.hsbcfts.com.cn, -citibank.com, -*.citibank.com, -chase.com, -*.chase.com, -dbs.com, -*.dbs.com, -dbs.com.sg, -*.dbs.com.sg, -ocbc.com, -*.ocbc.com, -uob.com.sg, -*.uob.com.sg, -alipay.com, -*.alipay.com, -alipay.cn, -*.alipay.cn, -alipayobjects.com, -*.alipayobjects.com, -antgroup.com, -*.antgroup.com, -95516.com, -*.95516.com, -unionpay.com, -*.unionpay.com, -unionpaysecure.com, -*.unionpaysecure.com, -chinapay.com, -*.chinapay.com, -tenpay.com, -*.tenpay.com, -pay.weixin.qq.com, -wx.tenpay.com, -wechatpay.com.hk, -*.wechatpay.com.hk, -jdpay.com, -*.jdpay.com, -pay.jd.com, -api.m.jd.com, -acs.m.taobao.com, -guide-acs.m.taobao.com, -*.pay.meituan.com, -npay.meituan.com, -bestpay.com.cn, -*.bestpay.com.cn, -95598pay.com, -*.95598pay.com, -ysepay.com, -*.ysepay.com, -lakala.com, -*.lakala.com, -helipay.com, -*.helipay.com, -paypal.com, -*.paypal.com, -paypalobjects.com, -*.paypalobjects.com, -stripe.com, -*.stripe.com, -stripe.network, -*.stripe.network, -braintreegateway.com, -*.braintreegateway.com, -adyen.com, -*.adyen.com, -wise.com, -*.wise.com, -visa.com, -*.visa.com, -mastercard.com, -*.mastercard.com, *.api.weibo.*, *.cainiao.com, *.dianping.com, *.iqiyi.com, *.music.126.net, *.uve.weibo.com, *.xiaohongshu.com, *.xima*.*, *.xmcdn.*, afd.baidu.com, ai.amap.com, amap-aos-info-nogw.amap.com, api*.tuisong.baidu.com, api.pinduoduo.com, api.smart.jd.com, api.weibo.*, api.weibo.cn, api.yangkeduo.com, api.zhihu.com, appcloud2.zhihu.com, appwk.baidu.com, awp-assets.meituan.net, b2baifanfan.baidu.com, baichuan.baidu.com, bdsp-x.jd.com, cdb.meituan.com, center.amap.com, ci.rnote.com, ci.xiaohongshu.com, cn-acs.m.cainiao.com, cover.baidu.com, cube.elemecdn.com, ddplus.meituan.net, dsp-x.jd.com, edith.rnote.com, edith.xiaohongshu.com, elemecdn.com, fcvbjbcebos.baidu.com, flowplus.meituan.net, fuss10.elemecdn.com, images.pinduoduo.com, img.meituan.net, interface*.music.163.com, interface.music.163.com, interface3.music.163.com, interface9.music.163.com, ipv4.music.163.com, iyes.youku.com, jdread-api.jd.com, link.zhihu.com, lop-proxy.jd.com, m*.amap.com, m.360buyimg.com, m.baidu.com, m.ximalaya.com, m5-zb.amap.com, m5.amap.com, mall.meituan.com, mapi.weibo.com, mbd.baidu.com, mime.baidu.com, mobads.baidu.com, mobile.ximalaya.com, mobile.yangkeduo.com, mobilehera.ximalaya.com, mobwsa.ximalaya.com, mp.weixin.qq.com, ms.jr.jd.com, mwsa.ximalaya.com, newclient.map.baidu.com, nr-op.elemecdn.com, optimus-ads.amap.com, p*.meituan.net, p.meituan.com, pan.baidu.com, peisongapi.meituan.com, portal-portm.meituan.com, r6.mo.baidu.com, res.mi.baidu.com, rms.meituan.com, s3plus.meituan.net, sa*.tuisong.baidu.com, search.ximalaya.com, searchwsa.ximalaya.com, so.rnote.com, so.xiaohongshu.com, sofire.baidu.com, t-dsp.pinduoduo.com, tiebac.baidu.com, update.pan.baidu.com, video-dsp.pddpic.com, waimai-guide.ele.me, web-render.zhihu.com, wmapi.meituan.com, www.baidu.com, www.meituan.com, www.rnote.com, www.xiaohongshu.com, www.zhihu.com, zhuanlan.zhihu.com
