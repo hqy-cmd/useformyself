@@ -1,14 +1,14 @@
 # AI_Domain.list - Surge DOMAIN-SET (merged AI domains)
-# Generated: 2026-10-23 23:07:17 UTC
-# Entries: 366 (248 suffix '.x', 118 exact)
+# Generated: 2026-10-27 23:44:54 UTC
+# Entries: 369 (248 suffix '.x', 121 exact)
 # Upstreams:
-#   - QuixoticHeart: 241 entries [fresh]
+#   - QuixoticHeart: 244 entries [fresh]
 #     https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/surge/ai.list
 #   - VPSDance: 319 entries [fresh]
 #     https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/global.list
 #   - dler-io: 192 entries [fresh]
 #     https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list
-#   - v2fly category-ai-!cn (MetaCubeX): 204 entries [fresh]
+#   - v2fly category-ai-!cn (MetaCubeX): 207 entries [fresh]
 #     https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.list
 # Exclude rules: 73, include rules: 0
 # Source: https://github.com/hqy-cmd/useformyself/tree/main/rules
@@ -160,9 +160,11 @@ origin-tracker.githubusercontent.com
 .antigravity.google.com
 apis.google.com
 .bard.google.com
+appsgenaiserver-pa.clients.google.com
 geminiweb-pa.clients.google.com
 alkalicore-pa.clients6.google.com
 alkalimakersuite-pa.clients6.google.com
+appsgenaiserver-pa.clients6.google.com
 geminiweb-pa.clients6.google.com
 waa-pa.clients6.google.com
 webchannel-alkalimakersuite-pa.clients6.google.com
@@ -184,6 +186,7 @@ aiplatform.googleapis.com
 .aisandbox-pa.googleapis.com
 antigravity.googleapis.com
 antigravity-pa.googleapis.com
+appsgenaiserver-pa.googleapis.com
 businessaicode.googleapis.com
 cloudaicompanion.googleapis.com
 .cloudcode-pa.googleapis.com
