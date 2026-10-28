@@ -1,21 +1,21 @@
 # AI rules report
 
-Generated: 2026-10-27 23:44:54 UTC
+Generated: 2026-10-28 23:59:29 UTC
 
 ## Upstreams
 
 | Upstream | Entries | DOMAIN | SUFFIX | KEYWORD | IP-CIDR | IP-ASN | Source |
 |---|---|---|---|---|---|---|---|
-| [QuixoticHeart](https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/surge/ai.list) | 244 | 48 | 188 | 8 | 0 | 0 | fresh |
-| [VPSDance](https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/global.list) | 319 | 56 | 249 | 5 | 6 | 3 | fresh |
+| [QuixoticHeart](https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/surge/ai.list) | 250 | 48 | 194 | 8 | 0 | 0 | fresh |
+| [VPSDance](https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/global.list) | 323 | 59 | 250 | 5 | 6 | 3 | fresh |
 | [dler-io](https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list) | 192 | 87 | 82 | 0 | 23 | 0 | fresh |
-| [v2fly category-ai-!cn (MetaCubeX)](https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.list) | 207 | 34 | 173 | 0 | 0 | 0 | fresh |
+| [v2fly category-ai-!cn (MetaCubeX)](https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.list) | 213 | 34 | 179 | 0 | 0 | 0 | fresh |
 
-Raw union before exclusions: 493
+Raw union before exclusions: 497
 
 ## Output
 
-- `AI_Domain.list`: 369 (248 suffix, 121 exact)
+- `AI_Domain.list`: 372 (251 suffix, 121 exact)
 - `AI.list`: 38 (DOMAIN-KEYWORD 7, IP-CIDR/IP-CIDR6 29, IP-ASN 2)
 
 ## Dropped rule types (unsupported in DOMAIN-SET / not wanted)
@@ -81,4 +81,4 @@ Removed: `DOMAIN-SUFFIX,envato.com`, `DOMAIN-SUFFIX,envato-static.com`, `DOMAIN-
 
 - DOMAIN covered by DOMAIN-SUFFIX: 14
 - DOMAIN-KEYWORD covered by shorter keyword: 2
-- DOMAIN-SUFFIX covered by broader DOMAIN-SUFFIX: 5
+- DOMAIN-SUFFIX covered by broader DOMAIN-SUFFIX: 6

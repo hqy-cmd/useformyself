@@ -1,18 +1,19 @@
 # AI_Domain.list - Surge DOMAIN-SET (merged AI domains)
-# Generated: 2026-10-27 23:44:54 UTC
-# Entries: 369 (248 suffix '.x', 121 exact)
+# Generated: 2026-10-28 23:59:29 UTC
+# Entries: 372 (251 suffix '.x', 121 exact)
 # Upstreams:
-#   - QuixoticHeart: 244 entries [fresh]
+#   - QuixoticHeart: 250 entries [fresh]
 #     https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/surge/ai.list
-#   - VPSDance: 319 entries [fresh]
+#   - VPSDance: 323 entries [fresh]
 #     https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/global.list
 #   - dler-io: 192 entries [fresh]
 #     https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list
-#   - v2fly category-ai-!cn (MetaCubeX): 207 entries [fresh]
+#   - v2fly category-ai-!cn (MetaCubeX): 213 entries [fresh]
 #     https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.list
 # Exclude rules: 73, include rules: 0
 # Source: https://github.com/hqy-cmd/useformyself/tree/main/rules
 .arena.ai
+.artificialanalysis.ai
 .bfl.ai
 .cerebras.ai
 .character.ai
@@ -132,6 +133,7 @@ pplx-res.cloudinary.com
 .codeium.com
 .codeiumdata.com
 .cohere.com
+.context7.com
 .copilot.com
 .copilot-stg.com
 .crewai.com
@@ -248,6 +250,7 @@ developer.meta.com
 ai.developer.meta.com
 llama.developer.meta.com
 imagine.meta.com
+.metaaiusercontent.com
 .metaaivm.com
 .copilot.microsoft.com
 self.events.data.microsoft.com
@@ -257,7 +260,7 @@ location.microsoft.com
 api.msn.com
 assets.msn.com
 .muthos.com
-.hermes-agent.nousresearch.com
+.nousresearch.com
 .oaistatic.com
 .oaistatsig.com
 .oaiusercontent.com
