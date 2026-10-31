@@ -1,52 +1,52 @@
 # Ad-block rules report
 
-Generated: 2026-10-31 00:06:27 UTC
+Generated: 2026-10-31 23:46:04 UTC
 
 ## Upstreams
 
 | Upstream | Layer | Entries | Source | Fetched | URL used |
 |---|---|---|---|---|---|
-| Public Suffix List | aux | 10397 | fresh | 2026-10-29 00:26:19 UTC | https://publicsuffix.org/list/public_suffix_list.dat |
+| Public Suffix List | aux | 10396 | fresh | 2026-10-31 23:46:04 UTC | https://publicsuffix.org/list/public_suffix_list.dat |
 | ddgksf2013 APP启动页去广告 (yfamilys) | module | 741 | fresh | 2026-10-15 20:51:11 UTC | https://yfamilys.com/module/startingad.sgmodule |
 | fmz200 wool_scripts blockAds | module | 1645 | fresh | 2026-10-31 00:06:27 UTC | https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module |
 | kelee 广告平台拦截器 (URL Rewrite) | module | 4 | fresh | 2026-10-15 20:51:11 UTC | https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule |
-| Sukka reject (domainset) | core | 145972 | fresh | 2026-10-31 00:06:27 UTC | https://ruleset.skk.moe/List/domainset/reject.conf |
+| Sukka reject (domainset) | core | 146202 | fresh | 2026-10-31 23:46:04 UTC | https://ruleset.skk.moe/List/domainset/reject.conf |
 | Sukka reject (non_ip) | core | 373 | fresh | 2026-10-23 23:32:24 UTC | https://ruleset.skk.moe/List/non_ip/reject.conf |
 | Sukka reject (ip) | core | 767 | fresh | 2026-10-29 00:26:19 UTC | https://ruleset.skk.moe/List/ip/reject.conf |
 | AWAvenue-Ads-Rule (秋风) | core | 976 | fresh | 2026-10-22 23:37:23 UTC | https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list |
 | 217heidai adblockfilters lite | core | 8480 | fresh | 2026-10-29 00:26:19 UTC | https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksurgelite.list |
-| v2fly category-ads-all (MetaCubeX) | core | 904 | fresh | 2026-10-31 00:06:27 UTC | https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list |
-| kelee 广告平台拦截器 [Rule] | core | 324 | fresh (mirror) | 2026-10-30 00:25:25 UTC | https://raw.githubusercontent.com/zwjtano/kelee-loon-surge-modules/master/modules/BlockAdvertisers.sgmodule |
-| Sukka reject_extra (domainset) | extra | 79201 | fresh | 2026-10-31 00:06:27 UTC | https://ruleset.skk.moe/List/domainset/reject_extra.conf |
-| HaGeZi Multi PRO (wildcard domains) | extra | 214202 | fresh | 2026-10-31 00:06:27 UTC | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt |
+| v2fly category-ads-all (MetaCubeX) | core | 904 | fresh | 2026-10-31 23:46:04 UTC | https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list |
+| kelee 广告平台拦截器 [Rule] | core | 324 | fresh | 2026-10-31 23:46:04 UTC | https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx |
+| Sukka reject_extra (domainset) | extra | 79352 | fresh | 2026-10-31 23:46:04 UTC | https://ruleset.skk.moe/List/domainset/reject_extra.conf |
+| HaGeZi Multi PRO (wildcard domains) | extra | 213387 | fresh | 2026-10-31 23:46:04 UTC | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt |
 
 List upstream breakdown:
 
 | Upstream | DOMAIN | SUFFIX | KEYWORD | WILDCARD | URL-REGEX | AND/OR | IP-CIDR |
 |---|---|---|---|---|---|---|---|
-| Sukka reject (domainset) | 1155 | 144817 | 0 | 0 | 0 | 0 | 0 |
+| Sukka reject (domainset) | 1155 | 145047 | 0 | 0 | 0 | 0 | 0 |
 | Sukka reject (non_ip) | 71 | 89 | 144 | 15 | 3 | 0 | 51 |
 | Sukka reject (ip) | 1 | 0 | 0 | 0 | 0 | 0 | 766 |
 | AWAvenue-Ads-Rule (秋风) | 960 | 12 | 4 | 0 | 0 | 0 | 0 |
 | 217heidai adblockfilters lite | 0 | 8480 | 0 | 0 | 0 | 0 | 0 |
 | v2fly category-ads-all (MetaCubeX) | 159 | 745 | 0 | 0 | 0 | 0 | 0 |
 | kelee 广告平台拦截器 [Rule] | 113 | 195 | 12 | 0 | 0 | 3 | 1 |
-| Sukka reject_extra (domainset) | 16 | 79185 | 0 | 0 | 0 | 0 | 0 |
-| HaGeZi Multi PRO (wildcard domains) | 0 | 214202 | 0 | 0 | 0 | 0 | 0 |
+| Sukka reject_extra (domainset) | 16 | 79336 | 0 | 0 | 0 | 0 | 0 |
+| HaGeZi Multi PRO (wildcard domains) | 0 | 213387 | 0 | 0 | 0 | 0 | 0 |
 
 - Module host-wide rejects moved into the core DOMAIN-SET: 7 (`adapi.izuiyou.com`, `api.htp.ad-scope.com.cn`, `fc-video.cdn.bcebos.com`, `sdk1xyajs.data.kuiniuca.com`, `stat.peopleapp.com`, `.kingsoft-office-service.com`, `.pglstatp-toutiao.com`)
-- Raw union before filtering: core 152488, extra 251246
+- Raw union before filtering: core 152718, extra 250441
 
 ## Outputs
 
-- `Reject_Domain.list`: 149635 lines
+- `Reject_Domain.list`: 149865 lines
 - `Reject.list`: 972 lines
-- `Reject_Extra_Domain.list`: 198689 lines
+- `Reject_Extra_Domain.list`: 197456 lines
 - `AdBlock.sgmodule`: 1855 lines
 - `AdBlock-iOS-Lite.sgmodule`: 278 lines
 - `MITM-Guard.sgmodule`: 2 lines
 - Reject.list breakdown: DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR 818
-- Extra-layer entries dropped because core already covers them: 49560
+- Extra-layer entries dropped because core already covers them: 49988
 
 ## Removed by category
 
@@ -111,7 +111,7 @@ Exclude rules with no current match (kept for future upstream changes): `DOMAIN-
 
 - **IP-ASN** (15): `IP-ASN,1012`, `IP-ASN,14651`, `IP-ASN,18044`, `IP-ASN,401111`, `IP-ASN,5111`, `IP-ASN,54625`, `IP-ASN,60539`, `IP-ASN,60842`, `IP-ASN,61302`, `IP-ASN,62489`, `IP-ASN,62853`, `IP-ASN,7257`, `IP-ASN,7480`, `IP-ASN,7719`, `IP-ASN,945`
 - **invalid domain** (2): `.data`, `DOMAIN-SUFFIX,data`
-- **non-reject policy (DIRECT)** (6): `AND,((DOMAIN-KEYWORD,tnc),(OR,((DOMAIN-SUFFIX,capcutapi.com),(DOMAIN-SUFFIX,zijieapi.com),(DOMAIN-SUFFIX,isnssdk.com),(DOMAIN-SUFFIX,toutiaoapi.com),(DOMAIN-SUFFIX,bytedance.com),(DOMAIN-SUFFIX,snssdk.com),(DOMAIN-SUFFIX,sgsnssdk.com)))),DIRECT`, `DOMAIN,code.sms.mob.com,DIRECT`, `DOMAIN,init.sms.mob.com,DIRECT`, `DOMAIN,sdk.verification.jiguang.cn,DIRECT`, `DOMAIN,sdkapi.sms.mob.com,DIRECT`, `DOMAIN,smartop-sdkapi.jiguang.cn,DIRECT`
+- **non-reject policy (DIRECT)** (6): `AND, ((DOMAIN-KEYWORD, tnc), (OR, ((DOMAIN-SUFFIX, capcutapi.com), (DOMAIN-SUFFIX, zijieapi.com), (DOMAIN-SUFFIX, isnssdk.com), (DOMAIN-SUFFIX, toutiaoapi.com), (DOMAIN-SUFFIX, bytedance.com), (DOMAIN-SUFFIX, snssdk.com), (DOMAIN-SUFFIX, sgsnssdk.com)))), DIRECT`, `DOMAIN, code.sms.mob.com, DIRECT`, `DOMAIN, init.sms.mob.com, DIRECT`, `DOMAIN, sdk.verification.jiguang.cn, DIRECT`, `DOMAIN, sdkapi.sms.mob.com, DIRECT`, `DOMAIN, smartop-sdkapi.jiguang.cn, DIRECT`
 
 ## Normalisation
 
