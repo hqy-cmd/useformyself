@@ -1,8 +1,8 @@
 # Reject.list - Surge RULE-SET (ad-block keyword / wildcard / logical / URL-REGEX / IP rules)
-# Generated: 2026-10-30 00:25:25 UTC
+# Generated: 2026-10-31 00:06:27 UTC
 # Rules: 972 (DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR/IP-CIDR6 818)
 # Upstreams:
-#   - Sukka reject (domainset): 145733 entries [fresh]
+#   - Sukka reject (domainset): 145972 entries [fresh]
 #     https://ruleset.skk.moe/List/domainset/reject.conf
 #   - Sukka reject (non_ip): 373 entries [fresh]
 #     https://ruleset.skk.moe/List/non_ip/reject.conf
@@ -17,7 +17,7 @@
 #   - kelee 广告平台拦截器 [Rule]: 324 entries [fresh (mirror)]
 #     https://raw.githubusercontent.com/zwjtano/kelee-loon-surge-modules/master/modules/BlockAdvertisers.sgmodule
 #   - module host-wide rejects (ddgksf2013 / fmz200 / kelee): 7 entries
-# Protected / excluded entries removed this run: 273 (see rules/adblock-report.md)
+# Protected / excluded entries removed this run: 299 (see rules/adblock-report.md)
 # Source: https://github.com/hqy-cmd/useformyself/tree/main/rules
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
 DOMAIN-KEYWORD,-ad.a.yximgs.com
