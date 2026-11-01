@@ -1,9 +1,9 @@
 {
-  "generated": "2026-10-31 23:46:04 UTC",
+  "generated": "2026-11-01 23:54:53 UTC",
   "output": {
-    "Reject_Domain.list": 149865,
+    "Reject_Domain.list": 150129,
     "Reject.list": 972,
-    "Reject_Extra_Domain.list": 197456,
+    "Reject_Extra_Domain.list": 195691,
     "AdBlock.sgmodule": 1855,
     "AdBlock-iOS-Lite.sgmodule": 278,
     "MITM-Guard.sgmodule": 2
@@ -20,8 +20,8 @@
     "ddgksf2013-startingad": {
       "name": "ddgksf2013 APP启动页去广告 (yfamilys)",
       "count": 741,
-      "sha256": "aa70518c19f06d9d85fd4e90eccedfc791307d0538f4dc51fbd96d48d953b81f",
-      "fetched_at": "2026-10-15 20:51:11 UTC",
+      "sha256": "e2c569ba03e46b32e8d9650ec206fcb5cc410aaf5bc1dace2046b73f20d8c623",
+      "fetched_at": "2026-11-01 23:54:53 UTC",
       "url": "https://yfamilys.com/module/startingad.sgmodule",
       "source": "fresh"
     },
@@ -43,9 +43,9 @@
     },
     "sukka-reject": {
       "name": "Sukka reject (domainset)",
-      "count": 146202,
-      "sha256": "b24fae83276b1504e9be9dd9292ff57d12000674c93b506abb11dfe3a1c992f6",
-      "fetched_at": "2026-10-31 23:46:04 UTC",
+      "count": 146467,
+      "sha256": "0ea730857b0b1ea3cdc43a330d258f5c2d96de5989e20fcba12bbe8f1136c95e",
+      "fetched_at": "2026-11-01 23:54:53 UTC",
       "url": "https://ruleset.skk.moe/List/domainset/reject.conf",
       "source": "fresh"
     },
@@ -84,8 +84,8 @@
     "v2fly-ads-all": {
       "name": "v2fly category-ads-all (MetaCubeX)",
       "count": 904,
-      "sha256": "4f2378305deadb37d96be1270ef9bbb92df83fe66a5ba26da1a695e8a44a3c94",
-      "fetched_at": "2026-10-31 23:46:04 UTC",
+      "sha256": "fac69bc6a6e0e26173d3fb30af193a977d76d4e37c300e5a60766ff449e4cbeb",
+      "fetched_at": "2026-11-01 23:54:53 UTC",
       "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list",
       "source": "fresh"
     },
@@ -99,17 +99,17 @@
     },
     "sukka-reject-extra": {
       "name": "Sukka reject_extra (domainset)",
-      "count": 79352,
-      "sha256": "16a0fe103dec0a5a61574500acead965f57dbeb0b39457077b8a2e16f0142fc2",
-      "fetched_at": "2026-10-31 23:46:04 UTC",
+      "count": 79456,
+      "sha256": "457942b253e59891a093bba323cd44e8ac68a0ddb0dd521fb1860cf113ac9144",
+      "fetched_at": "2026-11-01 23:54:53 UTC",
       "url": "https://ruleset.skk.moe/List/domainset/reject_extra.conf",
       "source": "fresh"
     },
     "hagezi-pro": {
       "name": "HaGeZi Multi PRO (wildcard domains)",
-      "count": 213387,
-      "sha256": "57d4aff6593c7ae9c54089777ceb089cab87ffe98115dc0357f3f2dbeda6b64e",
-      "fetched_at": "2026-10-31 23:46:04 UTC",
+      "count": 211739,
+      "sha256": "76bab0590bbaac583375aa17999ac3ba4eb9c465b9cf46475361693f9ac5f68a",
+      "fetched_at": "2026-11-01 23:54:53 UTC",
       "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt",
       "source": "fresh"
     }
