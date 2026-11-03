@@ -1,8 +1,8 @@
 # Reject.list - Surge RULE-SET (ad-block keyword / wildcard / logical / URL-REGEX / IP rules)
-# Generated: 2026-11-01 23:54:53 UTC
+# Generated: 2026-11-03 02:39:27 UTC
 # Rules: 972 (DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR/IP-CIDR6 818)
 # Upstreams:
-#   - Sukka reject (domainset): 146467 entries [fresh]
+#   - Sukka reject (domainset): 147977 entries [fresh]
 #     https://ruleset.skk.moe/List/domainset/reject.conf
 #   - Sukka reject (non_ip): 373 entries [fresh]
 #     https://ruleset.skk.moe/List/non_ip/reject.conf
