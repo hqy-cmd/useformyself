@@ -1,52 +1,52 @@
 # Ad-block rules report
 
-Generated: 2026-11-04 00:55:24 UTC
+Generated: 2026-11-05 01:04:37 UTC
 
 ## Upstreams
 
 | Upstream | Layer | Entries | Source | Fetched | URL used |
 |---|---|---|---|---|---|
-| Public Suffix List | aux | 10396 | fresh | 2026-10-31 23:46:04 UTC | https://publicsuffix.org/list/public_suffix_list.dat |
+| Public Suffix List | aux | 10401 | fresh | 2026-11-05 01:04:37 UTC | https://publicsuffix.org/list/public_suffix_list.dat |
 | ddgksf2013 APP启动页去广告 (yfamilys) | module | 741 | fresh | 2026-11-01 23:54:53 UTC | https://yfamilys.com/module/startingad.sgmodule |
 | fmz200 wool_scripts blockAds | module | 1645 | fresh | 2026-10-31 00:06:27 UTC | https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module |
 | kelee 广告平台拦截器 (URL Rewrite) | module | 4 | fresh | 2026-10-15 20:51:11 UTC | https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule |
-| Sukka reject (domainset) | core | 148060 | fresh | 2026-11-04 00:55:24 UTC | https://ruleset.skk.moe/List/domainset/reject.conf |
+| Sukka reject (domainset) | core | 148125 | fresh | 2026-11-05 01:04:37 UTC | https://ruleset.skk.moe/List/domainset/reject.conf |
 | Sukka reject (non_ip) | core | 373 | fresh | 2026-10-23 23:32:24 UTC | https://ruleset.skk.moe/List/non_ip/reject.conf |
 | Sukka reject (ip) | core | 767 | fresh | 2026-10-29 00:26:19 UTC | https://ruleset.skk.moe/List/ip/reject.conf |
 | AWAvenue-Ads-Rule (秋风) | core | 976 | fresh | 2026-10-22 23:37:23 UTC | https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list |
 | 217heidai adblockfilters lite | core | 8480 | fresh | 2026-10-29 00:26:19 UTC | https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksurgelite.list |
-| v2fly category-ads-all (MetaCubeX) | core | 904 | fresh | 2026-11-04 00:55:24 UTC | https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list |
+| v2fly category-ads-all (MetaCubeX) | core | 904 | fresh | 2026-11-05 01:04:37 UTC | https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list |
 | kelee 广告平台拦截器 [Rule] | core | 324 | fresh | 2026-10-31 23:46:04 UTC | https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx |
-| Sukka reject_extra (domainset) | extra | 81237 | fresh | 2026-11-04 00:55:24 UTC | https://ruleset.skk.moe/List/domainset/reject_extra.conf |
-| HaGeZi Multi PRO (wildcard domains) | extra | 247757 | fresh | 2026-11-04 00:55:24 UTC | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt |
+| Sukka reject_extra (domainset) | extra | 81442 | fresh | 2026-11-05 01:04:37 UTC | https://ruleset.skk.moe/List/domainset/reject_extra.conf |
+| HaGeZi Multi PRO (wildcard domains) | extra | 239581 | fresh | 2026-11-05 01:04:37 UTC | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt |
 
 List upstream breakdown:
 
 | Upstream | DOMAIN | SUFFIX | KEYWORD | WILDCARD | URL-REGEX | AND/OR | IP-CIDR |
 |---|---|---|---|---|---|---|---|
-| Sukka reject (domainset) | 1155 | 146905 | 0 | 0 | 0 | 0 | 0 |
+| Sukka reject (domainset) | 1156 | 146969 | 0 | 0 | 0 | 0 | 0 |
 | Sukka reject (non_ip) | 71 | 89 | 144 | 15 | 3 | 0 | 51 |
 | Sukka reject (ip) | 1 | 0 | 0 | 0 | 0 | 0 | 766 |
 | AWAvenue-Ads-Rule (秋风) | 960 | 12 | 4 | 0 | 0 | 0 | 0 |
 | 217heidai adblockfilters lite | 0 | 8480 | 0 | 0 | 0 | 0 | 0 |
 | v2fly category-ads-all (MetaCubeX) | 159 | 745 | 0 | 0 | 0 | 0 | 0 |
 | kelee 广告平台拦截器 [Rule] | 113 | 195 | 12 | 0 | 0 | 3 | 1 |
-| Sukka reject_extra (domainset) | 16 | 81221 | 0 | 0 | 0 | 0 | 0 |
-| HaGeZi Multi PRO (wildcard domains) | 0 | 247757 | 0 | 0 | 0 | 0 | 0 |
+| Sukka reject_extra (domainset) | 16 | 81426 | 0 | 0 | 0 | 0 | 0 |
+| HaGeZi Multi PRO (wildcard domains) | 0 | 239581 | 0 | 0 | 0 | 0 | 0 |
 
 - Module host-wide rejects moved into the core DOMAIN-SET: 7 (`adapi.izuiyou.com`, `api.htp.ad-scope.com.cn`, `fc-video.cdn.bcebos.com`, `sdk1xyajs.data.kuiniuca.com`, `stat.peopleapp.com`, `.kingsoft-office-service.com`, `.pglstatp-toutiao.com`)
-- Raw union before filtering: core 154576, extra 285680
+- Raw union before filtering: core 154641, extra 279488
 
 ## Outputs
 
-- `Reject_Domain.list`: 151722 lines
+- `Reject_Domain.list`: 151787 lines
 - `Reject.list`: 972 lines
-- `Reject_Extra_Domain.list`: 227027 lines
+- `Reject_Extra_Domain.list`: 222440 lines
 - `AdBlock.sgmodule`: 1855 lines
 - `AdBlock-iOS-Lite.sgmodule`: 278 lines
 - `MITM-Guard.sgmodule`: 2 lines
 - Reject.list breakdown: DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR 818
-- Extra-layer entries dropped because core already covers them: 55397
+- Extra-layer entries dropped because core already covers them: 53828
 
 ## Removed by category
 
@@ -54,17 +54,17 @@ List upstream breakdown:
 |---|---|
 | AI feature flags (Statsig) | 10 |
 | Crash reporting used by apps you sign in to (Sentry) | 8 |
-| Deep links (keep the app links in SMS / mail working) | 11 |
+| Deep links (keep the app links in SMS / mail working) | 2 |
 | Device fingerprinting for bot / fraud checks (FingerprintJS) | 25 |
 | Google infrastructure | 6 |
 | Noise | 2 |
 | Over-broad URL-REGEX | 3 |
 | Over-broad keywords | 10 |
 | TikTok / ByteDance network config and IM | 41 |
-| AI group (rules/AI_Domain.list) | 209 |
-| must-not-block: Banks (whole tree) | 40 |
-| must-not-block: Payments (whole tree) | 44 |
-| public suffix / bare eTLD | 102 |
+| AI group (rules/AI_Domain.list) | 91 |
+| must-not-block: Banks (whole tree) | 47 |
+| must-not-block: Payments (whole tree) | 43 |
+| public suffix / bare eTLD | 98 |
 
 ### adblock-exclude.txt
 
@@ -72,7 +72,7 @@ List upstream breakdown:
 
 **Crash reporting used by apps you sign in to (Sentry)** (8): `.sentry-cdn.com [core]`, `.sentry-cdn.com [extra]`, `.sentry.io [core]`, `.sentry.io [extra]`, `disney.my.sentry.io [core]`, `o33249.ingest.sentry.io [core]`, `o33249.ingest.us.sentry.io [core]`, `o4504926511693824.ingest.sentry.io [core]`
 
-**Deep links (keep the app links in SMS / mail working)** (11): `.adc0219647979.page.link [extra]`, `.arsadsatelitkond.page.link [extra]`, `.branch.io [extra]`, `.dewanni.page.link [extra]`, `.dtminwrj.page.link [extra]`, `.impressions.onelink.me [extra]`, `.nbascht.page.link [extra]`, `.thisisclicksecured.page.link [extra]`, `.w3larabii4.page.link [extra]`, `.yaaarbilamatsahal.page.link [extra]`, `.yarbitsshal.page.link [extra]`
+**Deep links (keep the app links in SMS / mail working)** (2): `.branch.io [extra]`, `.impressions.onelink.me [extra]`
 
 **Device fingerprinting for bot / fraud checks (FingerprintJS)** (25): `.analytics.dashboard.fingerprint.com [core]`, `.api.fpjs.com [extra]`, `.c.fingerprint.com [core]`, `.fingerprintjs.com [extra]`, `.fpapi.io [core]`, `.fpapi.io [extra]`, `.fpc.fingerprint.com [core]`, `.fpcdn.io [core]`, `.fpcdn.io [extra]`, `.fpjs.io [core]`, `.fpjs.io [extra]`, `.fpjscdn.net [core]`, `.fpjscdn.net [extra]`, `.fpnpmcdn.net [core]`, `.fpnpmcdn.net [extra]`, `.fptls.com [core]`, `.fptls.com [extra]`, `.fptls2.com [core]`, `.fptls2.com [extra]`, `.fptls3.com [core]`, `.fptls3.com [extra]`, `.fptls4.com [core]`, `.fptls4.com [extra]`, `.openfpcdn.io [core]`, `.openfpcdn.io [extra]`
 
@@ -88,20 +88,20 @@ List upstream breakdown:
 
 ### AI group
 
-**AI group (rules/AI_Domain.list)** (209): `.01c2e787-6c49-4365-8be5-e5d1c9e19ed3-00-2y5i0zdquflg3.worf.replit.dev [extra]`, `.0d9a56c5-6a18-4f41-9dcf-1fa0531f9645-00-3s6jlesunorig.riker.replit.dev [extra]`, `.38168545-3719-400e-93b0-dec00d5224ba-00-9czrgjfwf6qe.picard.replit.dev [extra]`, `.3ab48a20-acaa-49ab-95cc-3eb16f1cda78-00-1a0l3yf6hw9aq.sisko.replit.dev [extra]`, `.522dc3eb-0159-4f84-8b11-2f6b4796a494-00-1dfu7x699vkta.kirk.replit.dev [extra]`, `.533fd606-2144-4713-9f95-c0142132278e-00-b8ttsesj8jd6.riker.replit.dev [extra]`, `.572e434b-2b07-4367-a8d9-7590bf770708-00-2cd9jdm6tcu78.riker.replit.dev [extra]`, `.573d1d26-4337-4911-b597-5b00dd3e79fe-00-3cg4i3wnovpq8.worf.replit.dev [extra]`, `.6cd1f2d2-2c73-4070-9e40-9a15f91cab19-00-2evect6l7wxt7.janeway.replit.dev [extra]`, `.6d9d98b0-a858-41be-85b8-dfd3ad9f9331-00-2rwq1ehx6klt3.worf.replit.dev [extra]`, `.757cd1be-caf3-4f80-a41c-cce6f5c7cf14-00-n6g9vgcw7z72.spock.replit.dev [extra]`, `.758f3492-3ad5-46b2-ac40-72f67a3caefc-00-8u8rrhjo0sn.kirk.replit.dev [extra]`, `.76dda2e2-9f80-4af7-b3b4-f01303a989a2-00-1pql4qvay7fos.picard.replit.dev [extra]`, `.956c0ff0-1584-4ba1-a1dc-7eb401042d74-00-dhi9f362orh4.spock.replit.dev [extra]`, `.a4e70a6f-6360-4b01-83d7-af8b7ea246bc-00-3fud91nii2ukn.kirk.replit.dev [extra]`, `.advertising.civitai.com [extra]`, `.analytics.zed.dev [extra]`, `.asesoramientobdv-support--ethtrrgfg.replit.app [extra]`, `.asesorjuanluis--credito-ec.replit.app [extra]`, `.aumentopichincha-2026--aumento203.replit.app [extra]`, `.auntenticar-2-pasos--revision36593.replit.app [extra]`, `.austraco-2026--d44087341.replit.app [extra]`, `.ba2e451f-44f0-4ad9-9882-52c2c778d459-00-1v0zzgd534aib.spock.replit.dev [extra]`, `.bdv-2026-portal--2026tubdv.replit.app [extra]`, `.bdvcredienlinea-7--servcios.replit.app [extra]`, `.bdvenlineaa--tubdv-2026-2026.replit.app [extra]`, `.bdvonline-registrate--ppsickkke.replit.app [extra]`, `.bhdcredito-2026--bhdcredi2026.replit.app [extra]`, `.bhdenlineacreditos-206--benefi7cios2026.replit.app [extra]`, `.browser-intake-datadoghq.com [core]`, `.browser-intake-datadoghq.com [extra]`, `.browser-intake-us5-datadoghq.com [extra]`, `.bzr.openai.com [core]`, `.bzr.openai.com [extra]`, `.bzrcdn.openai.com [core]`, `.bzrcdn.openai.com [extra]`, `.cdn.usefathom.com [extra]`, `.client-telemetry.us-east-1.amazonaws.com [extra]`, `.cloudflareinsights.com [core]`, `.cloudflareinsights.com [extra]`, `.comunidad--comunidadunitec.replit.app [extra]`, `.consultaexpressdomi--pamelalorzano.replit.app [extra]`, `.copilot-telemetry-service.githubusercontent.com [extra]`, `.copilot-telemetry.githubusercontent.com [core]`, `.copilot-telemetry.githubusercontent.com [extra]`, `.crdiec-0001--aumento203.replit.app [extra]`, `.credi-miles--y626262j77.replit.app [extra]`, `.credipichincha--creditpichinch.replit.app [extra]`, `.creditbdvenezuela--unitecccmx.replit.app [extra]`, `.credito-ecuador-prestamo--victorvicenso12.replit.app [extra]`, `.credito-pichincha-12--prestamoubiii.replit.app [extra]`, `.credito-prestamos--victorvicenso12.replit.app [extra]`, `.creditoecuador-46--ecuadorcredit3.replit.app [extra]`, `.creditonacionaldeecuador--credinacionalec.replit.app [extra]`, `.creditopichincha--micreditoseguro.replit.app [extra]`, `.creditopichincha-2026--creditoenline3.replit.app [extra]`, `.creditoportunidades--solucionesec.replit.app [extra]`, `.creditos-pichincha-miles--pichincmiles.replit.app [extra]`, `.creditoseguro--micreditopich.replit.app [extra]`, `.d131b80a-9b6a-4719-a4fd-b2f7beaa9c33-00-tyex5w8ljwxl.riker.replit.dev [extra]`, ... and 149 more
+**AI group (rules/AI_Domain.list)** (91): `.advertising.civitai.com [extra]`, `.analytics.zed.dev [extra]`, `.austraco-2026--d44087341.replit.app [extra]`, `.browser-intake-datadoghq.com [core]`, `.browser-intake-datadoghq.com [extra]`, `.browser-intake-us5-datadoghq.com [extra]`, `.bzr.openai.com [core]`, `.bzr.openai.com [extra]`, `.bzrcdn.openai.com [core]`, `.bzrcdn.openai.com [extra]`, `.cdn.usefathom.com [extra]`, `.client-telemetry.us-east-1.amazonaws.com [extra]`, `.cloudflareinsights.com [core]`, `.cloudflareinsights.com [extra]`, `.copilot-telemetry-service.githubusercontent.com [extra]`, `.copilot-telemetry.githubusercontent.com [core]`, `.copilot-telemetry.githubusercontent.com [extra]`, `.data.microsoft.com [core]`, `.dd.huggingface.co [core]`, `.default.exp-tas.com [extra]`, `.desembolsableenlinea--lineamenner.replit.app [extra]`, `.editable-static-website--laboratorium13.replit.app [extra]`, `.events.api.gamma.app [core]`, `.events.api.gamma.app [extra]`, `.events.character.ai [core]`, `.events.character.ai [extra]`, `.faro.civitai.com [extra]`, `.gemini.talkai.info [extra]`, `.global-user-tracker.replit.app [extra]`, `.gnar.grammarly.com [core]`, `.gnar.grammarly.com [extra]`, `.goto.suno.com [core]`, `.goto.suno.com [extra]`, `.gtm.you.com [extra]`, `.i.replit.com [core]`, `.i.replit.com [extra]`, `.in.appcenter.ms [extra]`, `.k.coderabbit.ai [extra]`, `.m-chromadrone.prod.suno.com [core]`, `.m-chromadrone.prod.suno.com [extra]`, `.m-stratovibe.prod.suno.com [core]`, `.m-stratovibe.prod.suno.com [extra]`, `.m-zephyrtone.prod.suno.com [extra]`, `.metrics-prod.suno.com [core]`, `.metrics-prod.suno.com [extra]`, `.metrics.anthropic.com [extra]`, `.metrics.cursor.sh [extra]`, `.metrics.manus.im [extra]`, `.openai.qualtrics.com [extra]`, `.otel.cline.bot [extra]`, `.otel.otter.ai [extra]`, `.php-web-server--unitmexi.replit.app [extra]`, `.prod.us-east-1.telemetry-v2.kiro.dev [extra]`, `.proxima.midjourney.com [core]`, `.proxima.midjourney.com [extra]`, `.r.openai.com [extra]`, `.r.typesafe.ai [core]`, `.s.sourcegraph.com [extra]`, `.security-server-landing-page--009wq.replit.app [extra]`, `.security-server-page--abdohabib1.replit.app [extra]`, ... and 31 more
 
 ### must-not-block guard
 
-**must-not-block: Banks (whole tree)** (40): `.adv.ccb.com [core]`, `.adv.ccb.com [extra]`, `.analytics.chase.com [core]`, `.analytics.chase.com [extra]`, `.app.uob.com.sg [extra]`, `.biometrics-dm.chase.com [extra]`, `.cdntm.ciiom.hsbc.com [extra]`, `.cdntm.expat.hsbc.com [extra]`, `.cdntm.hsbc.com.hk [extra]`, `.cdntm.us.hsbc.com [extra]`, `.content22.citibank.com [extra]`, `.content22.online.citibank.com [extra]`, `.experimentation.chase.com [extra]`, `.fraudandcyberawareness.safeguard.hsbc.com [core]`, `.imageadv.ccb.com [extra]`, `.images.cmbinsight.hsbc.com [core]`, `.insight.business.hsbc.com [core]`, `.insight.gbm.hsbc.com [core]`, `.jf365.boc.cn [extra]`, `.log.cmbchina.com [core]`, `.log.cmbchina.com [extra]`, `.measure.chase.com [core]`, `.measure.chase.com [extra]`, `.metric-sz.ccd.cmbchina.com [extra]`, `.metrics.chase.com [core]`, `.metrics.citibank.com [core]`, `.metrics1.citibank.com [core]`, `.midas.chase.com [core]`, `.midas.chase.com [extra]`, `.omtr.uob.com.sg [core]`, `.pafms.ocbc.com [extra]`, `.page-format.chase.com [extra]`, `.poirot.chase.com [extra]`, `.servicing.business.hsbc.com [core]`, `.tagmanager1.citibank.com [core]`, `.target.chase.com [core]`, `.tms.data.hsbc.com [core]`, `.uafms.ocbc.com [extra]`, `.webtrack-brickstreetconnect-mkt-prd.hsbc.com.hk [extra]`, `adv.ccb.com [core]`
+**must-not-block: Banks (whole tree)** (47): `.adv.ccb.com [core]`, `.adv.ccb.com [extra]`, `.analytics.chase.com [core]`, `.analytics.chase.com [extra]`, `.app.uob.com.sg [extra]`, `.biometrics-dm.chase.com [extra]`, `.cdntm.ciiom.hsbc.com [extra]`, `.cdntm.expat.hsbc.com [extra]`, `.cdntm.hsbc.com.hk [extra]`, `.cdntm.us.hsbc.com [extra]`, `.content22.citibank.com [extra]`, `.content22.online.citibank.com [extra]`, `.experimentation.chase.com [extra]`, `.fraudandcyberawareness.safeguard.hsbc.com [core]`, `.imageadv.ccb.com [extra]`, `.images.cmbinsight.hsbc.com [core]`, `.insight.business.hsbc.com [core]`, `.insight.business.hsbc.com [extra]`, `.insight.gbm.hsbc.com [core]`, `.jf365.boc.cn [extra]`, `.log.cmbchina.com [core]`, `.log.cmbchina.com [extra]`, `.measure.chase.com [core]`, `.measure.chase.com [extra]`, `.metric-sz.ccd.cmbchina.com [extra]`, `.metrics.chase.com [core]`, `.metrics.citibank.com [core]`, `.metrics1.citibank.com [core]`, `.midas.chase.com [core]`, `.midas.chase.com [extra]`, `.omtr.uob.com.sg [core]`, `.pafms.ocbc.com [extra]`, `.page-format.chase.com [extra]`, `.poirot.chase.com [extra]`, `.servicing.business.hsbc.com [core]`, `.tagmanager1.citibank.com [core]`, `.target.chase.com [core]`, `.tms.data.hsbc.com [core]`, `.trkcmb.business.algeria.hsbc.com [extra]`, `.trkcmb.business.ciiom.hsbc.com [extra]`, `.trkcmb.business.hsbc.com [extra]`, `.trkcmb.business.hsbc.com.hk [extra]`, `.trkcmb.business.maldives.hsbc.com [extra]`, `.trkcmb.business.us.hsbc.com [extra]`, `.trkcmb.sustainablefinance.hsbc.com [extra]`, `.uafms.ocbc.com [extra]`, `adv.ccb.com [core]`
 
-**must-not-block: Payments (whole tree)** (44): `.ablink.info.wise.com [extra]`, `.ads.95516.com [core]`, `.ads.95516.com [extra]`, `.amdc-thirdparty.alipay.com [core]`, `.amdc.alipay.com [core]`, `.analytics.95516.com [core]`, `.analytics.95516.com [extra]`, `.business.visa.com [core]`, `.client-analytics.braintreegateway.com [core]`, `.client-analytics.braintreegateway.com [extra]`, `.collect.alipay.com [core]`, `.collect.alipay.com [extra]`, `.data.account.paypal.com [core]`, `.data.fastlane-email.paypal.com [core]`, `.data.messaging.paypal.com [core]`, `.data.news.paypal.com [core]`, `.data.news.paypal.com [extra]`, `.data.newsletter.paypal.com [core]`, `.data.zettleby.paypal.com [core]`, `.errors.stripe.com [extra]`, `.gtm.wise.com [core]`, `.gtm.wise.com [extra]`, `.i.paypal.com [core]`, `.images.globalempcomm.visa.com [core]`, `.loggw-ex.alipay.com [core]`, `.loggw-ex.alipay.com [extra]`, `.loggw-exsdk.alipay.com [core]`, `.loggw-exsdk.alipay.com [extra]`, `.loggw.alipay.com [core]`, `.loggw.alipay.com [extra]`, `.metrics.mastercard.com [core]`, `.openmonitor.alipay-eco.com [core]`, `.openmonitor.alipay-eco.com [extra]`, `.openmonitor.alipay.com [core]`, `.openmonitor.alipay.com [extra]`, `.sgtm.adyen.com [extra]`, `.smetrics.mastercard.com [extra]`, `.sst.wise.com [extra]`, `.stats.paypal.com [core]`, `.thm.visa.com [extra]`, `.thm12.visa.com [extra]`, `.tracert.alipay.com [extra]`, `.tracking.cpa.qa.web.visa.com [core]`, `ads.95516.com [core]`
+**must-not-block: Payments (whole tree)** (43): `.ablink.info.wise.com [extra]`, `.ads.95516.com [core]`, `.ads.95516.com [extra]`, `.amdc-thirdparty.alipay.com [core]`, `.amdc.alipay.com [core]`, `.analytics.95516.com [core]`, `.analytics.95516.com [extra]`, `.business.visa.com [core]`, `.client-analytics.braintreegateway.com [core]`, `.client-analytics.braintreegateway.com [extra]`, `.collect.alipay.com [core]`, `.collect.alipay.com [extra]`, `.data.account.paypal.com [core]`, `.data.fastlane-email.paypal.com [core]`, `.data.messaging.paypal.com [core]`, `.data.news.paypal.com [core]`, `.data.newsletter.paypal.com [core]`, `.data.zettleby.paypal.com [core]`, `.errors.stripe.com [extra]`, `.gtm.wise.com [core]`, `.gtm.wise.com [extra]`, `.i.paypal.com [core]`, `.images.globalempcomm.visa.com [core]`, `.loggw-ex.alipay.com [core]`, `.loggw-ex.alipay.com [extra]`, `.loggw-exsdk.alipay.com [core]`, `.loggw-exsdk.alipay.com [extra]`, `.loggw.alipay.com [core]`, `.loggw.alipay.com [extra]`, `.metrics.mastercard.com [core]`, `.openmonitor.alipay-eco.com [core]`, `.openmonitor.alipay-eco.com [extra]`, `.openmonitor.alipay.com [core]`, `.openmonitor.alipay.com [extra]`, `.sgtm.adyen.com [extra]`, `.sst.wise.com [extra]`, `.stats.paypal.com [core]`, `.thm.visa.com [extra]`, `.thm12.visa.com [extra]`, `.tracert.alipay.com [extra]`, `.tracking.cpa.qa.web.visa.com [core]`, `.tracking.cpa.qa.web.visa.com [extra]`, `ads.95516.com [core]`
 
-Exclude rules with no current match (kept for future upstream changes): `DOMAIN-SUFFIX,featureassets.org`, `DOMAIN-SUFFIX,prodregistryv2.org`, `DOMAIN-SUFFIX,oaistatsig.com`, `DOMAIN-KEYWORD,sentry`, `DOMAIN-SUFFIX,app.link`, `DOMAIN-SUFFIX,test-app.link`, `DOMAIN-SUFFIX,bnc.lt`, `DOMAIN-SUFFIX,adj.st`, `DOMAIN-SUFFIX,go.link`, `DOMAIN-KEYWORD,fenxi`, `DOMAIN-KEYWORD,advert`
+Exclude rules with no current match (kept for future upstream changes): `DOMAIN-SUFFIX,featureassets.org`, `DOMAIN-SUFFIX,prodregistryv2.org`, `DOMAIN-SUFFIX,oaistatsig.com`, `DOMAIN-KEYWORD,sentry`, `DOMAIN-SUFFIX,app.link`, `DOMAIN-SUFFIX,test-app.link`, `DOMAIN-SUFFIX,bnc.lt`, `DOMAIN-SUFFIX,adj.st`, `DOMAIN-SUFFIX,go.link`, `DOMAIN-SUFFIX,page.link`, `DOMAIN-KEYWORD,fenxi`, `DOMAIN-KEYWORD,advert`
 
 ### Public suffix / eTLD entries
 
 - core: 39: `.16-b.it`, `.32-b.it`, `.3utilities.com`, `.64-b.it`, `.cfolks.pl`, `.cprapid.com`, `.dkonto.pl`, `.dnsking.ch`, `.dnsup.net`, `.dynserv.org`, `.forumz.info`, `.freeddns.us`, `.hicam.net`, `.ingress-alpha.ewp.live`, `.ingress-baronn.ewp.live`, `.ingress-bonde.ewp.live`, `.ingress-comporellon.ewp.live`, `.ingress-daribow.ewp.live`, `.ingress-earth.ewp.live`, `.ingress-erytho.ewp.live`, `.ingress-florina.ewp.live`, `.ingress-haven.ewp.live`, `.myiphost.com`, `.mypi.co`, `.now-dns.net`, `.now-dns.org`, `.ntdll.top`, `.ownip.net`, `.plesk.page`, `.servebbs.net`, `.soundcast.me`, `.square.site`, `.tcp4.me`, `.try-snowplow.com`, `.vpndns.net`, `.webadorsite.com`, `.webhop.net`, `.yolasite.com`, `.you2.pl`
-- extra: 63: `.3utilities.com`, `.at-band-camp.net`, `.bush-sake.at.ply.gg`, `.camdvr.org`, `.ccwu.cc`, `.dfirma.pl`, `.dkonto.pl`, `.dyndns-work.com`, `.dynuddns.net`, `.fastvps-server.com`, `.for-some.biz`, `.for-the.biz`, `.from-ak.com`, `.from-al.com`, `.from-az.net`, `.from-co.net`, `.from-ga.com`, `.from-hi.com`, `.from-ia.com`, `.from-me.org`, `.from-mn.com`, `.from-mo.com`, `.from-nd.com`, `.from-nv.com`, `.from-ok.com`, `.from-or.com`, `.from-sd.com`, `.from-wv.com`, `.groks-the.info`, `.hippo2.eth.limo`, `.iamallama.com`, `.is-a-chef.net`, `.is-a-conservative.com`, `.is-a-democrat.com`, `.is-a-designer.com`, `.is-a-financialadvisor.com`, `.is-a-knight.org`, `.is-a-socialist.com`, `.is-a-soxfan.org`, `.is-a-therapist.com`, `.is-an-anarchist.com`, `.is-found.org`, `.is-slick.com`, `.is-very-good.org`, `.ju.mp`, `.kworker.eth.limo`, `.live-website.com`, `.misconfused.org`, `.myjino.ru`, `.mysecuritycamera.org`, `.nflfan.org`, `.on-fleek.app`, `.pisz.pl`, `.redirectme.net`, `.ru.com`, `.saves-the-whales.com`, `.sells-it.net`, `.servebbs.org`, `.serveftp.com`, `.servesarcasm.com`, ... and 3 more
+- extra: 59: `.3utilities.com`, `.at-band-camp.net`, `.bush-sake.at.ply.gg`, `.camdvr.org`, `.ccwu.cc`, `.dfirma.pl`, `.dkonto.pl`, `.dyndns-work.com`, `.dynuddns.net`, `.fastvps-server.com`, `.for-some.biz`, `.for-the.biz`, `.from-ak.com`, `.from-al.com`, `.from-az.net`, `.from-co.net`, `.from-ga.com`, `.from-hi.com`, `.from-ia.com`, `.from-me.org`, `.from-mn.com`, `.from-mo.com`, `.from-nd.com`, `.from-nv.com`, `.from-ok.com`, `.from-or.com`, `.from-sd.com`, `.from-wv.com`, `.groks-the.info`, `.iamallama.com`, `.is-a-chef.net`, `.is-a-conservative.com`, `.is-a-democrat.com`, `.is-a-designer.com`, `.is-a-financialadvisor.com`, `.is-a-knight.org`, `.is-a-socialist.com`, `.is-a-soxfan.org`, `.is-a-therapist.com`, `.is-an-anarchist.com`, `.is-found.org`, `.is-slick.com`, `.is-very-good.org`, `.ju.mp`, `.misconfused.org`, `.myjino.ru`, `.mysecuritycamera.org`, `.nflfan.org`, `.on-fleek.app`, `.pisz.pl`, `.redirectme.net`, `.ru.com`, `.saves-the-whales.com`, `.sells-it.net`, `.servebbs.org`, `.serveftp.com`, `.servesarcasm.com`, `.theworkpc.com`, `.webhop.me`
 
 ## Manual includes
 
@@ -120,7 +120,7 @@ Exclude rules with no current match (kept for future upstream changes): `DOMAIN-
 - core: DOMAIN-SUFFIX covered by broader DOMAIN-SUFFIX: 384
 - core: IP-CIDR covered by broader CIDR: 1
 - extra: DOMAIN covered by DOMAIN-SUFFIX: 4
-- extra: DOMAIN-SUFFIX covered by broader DOMAIN-SUFFIX: 2900
+- extra: DOMAIN-SUFFIX covered by broader DOMAIN-SUFFIX: 2989
 
 ## Modules
 
