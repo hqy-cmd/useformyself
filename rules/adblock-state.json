@@ -1,9 +1,9 @@
 {
-  "generated": "2026-11-06 01:08:20 UTC",
+  "generated": "2026-11-07 00:22:13 UTC",
   "output": {
-    "Reject_Domain.list": 152957,
+    "Reject_Domain.list": 153078,
     "Reject.list": 974,
-    "Reject_Extra_Domain.list": 204920,
+    "Reject_Extra_Domain.list": 204096,
     "AdBlock.sgmodule": 1855,
     "AdBlock-iOS-Lite.sgmodule": 278,
     "MITM-Guard.sgmodule": 2
@@ -43,9 +43,9 @@
     },
     "sukka-reject": {
       "name": "Sukka reject (domainset)",
-      "count": 149295,
-      "sha256": "5366e9a89272a5906c5c81f8b771210189bead2a9829c4ab32211eb760a5eeef",
-      "fetched_at": "2026-11-06 01:08:20 UTC",
+      "count": 149416,
+      "sha256": "68d0b6b9c0649f5cc1c1478c0bd534bf0140addda1094b7f2d051f00fea59a62",
+      "fetched_at": "2026-11-07 00:22:13 UTC",
       "url": "https://ruleset.skk.moe/List/domainset/reject.conf",
       "source": "fresh"
     },
@@ -84,8 +84,8 @@
     "v2fly-ads-all": {
       "name": "v2fly category-ads-all (MetaCubeX)",
       "count": 904,
-      "sha256": "e3ef10726784450c55a36e656db01c8e5ec708ff2d93df4a38925a7572c6291b",
-      "fetched_at": "2026-11-06 01:08:20 UTC",
+      "sha256": "2eee29660be2a66fd8a58f711c5effdfa2d9ccf6d1e39016fb8f2610388dd134",
+      "fetched_at": "2026-11-07 00:22:13 UTC",
       "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list",
       "source": "fresh"
     },
@@ -99,17 +99,17 @@
     },
     "sukka-reject-extra": {
       "name": "Sukka reject_extra (domainset)",
-      "count": 81860,
-      "sha256": "083e9564104b275da58c7ae13d79b3c48a00faec650ddecaf79b0e42dec21fdf",
-      "fetched_at": "2026-11-06 01:08:20 UTC",
+      "count": 83217,
+      "sha256": "1f37a074d3975695601b37db9cf9936e395ed5791e0b770d1d62689eed0c13fc",
+      "fetched_at": "2026-11-07 00:22:13 UTC",
       "url": "https://ruleset.skk.moe/List/domainset/reject_extra.conf",
       "source": "fresh"
     },
     "hagezi-pro": {
       "name": "HaGeZi Multi PRO (wildcard domains)",
-      "count": 223594,
-      "sha256": "2a91e21492ad6403348d7e66a1b5379f719a5530693dfb341184d40f4d67ed82",
-      "fetched_at": "2026-11-06 01:08:20 UTC",
+      "count": 219320,
+      "sha256": "6b36133fb8a60fd8ff0e134105eb6d05216864c839a568be34e0b9b2f929a2bb",
+      "fetched_at": "2026-11-07 00:22:13 UTC",
       "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt",
       "source": "fresh"
     }
