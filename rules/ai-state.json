@@ -1,14 +1,14 @@
 {
-  "generated": "2026-10-28 23:59:29 UTC",
+  "generated": "2026-11-08 23:41:01 UTC",
   "output": {
-    "AI_Domain.list": 372,
+    "AI_Domain.list": 376,
     "AI.list": 38
   },
   "upstreams": {
     "QuixoticHeart": {
-      "count": 250,
-      "sha256": "fdf9899f4e0010551c3026a6607dfa969983b945fe1206c32b9a0e0f0360fe46",
-      "fetched_at": "2026-10-28 23:59:29 UTC",
+      "count": 254,
+      "sha256": "ac93b315f9f23cb57696cc6798ca1ee005ef75b068c6404d17216bb4bb11029b",
+      "fetched_at": "2026-11-08 23:41:01 UTC",
       "source": "fresh"
     },
     "VPSDance": {
@@ -24,9 +24,9 @@
       "source": "fresh"
     },
     "v2fly category-ai-!cn (MetaCubeX)": {
-      "count": 213,
-      "sha256": "34ff5f90a39dd4185e5cd0f402943133f049a444a242fb20b90fc016c34cbc57",
-      "fetched_at": "2026-10-28 23:59:29 UTC",
+      "count": 217,
+      "sha256": "735e719e6e82d3f5fa43484c194fa9c023e78ac7c88afc849814e7c46997dcff",
+      "fetched_at": "2026-11-08 23:41:01 UTC",
       "source": "fresh"
     }
   }
