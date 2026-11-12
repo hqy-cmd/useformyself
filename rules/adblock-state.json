@@ -1,35 +1,35 @@
 {
-  "generated": "2026-11-11 00:55:07 UTC",
+  "generated": "2026-11-12 02:00:27 UTC",
   "output": {
-    "Reject_Domain.list": 151628,
+    "Reject_Domain.list": 153282,
     "Reject.list": 974,
-    "Reject_Extra_Domain.list": 206586,
-    "AdBlock.sgmodule": 1855,
-    "AdBlock-iOS-Lite.sgmodule": 278,
+    "Reject_Extra_Domain.list": 205698,
+    "AdBlock.sgmodule": 1913,
+    "AdBlock-iOS-Lite.sgmodule": 286,
     "MITM-Guard.sgmodule": 2
   },
   "upstreams": {
     "public-suffix-list": {
       "name": "Public Suffix List",
-      "count": 10414,
-      "sha256": "b726c0248a4b6bbb2ece1a9cf98644afaf90469f9508435e3901ebe85655ebee",
-      "fetched_at": "2026-11-11 00:55:07 UTC",
+      "count": 10415,
+      "sha256": "55d282c86a00f85cd5c686c91e8ba26a3b156154640d93853d3d389a5e949b07",
+      "fetched_at": "2026-11-12 02:00:27 UTC",
       "url": "https://publicsuffix.org/list/public_suffix_list.dat",
       "source": "fresh"
     },
     "ddgksf2013-startingad": {
       "name": "ddgksf2013 APP启动页去广告 (yfamilys)",
-      "count": 741,
-      "sha256": "e2c569ba03e46b32e8d9650ec206fcb5cc410aaf5bc1dace2046b73f20d8c623",
-      "fetched_at": "2026-11-01 23:54:53 UTC",
+      "count": 825,
+      "sha256": "f25ba434480a0c29fe08589f2a7892d07f87d6b7ada05c5e71840ecb8245ecd2",
+      "fetched_at": "2026-11-12 02:00:27 UTC",
       "url": "https://yfamilys.com/module/startingad.sgmodule",
       "source": "fresh"
     },
     "fmz200-blockads": {
       "name": "fmz200 wool_scripts blockAds",
-      "count": 1645,
-      "sha256": "cc306fc3e061d106d5197a5a1be42f940193c32bc7234302ff31b357f4a01076",
-      "fetched_at": "2026-10-31 00:06:27 UTC",
+      "count": 1643,
+      "sha256": "c0f86fc48a01da7bd1344ab084eeeb47b6067677e75b526ccd460d785c9418c1",
+      "fetched_at": "2026-11-12 02:00:27 UTC",
       "url": "https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module",
       "source": "fresh"
     },
@@ -43,9 +43,9 @@
     },
     "sukka-reject": {
       "name": "Sukka reject (domainset)",
-      "count": 147963,
-      "sha256": "edbd55fd18a1bfe9cf7cb5c972f76f18d42473162b03c9b56cb8be0bc2f48dcd",
-      "fetched_at": "2026-11-11 00:55:07 UTC",
+      "count": 149618,
+      "sha256": "5e34422a22db7df052674cc3f80b30ac75115a3e28e925184a0015c3796bfb70",
+      "fetched_at": "2026-11-12 02:00:27 UTC",
       "url": "https://ruleset.skk.moe/List/domainset/reject.conf",
       "source": "fresh"
     },
@@ -84,8 +84,8 @@
     "v2fly-ads-all": {
       "name": "v2fly category-ads-all (MetaCubeX)",
       "count": 908,
-      "sha256": "59a41120166606ee005debf96e4b0674a096984e65048953a850f3a399a9afa6",
-      "fetched_at": "2026-11-11 00:55:07 UTC",
+      "sha256": "a310762b3d99af909a98f48276bcff05509704c5b5515801c552bf2be8b1eaed",
+      "fetched_at": "2026-11-12 02:00:27 UTC",
       "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list",
       "source": "fresh"
     },
@@ -99,17 +99,17 @@
     },
     "sukka-reject-extra": {
       "name": "Sukka reject_extra (domainset)",
-      "count": 83104,
-      "sha256": "58d7e9bf68b66b7ce28deeee0090544c3697086c594890ce07134cc4476384bc",
-      "fetched_at": "2026-11-11 00:55:07 UTC",
+      "count": 83333,
+      "sha256": "30e237f863867fb8a73e036325659d99ae28b3abcaaa4682f8ae38d88fe90961",
+      "fetched_at": "2026-11-12 02:00:27 UTC",
       "url": "https://ruleset.skk.moe/List/domainset/reject_extra.conf",
       "source": "fresh"
     },
     "hagezi-pro": {
       "name": "HaGeZi Multi PRO (wildcard domains)",
-      "count": 224048,
-      "sha256": "e68d1103797ae0e9847162da93bc88393e0d4ae5686f89b77ff6b49085858f1c",
-      "fetched_at": "2026-11-11 00:55:07 UTC",
+      "count": 223960,
+      "sha256": "346678955bb2b2d76d7b14e3c16372e00509f96ce299b2545efaa844141864a5",
+      "fetched_at": "2026-11-12 02:00:27 UTC",
       "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt",
       "source": "fresh"
     }

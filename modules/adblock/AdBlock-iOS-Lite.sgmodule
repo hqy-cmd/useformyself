@@ -4,10 +4,10 @@
 #!homepage=https://github.com/hqy-cmd/useformyself/tree/main/modules/adblock
 # Install URL: https://raw.githubusercontent.com/hqy-cmd/useformyself/main/modules/adblock/AdBlock-iOS-Lite.sgmodule
 #!category=AdBlock
-# Generated: 2026-11-11 00:55:07 UTC by scripts/update_adblock_rules.py - do not edit by hand.
+# Generated: 2026-11-12 02:00:27 UTC by scripts/update_adblock_rules.py - do not edit by hand.
 # Domain rejects are NOT in this module (module [Rule] lines run before profile rules);
 # use rules/Reject_Domain.list + rules/Reject.list in the profile. Needs MITM enabled.
-# Sections: Body Rewrite 10, Map Local 159, Script 30, URL Rewrite 73; body-buffering entries 40; MITM hosts 100
+# Sections: Body Rewrite 11, Map Local 166, Script 30, URL Rewrite 73; body-buffering entries 41; MITM hosts 100
 # Upstreams:
 #   - ddgksf2013 APP启动页去广告 (yfamilys) [fresh] https://yfamilys.com/module/startingad.sgmodule
 #   - fmz200 wool_scripts blockAds [fresh] https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module
@@ -207,6 +207,14 @@
 ^https?:\/\/api\.zhihu\.com\/api\/v4\/ecom_data\/config data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https?:\/\/api\.zhihu\.com\/feed\/render\/revisit\/tag_config data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https?:\/\/api\.zhihu\.com\/content-distribution-core\/sections\/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+# > baidu.com  [ddgksf2013-startingad]
+^https?:\/\/pan\.baidu\.com\/api\/getconfig data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/pan\.baidu\.com\/rest\/.*\/pcs\/ad data-type=text data=" " status-code=200
+^https:\/\/pan\.baidu\.com\/feed\/hotlist data-type=text data=" " status-code=200
+^https?:\/\/pan\.baidu\.com\/api\/getsyscfg data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https:\/\/pan\.baidu\.com\/queryintent\/queryhint data-type=text data=" " status-code=200
+^https:\/\/pan\.baidu\.com\/coins\/center\/notice data-type=text data=" " status-code=200
+^https:\/\/pan\.baidu\.com\/recommend\/shortseries\/list data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # > 爱奇艺  [fmz200-blockads]
 ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https?:\/\/iface2\.iqiyi\.com\/ivos\/interact\/video\/data\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
@@ -312,6 +320,8 @@ https?:\/\/(ipv4|interface\d?)\.music\.163.com\/e?api\/ad data-type=text data="{
 [Body Rewrite]
 # > weibo.cn  [ddgksf2013-startingad]
 http-response-jq ^https?:\/\/api\.weibo\.cn\/\d\/ug\/checkin\/stream '.items |= map(select(.category != "card"))'
+# > baidu.com  [ddgksf2013-startingad]
+http-response-jq ^https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist '.result.list=[]'
 # > 建行生活  [fmz200-blockads]
 http-response ^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopresourceservice\.getshopresource posterList fmz200
 # > 拼多多  [fmz200-blockads]
