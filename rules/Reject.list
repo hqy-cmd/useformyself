@@ -1,8 +1,8 @@
 # Reject.list - Surge RULE-SET (ad-block keyword / wildcard / logical / URL-REGEX / IP rules)
-# Generated: 2026-11-12 02:00:27 UTC
+# Generated: 2026-11-13 01:28:58 UTC
 # Rules: 974 (DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR/IP-CIDR6 820)
 # Upstreams:
-#   - Sukka reject (domainset): 149618 entries [fresh]
+#   - Sukka reject (domainset): 149574 entries [fresh]
 #     https://ruleset.skk.moe/List/domainset/reject.conf
 #   - Sukka reject (non_ip): 373 entries [fresh]
 #     https://ruleset.skk.moe/List/non_ip/reject.conf
@@ -17,7 +17,7 @@
 #   - kelee 广告平台拦截器 [Rule]: 324 entries [fresh]
 #     https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
 #   - module host-wide rejects (ddgksf2013 / fmz200 / kelee): 7 entries
-# Protected / excluded entries removed this run: 284 (see rules/adblock-report.md)
+# Protected / excluded entries removed this run: 283 (see rules/adblock-report.md)
 # Source: https://github.com/hqy-cmd/useformyself/tree/main/rules
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
 DOMAIN-KEYWORD,-ad.a.yximgs.com
@@ -317,7 +317,6 @@ IP-CIDR,50.112.124.170/32,no-resolve
 IP-CIDR,51.15.3.223/32,no-resolve
 IP-CIDR,51.68.87.229/32,no-resolve
 IP-CIDR,51.77.227.97/32,no-resolve
-IP-CIDR,51.89.187.141/32,no-resolve
 IP-CIDR,51.91.66.125/32,no-resolve
 IP-CIDR,51.91.211.94/32,no-resolve
 IP-CIDR,51.178.76.105/32,no-resolve
@@ -726,6 +725,7 @@ IP-CIDR,172.255.6.107/32,no-resolve
 IP-CIDR,172.255.6.147/32,no-resolve
 IP-CIDR,172.255.6.219/32,no-resolve
 IP-CIDR,172.255.6.225/32,no-resolve
+IP-CIDR,172.255.6.254/32,no-resolve
 IP-CIDR,173.208.96.42/31,no-resolve
 IP-CIDR,173.208.96.44/31,no-resolve
 IP-CIDR,173.208.96.46/32,no-resolve
