@@ -1,52 +1,52 @@
 # Ad-block rules report
 
-Generated: 2026-11-13 01:28:58 UTC
+Generated: 2026-11-14 01:03:47 UTC
 
 ## Upstreams
 
 | Upstream | Layer | Entries | Source | Fetched | URL used |
 |---|---|---|---|---|---|
-| Public Suffix List | aux | 10419 | fresh | 2026-11-13 01:28:58 UTC | https://publicsuffix.org/list/public_suffix_list.dat |
+| Public Suffix List | aux | 10425 | fresh | 2026-11-14 01:03:47 UTC | https://publicsuffix.org/list/public_suffix_list.dat |
 | ddgksf2013 APP启动页去广告 (yfamilys) | module | 825 | fresh | 2026-11-12 02:00:27 UTC | https://yfamilys.com/module/startingad.sgmodule |
 | fmz200 wool_scripts blockAds | module | 1643 | fresh | 2026-11-12 02:00:27 UTC | https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module |
 | kelee 广告平台拦截器 (URL Rewrite) | module | 4 | fresh | 2026-10-15 20:51:11 UTC | https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule |
-| Sukka reject (domainset) | core | 149574 | fresh | 2026-11-13 01:28:58 UTC | https://ruleset.skk.moe/List/domainset/reject.conf |
+| Sukka reject (domainset) | core | 149803 | fresh | 2026-11-14 01:03:47 UTC | https://ruleset.skk.moe/List/domainset/reject.conf |
 | Sukka reject (non_ip) | core | 373 | fresh | 2026-10-23 23:32:24 UTC | https://ruleset.skk.moe/List/non_ip/reject.conf |
 | Sukka reject (ip) | core | 769 | fresh | 2026-11-13 01:28:58 UTC | https://ruleset.skk.moe/List/ip/reject.conf |
 | AWAvenue-Ads-Rule (秋风) | core | 976 | fresh | 2026-10-22 23:37:23 UTC | https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list |
 | 217heidai adblockfilters lite | core | 8480 | fresh | 2026-10-29 00:26:19 UTC | https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksurgelite.list |
-| v2fly category-ads-all (MetaCubeX) | core | 908 | fresh | 2026-11-13 01:28:58 UTC | https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list |
+| v2fly category-ads-all (MetaCubeX) | core | 908 | fresh | 2026-11-14 01:03:47 UTC | https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list |
 | kelee 广告平台拦截器 [Rule] | core | 324 | fresh | 2026-10-31 23:46:04 UTC | https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx |
-| Sukka reject_extra (domainset) | extra | 83637 | fresh | 2026-11-13 01:28:58 UTC | https://ruleset.skk.moe/List/domainset/reject_extra.conf |
-| HaGeZi Multi PRO (wildcard domains) | extra | 224729 | fresh | 2026-11-13 01:28:58 UTC | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt |
+| Sukka reject_extra (domainset) | extra | 83820 | fresh | 2026-11-14 01:03:47 UTC | https://ruleset.skk.moe/List/domainset/reject_extra.conf |
+| HaGeZi Multi PRO (wildcard domains) | extra | 226838 | fresh | 2026-11-14 01:03:47 UTC | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt |
 
 List upstream breakdown:
 
 | Upstream | DOMAIN | SUFFIX | KEYWORD | WILDCARD | URL-REGEX | AND/OR | IP-CIDR |
 |---|---|---|---|---|---|---|---|
-| Sukka reject (domainset) | 1156 | 148418 | 0 | 0 | 0 | 0 | 0 |
+| Sukka reject (domainset) | 1156 | 148647 | 0 | 0 | 0 | 0 | 0 |
 | Sukka reject (non_ip) | 71 | 89 | 144 | 15 | 3 | 0 | 51 |
 | Sukka reject (ip) | 1 | 0 | 0 | 0 | 0 | 0 | 768 |
 | AWAvenue-Ads-Rule (秋风) | 960 | 12 | 4 | 0 | 0 | 0 | 0 |
 | 217heidai adblockfilters lite | 0 | 8480 | 0 | 0 | 0 | 0 | 0 |
 | v2fly category-ads-all (MetaCubeX) | 159 | 749 | 0 | 0 | 0 | 0 | 0 |
 | kelee 广告平台拦截器 [Rule] | 113 | 195 | 12 | 0 | 0 | 3 | 1 |
-| Sukka reject_extra (domainset) | 16 | 83621 | 0 | 0 | 0 | 0 | 0 |
-| HaGeZi Multi PRO (wildcard domains) | 0 | 224729 | 0 | 0 | 0 | 0 | 0 |
+| Sukka reject_extra (domainset) | 16 | 83804 | 0 | 0 | 0 | 0 | 0 |
+| HaGeZi Multi PRO (wildcard domains) | 0 | 226838 | 0 | 0 | 0 | 0 | 0 |
 
 - Module host-wide rejects moved into the core DOMAIN-SET: 7 (`adapi.izuiyou.com`, `api.htp.ad-scope.com.cn`, `fc-video.cdn.bcebos.com`, `sdk1xyajs.data.kuiniuca.com`, `stat.peopleapp.com`, `.kingsoft-office-service.com`, `.pglstatp-toutiao.com`)
-- Raw union before filtering: core 156094, extra 266025
+- Raw union before filtering: core 156323, extra 268115
 
 ## Outputs
 
-- `Reject_Domain.list`: 153237 lines
+- `Reject_Domain.list`: 153466 lines
 - `Reject.list`: 974 lines
-- `Reject_Extra_Domain.list`: 206330 lines
+- `Reject_Extra_Domain.list`: 207940 lines
 - `AdBlock.sgmodule`: 1913 lines
 - `AdBlock-iOS-Lite.sgmodule`: 286 lines
 - `MITM-Guard.sgmodule`: 2 lines
 - Reject.list breakdown: DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR 820
-- Extra-layer entries dropped because core already covers them: 56697
+- Extra-layer entries dropped because core already covers them: 57171
 
 ## Removed by category
 
@@ -61,7 +61,7 @@ List upstream breakdown:
 | Over-broad URL-REGEX | 3 |
 | Over-broad keywords | 10 |
 | TikTok / ByteDance network config and IM | 41 |
-| AI group (rules/AI_Domain.list) | 92 |
+| AI group (rules/AI_Domain.list) | 91 |
 | must-not-block: Banks (whole tree) | 40 |
 | must-not-block: Payments (whole tree) | 42 |
 | public suffix / bare eTLD | 110 |
@@ -88,7 +88,7 @@ List upstream breakdown:
 
 ### AI group
 
-**AI group (rules/AI_Domain.list)** (92): `.956c0ff0-1584-4ba1-a1dc-7eb401042d74-00-dhi9f362orh4.spock.replit.dev [extra]`, `.ads.openai.com [extra]`, `.advertising.civitai.com [extra]`, `.analytics.zed.dev [extra]`, `.bdvcredienlinea-7--servcios.replit.app [extra]`, `.browser-intake-datadoghq.com [core]`, `.browser-intake-datadoghq.com [extra]`, `.browser-intake-us5-datadoghq.com [extra]`, `.bzr.openai.com [core]`, `.bzr.openai.com [extra]`, `.bzrcdn.openai.com [core]`, `.bzrcdn.openai.com [extra]`, `.cdn.usefathom.com [extra]`, `.client-telemetry.us-east-1.amazonaws.com [extra]`, `.cloudflareinsights.com [core]`, `.cloudflareinsights.com [extra]`, `.consultaexpressdomi--pamelalorzano.replit.app [extra]`, `.copilot-telemetry-service.githubusercontent.com [extra]`, `.copilot-telemetry.githubusercontent.com [core]`, `.copilot-telemetry.githubusercontent.com [extra]`, `.data.microsoft.com [core]`, `.dd.huggingface.co [core]`, `.default.exp-tas.com [extra]`, `.events.api.gamma.app [core]`, `.events.api.gamma.app [extra]`, `.events.character.ai [core]`, `.events.character.ai [extra]`, `.faro.civitai.com [extra]`, `.gemini.talkai.info [extra]`, `.global-user-tracker.replit.app [extra]`, `.gnar.grammarly.com [core]`, `.gnar.grammarly.com [extra]`, `.goto.suno.com [core]`, `.goto.suno.com [extra]`, `.gtm.you.com [extra]`, `.i.replit.com [core]`, `.i.replit.com [extra]`, `.in.appcenter.ms [extra]`, `.k.coderabbit.ai [extra]`, `.logs.us5.datadoghq.com [extra]`, `.m-chromadrone.prod.suno.com [core]`, `.m-chromadrone.prod.suno.com [extra]`, `.m-stratovibe.prod.suno.com [core]`, `.m-stratovibe.prod.suno.com [extra]`, `.m-zephyrtone.prod.suno.com [extra]`, `.metrics-prod.suno.com [core]`, `.metrics-prod.suno.com [extra]`, `.metrics.anthropic.com [extra]`, `.metrics.cursor.sh [extra]`, `.metrics.manus.im [extra]`, `.openai.qualtrics.com [extra]`, `.otel.cline.bot [extra]`, `.otel.otter.ai [extra]`, `.presale-amswallet.replit.app [extra]`, `.prod.us-east-1.telemetry-v2.kiro.dev [extra]`, `.proxima.midjourney.com [core]`, `.proxima.midjourney.com [extra]`, `.r.openai.com [extra]`, `.r.typesafe.ai [core]`, `.s.sourcegraph.com [extra]`, ... and 32 more
+**AI group (rules/AI_Domain.list)** (91): `.956c0ff0-1584-4ba1-a1dc-7eb401042d74-00-dhi9f362orh4.spock.replit.dev [extra]`, `.ads.openai.com [extra]`, `.advertising.civitai.com [extra]`, `.analytics.zed.dev [extra]`, `.bdvcredienlinea-7--servcios.replit.app [extra]`, `.browser-intake-datadoghq.com [core]`, `.browser-intake-datadoghq.com [extra]`, `.browser-intake-us5-datadoghq.com [extra]`, `.bzr.openai.com [core]`, `.bzr.openai.com [extra]`, `.bzrcdn.openai.com [core]`, `.bzrcdn.openai.com [extra]`, `.cdn.usefathom.com [extra]`, `.client-telemetry.us-east-1.amazonaws.com [extra]`, `.cloudflareinsights.com [core]`, `.cloudflareinsights.com [extra]`, `.consultaexpressdomi--pamelalorzano.replit.app [extra]`, `.copilot-telemetry-service.githubusercontent.com [extra]`, `.copilot-telemetry.githubusercontent.com [core]`, `.copilot-telemetry.githubusercontent.com [extra]`, `.data.microsoft.com [core]`, `.dd.huggingface.co [core]`, `.default.exp-tas.com [extra]`, `.events.api.gamma.app [core]`, `.events.api.gamma.app [extra]`, `.events.character.ai [core]`, `.events.character.ai [extra]`, `.faro.civitai.com [extra]`, `.gemini.talkai.info [extra]`, `.global-user-tracker.replit.app [extra]`, `.gnar.grammarly.com [core]`, `.gnar.grammarly.com [extra]`, `.goto.suno.com [core]`, `.goto.suno.com [extra]`, `.gtm.you.com [extra]`, `.i.replit.com [core]`, `.i.replit.com [extra]`, `.in.appcenter.ms [extra]`, `.k.coderabbit.ai [extra]`, `.logs.us5.datadoghq.com [extra]`, `.m-chromadrone.prod.suno.com [core]`, `.m-chromadrone.prod.suno.com [extra]`, `.m-stratovibe.prod.suno.com [core]`, `.m-stratovibe.prod.suno.com [extra]`, `.m-zephyrtone.prod.suno.com [extra]`, `.metrics-prod.suno.com [core]`, `.metrics-prod.suno.com [extra]`, `.metrics.anthropic.com [extra]`, `.metrics.cursor.sh [extra]`, `.metrics.manus.im [extra]`, `.openai.qualtrics.com [extra]`, `.otel.cline.bot [extra]`, `.otel.otter.ai [extra]`, `.presale-amswallet.replit.app [extra]`, `.prod.us-east-1.telemetry-v2.kiro.dev [extra]`, `.proxima.midjourney.com [core]`, `.proxima.midjourney.com [extra]`, `.r.openai.com [extra]`, `.r.typesafe.ai [core]`, `.s.sourcegraph.com [extra]`, ... and 31 more
 
 ### must-not-block guard
 
@@ -120,7 +120,7 @@ Exclude rules with no current match (kept for future upstream changes): `DOMAIN-
 - core: DOMAIN-SUFFIX covered by broader DOMAIN-SUFFIX: 385
 - core: IP-CIDR covered by broader CIDR: 1
 - extra: DOMAIN covered by DOMAIN-SUFFIX: 2
-- extra: DOMAIN-SUFFIX covered by broader DOMAIN-SUFFIX: 2762
+- extra: DOMAIN-SUFFIX covered by broader DOMAIN-SUFFIX: 2769
 
 ## Modules
 
