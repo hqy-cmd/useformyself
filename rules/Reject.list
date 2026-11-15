@@ -1,14 +1,14 @@
 # Reject.list - Surge RULE-SET (ad-block keyword / wildcard / logical / URL-REGEX / IP rules)
-# Generated: 2026-11-14 01:03:47 UTC
-# Rules: 974 (DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR/IP-CIDR6 820)
+# Generated: 2026-11-15 00:20:22 UTC
+# Rules: 987 (DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR/IP-CIDR6 833)
 # Upstreams:
-#   - Sukka reject (domainset): 149803 entries [fresh]
+#   - Sukka reject (domainset): 149966 entries [fresh]
 #     https://ruleset.skk.moe/List/domainset/reject.conf
 #   - Sukka reject (non_ip): 373 entries [fresh]
 #     https://ruleset.skk.moe/List/non_ip/reject.conf
 #   - Sukka reject (ip): 769 entries [fresh]
 #     https://ruleset.skk.moe/List/ip/reject.conf
-#   - AWAvenue-Ads-Rule (秋风): 976 entries [fresh]
+#   - AWAvenue-Ads-Rule (秋风): 984 entries [fresh]
 #     https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list
 #   - 217heidai adblockfilters lite: 8480 entries [fresh]
 #     https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksurgelite.list
@@ -17,7 +17,7 @@
 #   - kelee 广告平台拦截器 [Rule]: 324 entries [fresh]
 #     https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
 #   - module host-wide rejects (ddgksf2013 / fmz200 / kelee): 7 entries
-# Protected / excluded entries removed this run: 282 (see rules/adblock-report.md)
+# Protected / excluded entries removed this run: 284 (see rules/adblock-report.md)
 # Source: https://github.com/hqy-cmd/useformyself/tree/main/rules
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
 DOMAIN-KEYWORD,-ad.a.yximgs.com
@@ -192,6 +192,9 @@ IP-CIDR,5.188.62.36/32,no-resolve
 IP-CIDR,10.72.25.0/24,no-resolve
 IP-CIDR,13.140.171.211/32,no-resolve
 IP-CIDR,13.248.148.254/32,no-resolve
+IP-CIDR,14.29.101.160/32,no-resolve
+IP-CIDR,14.29.101.168/32,no-resolve
+IP-CIDR,14.29.101.169/32,no-resolve
 IP-CIDR,15.197.244.48/32,no-resolve
 IP-CIDR,18.142.131.147/32,no-resolve
 IP-CIDR,18.202.86.139/32,no-resolve
@@ -256,6 +259,7 @@ IP-CIDR,37.48.80.112/32,no-resolve
 IP-CIDR,37.220.26.135/32,no-resolve
 IP-CIDR,37.220.26.136/31,no-resolve
 IP-CIDR,38.180.96.244/32,no-resolve
+IP-CIDR,38.190.225.166/32,no-resolve
 IP-CIDR,39.65.72.211/32,no-resolve
 IP-CIDR,39.68.172.210/32,no-resolve
 IP-CIDR,39.80.147.239/32,no-resolve
@@ -529,6 +533,7 @@ IP-CIDR,110.93.143.144/32,no-resolve
 IP-CIDR,110.167.64.171/32,no-resolve
 IP-CIDR,110.241.119.159/32,no-resolve
 IP-CIDR,111.11.208.2/32,no-resolve
+IP-CIDR,111.20.26.186/32,no-resolve
 IP-CIDR,111.175.220.163/32,no-resolve
 IP-CIDR,111.175.220.164/32,no-resolve
 IP-CIDR,111.175.221.58/32,no-resolve
@@ -539,6 +544,7 @@ IP-CIDR,112.30.110.58/32,no-resolve
 IP-CIDR,112.31.211.135/32,no-resolve
 IP-CIDR,112.64.218.119/32,no-resolve
 IP-CIDR,112.65.200.117/32,no-resolve
+IP-CIDR,112.84.130.73/32,no-resolve
 IP-CIDR,112.132.230.179/32,no-resolve
 IP-CIDR,112.252.132.185/32,no-resolve
 IP-CIDR,113.12.83.4/31,no-resolve
@@ -568,6 +574,8 @@ IP-CIDR,115.236.121.195/32,no-resolve
 IP-CIDR,116.17.210.157/32,no-resolve
 IP-CIDR,116.63.10.31/32,no-resolve
 IP-CIDR,116.63.10.135/32,no-resolve
+IP-CIDR,116.142.251.100/32,no-resolve
+IP-CIDR,116.177.251.215/32,no-resolve
 IP-CIDR,116.179.138.68/32,no-resolve
 IP-CIDR,117.46.7.204/32,no-resolve
 IP-CIDR,117.46.7.206/31,no-resolve
@@ -594,6 +602,7 @@ IP-CIDR,120.4.141.185/32,no-resolve
 IP-CIDR,120.12.138.133/32,no-resolve
 IP-CIDR,120.46.169.234/32,no-resolve
 IP-CIDR,120.76.189.132/32,no-resolve
+IP-CIDR,120.77.173.114/32,no-resolve
 IP-CIDR,120.192.83.163/32,no-resolve
 IP-CIDR,120.209.138.64/32,no-resolve
 IP-CIDR,121.36.72.124/32,no-resolve
@@ -608,6 +617,7 @@ IP-CIDR,122.192.177.176/32,no-resolve
 IP-CIDR,123.10.65.201/32,no-resolve
 IP-CIDR,123.10.224.135/32,no-resolve
 IP-CIDR,123.10.225.196/32,no-resolve
+IP-CIDR,123.56.23.22/32,no-resolve
 IP-CIDR,123.56.152.96/32,no-resolve
 IP-CIDR,123.110.176.246/32,no-resolve
 IP-CIDR,123.125.81.12/32,no-resolve
@@ -760,6 +770,7 @@ IP-CIDR,182.122.196.203/32,no-resolve
 IP-CIDR,182.122.252.69/32,no-resolve
 IP-CIDR,182.123.141.17/32,no-resolve
 IP-CIDR,182.173.0.181/32,no-resolve
+IP-CIDR,182.254.116.116/32,no-resolve
 IP-CIDR,182.254.116.117/32,no-resolve
 IP-CIDR,182.254.118.119/32,no-resolve
 IP-CIDR,183.15.90.156/32,no-resolve
@@ -896,6 +907,7 @@ IP-CIDR,203.107.1.0/24,no-resolve
 IP-CIDR,203.119.204.66/32,no-resolve
 IP-CIDR,203.119.238.194/32,no-resolve
 IP-CIDR,203.188.171.156/32,no-resolve
+IP-CIDR,203.205.137.89/32,no-resolve
 IP-CIDR,205.185.126.200/32,no-resolve
 IP-CIDR,205.209.138.102/32,no-resolve
 IP-CIDR,206.54.181.250/32,no-resolve
@@ -944,6 +956,7 @@ IP-CIDR,218.30.64.194/32,no-resolve
 IP-CIDR,218.68.250.117/32,no-resolve
 IP-CIDR,218.68.250.118/31,no-resolve
 IP-CIDR,218.68.250.120/31,no-resolve
+IP-CIDR,218.77.192.51/32,no-resolve
 IP-CIDR,218.93.127.37/32,no-resolve
 IP-CIDR,219.146.13.36/32,no-resolve
 IP-CIDR,219.155.26.50/32,no-resolve
