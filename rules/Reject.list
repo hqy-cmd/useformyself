@@ -1,14 +1,14 @@
 # Reject.list - Surge RULE-SET (ad-block keyword / wildcard / logical / URL-REGEX / IP rules)
-# Generated: 2026-11-16 00:23:28 UTC
+# Generated: 2026-11-17 03:11:50 UTC
 # Rules: 987 (DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR/IP-CIDR6 833)
 # Upstreams:
-#   - Sukka reject (domainset): 150228 entries [fresh]
+#   - Sukka reject (domainset): 149413 entries [fresh]
 #     https://ruleset.skk.moe/List/domainset/reject.conf
 #   - Sukka reject (non_ip): 373 entries [fresh]
 #     https://ruleset.skk.moe/List/non_ip/reject.conf
 #   - Sukka reject (ip): 769 entries [fresh]
 #     https://ruleset.skk.moe/List/ip/reject.conf
-#   - AWAvenue-Ads-Rule (秋风): 984 entries [fresh]
+#   - AWAvenue-Ads-Rule (秋风): 998 entries [fresh]
 #     https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list
 #   - 217heidai adblockfilters lite: 8480 entries [fresh]
 #     https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksurgelite.list
@@ -17,7 +17,7 @@
 #   - kelee 广告平台拦截器 [Rule]: 324 entries [fresh]
 #     https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
 #   - module host-wide rejects (ddgksf2013 / fmz200 / kelee): 7 entries
-# Protected / excluded entries removed this run: 283 (see rules/adblock-report.md)
+# Protected / excluded entries removed this run: 290 (see rules/adblock-report.md)
 # Source: https://github.com/hqy-cmd/useformyself/tree/main/rules
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
 DOMAIN-KEYWORD,-ad.a.yximgs.com
