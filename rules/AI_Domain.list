@@ -1,10 +1,10 @@
 # AI_Domain.list - Surge DOMAIN-SET (merged AI domains)
-# Generated: 2026-11-08 23:41:01 UTC
-# Entries: 376 (252 suffix '.x', 124 exact)
+# Generated: 2026-11-18 02:24:27 UTC
+# Entries: 377 (252 suffix '.x', 125 exact)
 # Upstreams:
-#   - QuixoticHeart: 254 entries [fresh]
+#   - QuixoticHeart: 256 entries [fresh]
 #     https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/surge/ai.list
-#   - VPSDance: 323 entries [fresh]
+#   - VPSDance: 325 entries [fresh]
 #     https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/global.list
 #   - dler-io: 192 entries [fresh]
 #     https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list
@@ -152,6 +152,7 @@ http-intake.logs.us5.datadoghq.com
 .dreamgen.com
 .elevenlabs.com
 default.exp-tas.com
+graph.facebook.com
 apple-relay.fastly-edge.com
 copilot-reports.github.com
 .githubcopilot.com
