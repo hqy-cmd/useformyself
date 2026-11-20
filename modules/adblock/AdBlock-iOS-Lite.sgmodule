@@ -4,10 +4,10 @@
 #!homepage=https://github.com/hqy-cmd/useformyself/tree/main/modules/adblock
 # Install URL: https://raw.githubusercontent.com/hqy-cmd/useformyself/main/modules/adblock/AdBlock-iOS-Lite.sgmodule
 #!category=AdBlock
-# Generated: 2026-11-19 02:00:09 UTC by scripts/update_adblock_rules.py - do not edit by hand.
+# Generated: 2026-11-20 01:54:33 UTC by scripts/update_adblock_rules.py - do not edit by hand.
 # Domain rejects are NOT in this module (module [Rule] lines run before profile rules);
 # use rules/Reject_Domain.list + rules/Reject.list in the profile. Needs MITM enabled.
-# Sections: Body Rewrite 11, Map Local 166, Script 30, URL Rewrite 73; body-buffering entries 41; MITM hosts 100
+# Sections: Body Rewrite 10, Map Local 166, Script 30, URL Rewrite 73; body-buffering entries 40; MITM hosts 100
 # Upstreams:
 #   - ddgksf2013 APP启动页去广告 (yfamilys) [fresh] https://yfamilys.com/module/startingad.sgmodule
 #   - fmz200 wool_scripts blockAds [fresh] https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module
@@ -136,12 +136,12 @@
 ^https?:\/\/img\.meituan\.net\/(adunion|display|midas)\/\w+\.(gif|jpg|jpg\.webp)$ data-type=text data=" " status-code=200
 ^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) data-type=text data=" " status-code=200
 ^https?:\/\/p\d\.meituan\.net\/(bizad|wmbanner)\/\w+\.jpg data-type=text data=" " status-code=200
-^https?:\/\/p\d\.meituan\.net\/movie\/\w+\.jpg\?may_covertWebp data-type=text data=" " status-code=200
+^https?:\/\/p\d\.meituan\.net\/movie\/\w+\.jpg\?(?:[^#?&]+&)*may_covertWebp data-type=text data=" " status-code=200
 ^https?:\/\/img\.meituan\.net\/(bizad|brandCpt)\/\w+\.(png|jpg) data-type=text data=" " status-code=200
 # > meituan.com  [ddgksf2013-startingad]
-^https?:\/\/.*\.meituan\.com\/api\/v\d\/(openscreen\?ad|appstatus\?ad|loadInfo\?|startpicture) data-type=text data=" " status-code=200
+^https?:\/\/.*\.meituan\.com\/api\/v\d\/(openscreen\?(?:[^#?&]+&)*ad|appstatus\?(?:[^#?&]+&)*ad|loadInfo\?|startpicture) data-type=text data=" " status-code=200
 # > meituan.net  [ddgksf2013-startingad]
-^http:\/\/s3plus\.meituan\.net\/.*\/brandcpt-vedio\/.*\?time data-type=text data=" " status-code=200
+^http:\/\/s3plus\.meituan\.net\/.*\/brandcpt-vedio\/.*\?(?:[^#?&]+&)*time data-type=text data=" " status-code=200
 # > pinduoduo.com  [ddgksf2013-startingad]
 ^https?:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash data-type=text data=" " status-code=200
 # > qq.com  [ddgksf2013-startingad]
@@ -178,8 +178,8 @@
 ^https?:\/\/api\.weibo\.cn\/.*discovery_home_bottom_getdotinfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/api\.weibo\.cn\/\d\/cardlist\?v_f=.*Weibo_intl data-type=text data="{}" status-code=200 header="Content-Type:application/json"
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/api\.weibo\.cn\/\d\/cardlist\?(?:[^#?&]+&)*v_f=.*Weibo_intl data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?(?:[^#?&]+&)*a=hot_search_users data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 # > xiaohongshu.com  [ddgksf2013-startingad]
 ^https?:\/\/[a-z]+\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/notes\/recommend_info\? data-type=text data=" " status-code=200
@@ -318,8 +318,6 @@ https?:\/\/(ipv4|interface\d?)\.music\.163.com\/e?api\/ad data-type=text data="{
 ^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/h5\/recommendation\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Body Rewrite]
-# > qq.com  [ddgksf2013-startingad]
-http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad advertisement ddgksf2013
 # > weibo.cn  [ddgksf2013-startingad]
 http-response-jq ^https?:\/\/api\.weibo\.cn\/\d\/ug\/checkin\/stream '.items |= map(select(.category != "card"))'
 # > baidu.com  [ddgksf2013-startingad]
@@ -338,34 +336,34 @@ http-response-jq ^https:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-us
 
 [Script]
 # > zhihu.com  [ddgksf2013-startingad]
-ab-zhihu-com-1 = type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/commercial_api.*launch_v2,requires-body=true,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/zhihu_openads.js
+ab-zhihu-com-1 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/commercial_api.*launch_v2, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/zhihu_openads.js, requires-body=true, max-size=-1, timeout=60
 # > amap.com  [ddgksf2013-startingad]
-ab-amap-com-1 = type=http-response,pattern=^https?:\/\/.*\.amap\.com\/ws\/message\/notice\/list,requires-body=true,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amap.js
-ab-amap-com-2 = type=http-response,pattern=^https?:\/\/.*\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable,requires-body=true,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amap.js
-ab-amap-com-3 = type=http-response,pattern=^https?:\/\/.*\.amap\.com\/ws\/shield\/search\/nearbyrec_smart,requires-body=true,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amap.js
-ab-amap-com-4 = type=http-response,pattern=^https?:\/\/.*\.amap\.com\/ws\/promotion-web\/resource,requires-body=true,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amap.js
-ab-amap-com-5 = type=http-response,pattern=^https?:\/\/.*\.amap\.com\/ws\/faas\/amap-navigation\/main-page,requires-body=true,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amap.js
-ab-amap-com-6 = type=http-response,pattern=^https?:\/\/.*\.amap\.com\/ws\/valueadded\/alimama\/splash_screen,requires-body=true,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amap.js
+ab-amap-com-1 = type=http-response, pattern=^https?:\/\/.*\.amap\.com\/ws\/message\/notice\/list, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amap.js, requires-body=true, max-size=-1, timeout=60
+ab-amap-com-2 = type=http-response, pattern=^https?:\/\/.*\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amap.js, requires-body=true, max-size=-1, timeout=60
+ab-amap-com-3 = type=http-response, pattern=^https?:\/\/.*\.amap\.com\/ws\/shield\/search\/nearbyrec_smart, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amap.js, requires-body=true, max-size=-1, timeout=60
+ab-amap-com-4 = type=http-response, pattern=^https?:\/\/.*\.amap\.com\/ws\/promotion-web\/resource, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amap.js, requires-body=true, max-size=-1, timeout=60
+ab-amap-com-5 = type=http-response, pattern=^https?:\/\/.*\.amap\.com\/ws\/faas\/amap-navigation\/main-page, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amap.js, requires-body=true, max-size=-1, timeout=60
+ab-amap-com-6 = type=http-response, pattern=^https?:\/\/.*\.amap\.com\/ws\/valueadded\/alimama\/splash_screen, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/amap.js, requires-body=true, max-size=-1, timeout=60
 # > 163.com  [ddgksf2013-startingad]
-ab-163-com-1 = type=http-response,pattern=^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/home\/framework\/tab,requires-body=true,script-path=https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js
-ab-163-com-2 = type=http-response,pattern=^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show,requires-body=true,script-path=https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js
-ab-163-com-3 = type=http-response,pattern=^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/page\/rcmd\/resource\/show,requires-body=true,script-path=https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js
-ab-163-com-4 = type=http-response,pattern=^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/ad\/loading\/get,requires-body=true,script-path=https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js
-ab-163-com-5 = type=http-response,pattern=^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/ad\/loading\/current,requires-body=true,script-path=https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js
-ab-163-com-6 = type=http-response,pattern=^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/ad\/get,requires-body=true,script-path=https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js
+ab-163-com-1 = type=http-response, pattern=^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/home\/framework\/tab, script-path=https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body=true, max-size=-1, timeout=60
+ab-163-com-2 = type=http-response, pattern=^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show, script-path=https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body=true, max-size=-1, timeout=60
+ab-163-com-3 = type=http-response, pattern=^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/link\/page\/rcmd\/resource\/show, script-path=https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body=true, max-size=-1, timeout=60
+ab-163-com-4 = type=http-response, pattern=^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/ad\/loading\/get, script-path=https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body=true, max-size=-1, timeout=60
+ab-163-com-5 = type=http-response, pattern=^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/ad\/loading\/current, script-path=https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body=true, max-size=-1, timeout=60
+ab-163-com-6 = type=http-response, pattern=^https?:\/\/interface(\d)?\.music\.163\.com\/e?api\/ad\/get, script-path=https://gist.githubusercontent.com/ddgksf2013/4f53b7c6083678df25fecc8ff68b52c4/raw/netease.adblock.js, requires-body=true, max-size=-1, timeout=60
 # > weibo.cn  [ddgksf2013-startingad]
-ab-weibo-cn-1 = type=http-response,pattern=^https?:\/\/api\.weibo\.cn\/\d\/statuses\/container_detail,requires-body=true,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_json.js
-ab-weibo-cn-2 = type=http-response,pattern=^https?:\/\/api\.weibo\.cn\/\d\/groups\/allgroups\/v\d,requires-body=true,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_json.js
-ab-weibo-cn-3 = type=http-response,pattern=^https?:\/\/api\.weibo\.cn\/\d\/\w{5}\/(statuses_unread_hot_timeline|timeline),requires-body=true,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_json.js
-ab-weibo-cn-4 = type=http-response,pattern=^https?:\/\/api\.weibo\.cn\/\d\/video\/tiny_stream_mid_detail,requires-body=true,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_json.js
-ab-weibo-cn-5 = type=http-response,pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist,requires-body=true,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_json.js
-ab-weibo-cn-6 = type=http-response,pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads,requires-body=true,script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_json.js
+ab-weibo-cn-1 = type=http-response, pattern=^https?:\/\/api\.weibo\.cn\/\d\/statuses\/container_detail, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+ab-weibo-cn-2 = type=http-response, pattern=^https?:\/\/api\.weibo\.cn\/\d\/groups\/allgroups\/v\d, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+ab-weibo-cn-3 = type=http-response, pattern=^https?:\/\/api\.weibo\.cn\/\d\/\w{5}\/(statuses_unread_hot_timeline|timeline), script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+ab-weibo-cn-4 = type=http-response, pattern=^https?:\/\/api\.weibo\.cn\/\d\/video\/tiny_stream_mid_detail, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+ab-weibo-cn-5 = type=http-response, pattern=^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
+ab-weibo-cn-6 = type=http-response, pattern=^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php.*get_coopen_ads, script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/refs/heads/master/weibo_json.js, requires-body=true, max-size=-1, timeout=60
 # > zhihu.com  [ddgksf2013-startingad]
-ab-zhihu-com-2 = type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/people\/,requires-body=true,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-ab-zhihu-com-3 = type=http-request,pattern=^https?:\/\/api\.zhihu\.com\/feed-root\/block,requires-body=true,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-ab-zhihu-com-4 = type=http-response,pattern=^https?:\/\/api\.zhihu\.com\/root\/tab\/v2,requires-body=true,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-ab-zhihu-com-5 = type=http-response,pattern=^https:\/\/(api|web-render)\.zhihu\.com\/topstory\/recommend,requires-body=true,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-ab-zhihu-com-6 = type=http-response,pattern=^https:\/\/api\.zhihu\.com\/questions\/\d+\/feeds?,requires-body=true,script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+ab-zhihu-com-2 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/people\/, script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js, requires-body=true, max-size=-1, timeout=60
+ab-zhihu-com-3 = type=http-request, pattern=^https?:\/\/api\.zhihu\.com\/feed-root\/block, script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js, requires-body=true, max-size=-1, timeout=60
+ab-zhihu-com-4 = type=http-response, pattern=^https?:\/\/api\.zhihu\.com\/root\/tab\/v2, script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js, requires-body=true, max-size=-1, timeout=60
+ab-zhihu-com-5 = type=http-response, pattern=^https:\/\/(api|web-render)\.zhihu\.com\/topstory\/recommend, script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js, requires-body=true, max-size=-1, timeout=60
+ab-zhihu-com-6 = type=http-response, pattern=^https:\/\/api\.zhihu\.com\/questions\/\d+\/feeds?, script-path=https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js, requires-body=true, max-size=-1, timeout=60
 # > 小红书  [fmz200-blockads]
 ab-xiaohongshu-com-1 = type=http-response, pattern=^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/search\/(banner|hot)_list, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
 ab-xiaohongshu-com-2 = type=http-response, pattern=^https?:\/\/edith\.(xiaohongshu|rnote)\.com\/api\/sns\/v\d+\/search\/(hint|trending)\?, script-path=https://github.com/fmz200/wool_scripts/raw/main/Scripts/xiaohongshu/xiaohongshu.js, requires-body=true, timeout=60
