@@ -1,8 +1,8 @@
 # AI.list - Surge RULE-SET (merged AI keyword / IP / ASN rules)
-# Generated: 2026-11-19 01:51:36 UTC
-# Rules: 38 (DOMAIN-KEYWORD 7, IP-CIDR/IP-CIDR6 29, IP-ASN 2)
+# Generated: 2026-11-23 00:48:52 UTC
+# Rules: 39 (DOMAIN-KEYWORD 8, IP-CIDR/IP-CIDR6 29, IP-ASN 2)
 # Upstreams:
-#   - QuixoticHeart: 257 entries [fresh]
+#   - QuixoticHeart: 258 entries [fresh]
 #     https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/surge/ai.list
 #   - VPSDance: 326 entries [fresh]
 #     https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/global.list
@@ -14,6 +14,7 @@
 # Source: https://github.com/hqy-cmd/useformyself/tree/main/rules
 DOMAIN-KEYWORD,alkalimakersuite-pa.clients6.google.com
 DOMAIN-KEYWORD,anthropic
+DOMAIN-KEYWORD,antigravity
 DOMAIN-KEYWORD,chatgpt-async-webps-prod
 DOMAIN-KEYWORD,claude
 DOMAIN-KEYWORD,labs.google

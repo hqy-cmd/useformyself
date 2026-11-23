@@ -1,22 +1,22 @@
 # AI rules report
 
-Generated: 2026-11-19 01:51:36 UTC
+Generated: 2026-11-23 00:48:52 UTC
 
 ## Upstreams
 
 | Upstream | Entries | DOMAIN | SUFFIX | KEYWORD | IP-CIDR | IP-ASN | Source |
 |---|---|---|---|---|---|---|---|
-| [QuixoticHeart](https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/surge/ai.list) | 257 | 53 | 196 | 8 | 0 | 0 | fresh |
+| [QuixoticHeart](https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/surge/ai.list) | 258 | 53 | 196 | 9 | 0 | 0 | fresh |
 | [VPSDance](https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/global.list) | 326 | 60 | 252 | 5 | 6 | 3 | fresh |
 | [dler-io](https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list) | 193 | 71 | 99 | 0 | 23 | 0 | fresh |
 | [v2fly category-ai-!cn (MetaCubeX)](https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.list) | 218 | 37 | 181 | 0 | 0 | 0 | fresh |
 
-Raw union before exclusions: 506
+Raw union before exclusions: 507
 
 ## Output
 
 - `AI_Domain.list`: 379 (269 suffix, 110 exact)
-- `AI.list`: 38 (DOMAIN-KEYWORD 7, IP-CIDR/IP-CIDR6 29, IP-ASN 2)
+- `AI.list`: 39 (DOMAIN-KEYWORD 8, IP-CIDR/IP-CIDR6 29, IP-ASN 2)
 
 ## Dropped rule types (unsupported in DOMAIN-SET / not wanted)
 
