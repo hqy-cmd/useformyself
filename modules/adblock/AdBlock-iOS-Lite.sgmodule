@@ -4,7 +4,7 @@
 #!homepage=https://github.com/hqy-cmd/useformyself/tree/main/modules/adblock
 # Install URL: https://raw.githubusercontent.com/hqy-cmd/useformyself/main/modules/adblock/AdBlock-iOS-Lite.sgmodule
 #!category=AdBlock
-# Generated: 2026-11-23 01:08:35 UTC by scripts/update_adblock_rules.py - do not edit by hand.
+# Generated: 2026-11-24 04:59:41 UTC by scripts/update_adblock_rules.py - do not edit by hand.
 # Domain rejects are NOT in this module (module [Rule] lines run before profile rules);
 # use rules/Reject_Domain.list + rules/Reject.list in the profile. Needs MITM enabled.
 # Sections: Body Rewrite 10, Map Local 166, Script 30, URL Rewrite 73; body-buffering entries 40; MITM hosts 100
