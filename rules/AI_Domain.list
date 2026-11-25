@@ -1,14 +1,14 @@
 # AI_Domain.list - Surge DOMAIN-SET (merged AI domains)
-# Generated: 2026-11-23 00:48:52 UTC
-# Entries: 379 (269 suffix '.x', 110 exact)
+# Generated: 2026-11-25 03:31:24 UTC
+# Entries: 380 (270 suffix '.x', 110 exact)
 # Upstreams:
-#   - QuixoticHeart: 258 entries [fresh]
+#   - QuixoticHeart: 259 entries [fresh]
 #     https://raw.githubusercontent.com/QuixoticHeart/rule-set/refs/heads/ruleset/surge/ai.list
-#   - VPSDance: 326 entries [fresh]
+#   - VPSDance: 327 entries [fresh]
 #     https://raw.githubusercontent.com/VPSDance/ai-proxy-rules/main/rules/surge/global.list
 #   - dler-io: 193 entries [fresh]
 #     https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/AI%20Suite.list
-#   - v2fly category-ai-!cn (MetaCubeX): 218 entries [fresh]
+#   - v2fly category-ai-!cn (MetaCubeX): 219 entries [fresh]
 #     https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.list
 # Exclude rules: 73, include rules: 0
 # Source: https://github.com/hqy-cmd/useformyself/tree/main/rules
@@ -30,6 +30,7 @@
 .factory.ai
 .fireworks.ai
 .g.ai
+.gemma.ai
 .genspark.ai
 .grazie.ai
 .h2o.ai
