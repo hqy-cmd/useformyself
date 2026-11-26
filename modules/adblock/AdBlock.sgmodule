@@ -4,7 +4,7 @@
 #!homepage=https://github.com/hqy-cmd/useformyself/tree/main/modules/adblock
 # Install URL: https://raw.githubusercontent.com/hqy-cmd/useformyself/main/modules/adblock/AdBlock.sgmodule
 #!category=AdBlock
-# Generated: 2026-11-25 03:45:35 UTC by scripts/update_adblock_rules.py - do not edit by hand.
+# Generated: 2026-11-26 03:09:41 UTC by scripts/update_adblock_rules.py - do not edit by hand.
 # Domain rejects are NOT in this module (module [Rule] lines run before profile rules);
 # use rules/Reject_Domain.list + rules/Reject.list in the profile. Needs MITM enabled.
 # Sections: Body Rewrite 65, Map Local 1082, Script 279, URL Rewrite 488; body-buffering entries 341; MITM hosts 997
@@ -2638,7 +2638,7 @@ http-response ^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/showads\.js$ true fal
 # > 台铃智能  [fmz200-blockads]
 http-response-jq ^https://www\.tailgdd\.com/v8/smart/app/config/get$ 'if (getpath([]) | has("data")) then (setpath(["data"]; {})) else . end'
 # > 天府银行小程序  [fmz200-blockads]
-http-response ^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/order\/queryOrderInfo "imgUrl" response-body
+http-response ^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/order\/queryOrderInfo "imgUrl" "fmz200"
 # > 途家民宿  [fmz200-blockads]
 http-response ^https?:\/\/client\.tujia\.com\/bnbapp-node\/app\/portal\/getportalconfig\/bnb\/v2 "banners":\[.+\], "banners":[],
 # > 万达电影  [fmz200-blockads]
