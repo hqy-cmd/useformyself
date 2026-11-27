@@ -1,52 +1,52 @@
 # Ad-block rules report
 
-Generated: 2026-11-26 03:09:41 UTC
+Generated: 2026-11-27 03:17:17 UTC
 
 ## Upstreams
 
 | Upstream | Layer | Entries | Source | Fetched | URL used |
 |---|---|---|---|---|---|
-| Public Suffix List | aux | 10477 | fresh | 2026-11-25 03:45:35 UTC | https://publicsuffix.org/list/public_suffix_list.dat |
+| Public Suffix List | aux | 10494 | fresh | 2026-11-27 03:17:17 UTC | https://publicsuffix.org/list/public_suffix_list.dat |
 | ddgksf2013 APP启动页去广告 (yfamilys) | module | 830 | fresh | 2026-11-23 01:08:35 UTC | https://yfamilys.com/module/startingad.sgmodule |
 | fmz200 wool_scripts blockAds | module | 1644 | fresh | 2026-11-26 03:09:41 UTC | https://raw.githubusercontent.com/fmz200/wool_scripts/main/Surge/module/blockAds.module |
 | kelee 广告平台拦截器 (URL Rewrite) | module | 4 | fresh | 2026-10-15 20:51:11 UTC | https://raw.githubusercontent.com/QingRex/LoonKissSurge/refs/heads/main/Surge/Beta/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.beta.sgmodule |
-| Sukka reject (domainset) | core | 152190 | fresh | 2026-11-26 03:09:41 UTC | https://ruleset.skk.moe/List/domainset/reject.conf |
+| Sukka reject (domainset) | core | 152251 | fresh | 2026-11-27 03:17:17 UTC | https://ruleset.skk.moe/List/domainset/reject.conf |
 | Sukka reject (non_ip) | core | 373 | fresh | 2026-10-23 23:32:24 UTC | https://ruleset.skk.moe/List/non_ip/reject.conf |
 | Sukka reject (ip) | core | 768 | fresh | 2026-11-20 01:54:33 UTC | https://ruleset.skk.moe/List/ip/reject.conf |
 | AWAvenue-Ads-Rule (秋风) | core | 998 | fresh | 2026-11-23 01:08:35 UTC | https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list |
 | 217heidai adblockfilters lite | core | 8480 | fresh | 2026-10-29 00:26:19 UTC | https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblocksurgelite.list |
-| v2fly category-ads-all (MetaCubeX) | core | 909 | fresh | 2026-11-26 03:09:41 UTC | https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list |
+| v2fly category-ads-all (MetaCubeX) | core | 909 | fresh | 2026-11-27 03:17:17 UTC | https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ads-all.list |
 | kelee 广告平台拦截器 [Rule] | core | 324 | fresh | 2026-10-31 23:46:04 UTC | https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx |
-| Sukka reject_extra (domainset) | extra | 86911 | fresh | 2026-11-26 03:09:41 UTC | https://ruleset.skk.moe/List/domainset/reject_extra.conf |
-| HaGeZi Multi PRO (wildcard domains) | extra | 241191 | fresh | 2026-11-26 03:09:41 UTC | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt |
+| Sukka reject_extra (domainset) | extra | 87183 | fresh | 2026-11-27 03:17:17 UTC | https://ruleset.skk.moe/List/domainset/reject_extra.conf |
+| HaGeZi Multi PRO (wildcard domains) | extra | 242659 | fresh | 2026-11-27 03:17:17 UTC | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/wildcard/pro-onlydomains.txt |
 
 List upstream breakdown:
 
 | Upstream | DOMAIN | SUFFIX | KEYWORD | WILDCARD | URL-REGEX | AND/OR | IP-CIDR |
 |---|---|---|---|---|---|---|---|
-| Sukka reject (domainset) | 1155 | 151035 | 0 | 0 | 0 | 0 | 0 |
+| Sukka reject (domainset) | 1155 | 151096 | 0 | 0 | 0 | 0 | 0 |
 | Sukka reject (non_ip) | 71 | 89 | 144 | 15 | 3 | 0 | 51 |
 | Sukka reject (ip) | 1 | 0 | 0 | 0 | 0 | 0 | 767 |
 | AWAvenue-Ads-Rule (秋风) | 969 | 12 | 4 | 0 | 0 | 0 | 13 |
 | 217heidai adblockfilters lite | 0 | 8480 | 0 | 0 | 0 | 0 | 0 |
 | v2fly category-ads-all (MetaCubeX) | 159 | 750 | 0 | 0 | 0 | 0 | 0 |
 | kelee 广告平台拦截器 [Rule] | 113 | 195 | 12 | 0 | 0 | 3 | 1 |
-| Sukka reject_extra (domainset) | 16 | 86895 | 0 | 0 | 0 | 0 | 0 |
-| HaGeZi Multi PRO (wildcard domains) | 0 | 241191 | 0 | 0 | 0 | 0 | 0 |
+| Sukka reject_extra (domainset) | 16 | 87167 | 0 | 0 | 0 | 0 | 0 |
+| HaGeZi Multi PRO (wildcard domains) | 0 | 242659 | 0 | 0 | 0 | 0 | 0 |
 
 - Module host-wide rejects moved into the core DOMAIN-SET: 7 (`adapi.izuiyou.com`, `api.htp.ad-scope.com.cn`, `fc-video.cdn.bcebos.com`, `sdk1xyajs.data.kuiniuca.com`, `stat.peopleapp.com`, `.kingsoft-office-service.com`, `.pglstatp-toutiao.com`)
-- Raw union before filtering: core 158971, extra 283293
+- Raw union before filtering: core 159032, extra 284946
 
 ## Outputs
 
-- `Reject_Domain.list`: 156084 lines
+- `Reject_Domain.list`: 156145 lines
 - `Reject.list`: 986 lines
-- `Reject_Extra_Domain.list`: 221798 lines
+- `Reject_Extra_Domain.list`: 221446 lines
 - `AdBlock.sgmodule`: 1920 lines
 - `AdBlock-iOS-Lite.sgmodule`: 285 lines
 - `MITM-Guard.sgmodule`: 2 lines
 - Reject.list breakdown: DOMAIN-KEYWORD 136, DOMAIN-WILDCARD 14, AND/OR 3, URL-REGEX 1, IP-CIDR 832
-- Extra-layer entries dropped because core already covers them: 58033
+- Extra-layer entries dropped because core already covers them: 58857
 
 ## Removed by category
 
@@ -120,7 +120,7 @@ Exclude rules with no current match (kept for future upstream changes): `DOMAIN-
 - core: DOMAIN-SUFFIX covered by broader DOMAIN-SUFFIX: 387
 - core: IP-CIDR covered by broader CIDR: 1
 - extra: DOMAIN covered by DOMAIN-SUFFIX: 2
-- extra: DOMAIN-SUFFIX covered by broader DOMAIN-SUFFIX: 3237
+- extra: DOMAIN-SUFFIX covered by broader DOMAIN-SUFFIX: 4418
 
 ## Modules
 
